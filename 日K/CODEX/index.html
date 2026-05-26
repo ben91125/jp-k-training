@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>日K五十音直覺認讀訓練器</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap');
+
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    background: #0b0f19;
+}
+
+.kana-glow {
+    text-shadow:
+        0 0 12px rgba(0,229,255,.5),
+        0 0 32px rgba(0,229,255,.25);
+}
+
+.fade-in {
+    animation: fadeIn .25s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #1f2937;
+    border-radius: 999px;
+}
+</style>
+</head>
+
+<body class="text-gray-100 min-h-screen overflow-hidden">
+
+<div class="flex flex-col lg:flex-row h-screen">
+
+    <!-- 左側 -->
+    <aside class="w-full lg:w-80 bg-gray-900 border-r border-gray-800 p-5 overflow-y-auto shrink-0">
+
+        <div class="mb-6">
+            <h1 class="text-2xl font-bold text-cyan-400 tracking-widest">
+                🎵 日K五十音認讀器
+            </h1>
+            <p class="text-xs text-gray-500 mt-2 leading-relaxed">
+                目標：把日文假名訓練成像注音一樣的直覺反應。
+            </p>
+        </div>
+
+        <div class="space-y-5">
+
+            <div>
+                <label class="text-xs text-gray-400 block mb-2">
+                    Gemini API Key
+                </label>
+
+        <div class="bg-gray-950 border border-gray-800 rounded-lg p-2 text-center hover:bor
