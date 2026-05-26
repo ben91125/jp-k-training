@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>日K五十音直覺認讀訓練器 (本地解鎖版)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap');
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            background-color: #0b0f19;
+        }
+        /* 避免圖示事件干擾按鈕點擊 */
+        svg, i, span { pointer-events: none; }
+        .animate-fade-in {
+            animation: fadeIn 0.2s ease-out forwards;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(5px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="text-gray-100 min-h-screen flex flex-col overflow-hidden">
+
+    <div class="flex flex-col lg:flex-row flex-1 h-screen overflow-hidden">
+        
+        <div class="w-full lg:w-80 bg-gray-900 border-b lg:border-b-0 lg:border-r border-gray-800 p-4 flex flex-col gap-5 overflow-y-auto shrink-0">
+            <div class="flex items-center gap-2 pb-3 border-b border-gray-800">
+                <span class="text-xl text-cyan-400">🎵</span>
+                <h1 class="text-lg font-bold tracking-wider text-cyan-400">日K五十音認讀器</h1>
+            </div>
+
+            <div class="flex flex-col gap-2">
+                <label class="text-xs text-gray-400 font-semibold flex items-center gap-1">🔑 Gemini API 金鑰</label>
+                <div class="relative">
+                    <input id="apiKeyInput" type="password" 
+                           placeholder="免 Key 可用本地預設字庫" 
+                           class="w-full bg-gray-950 border border-gray-800 rounded px-3 py-1.5 pr-8 text-sm focus:outline-none focus:border-cyan-500 text-cyan-300">
+                    <button id="toggleApiBtn" class="absolute right-2.5 top-2 text-gray-500 hover:text-gray-300 text-xs" style="pointer-events: auto;">👁️</button>
+                </div>
+            </div>
+
+            <div class="flex flex-col gap-2">
+                <label class="text-xs text-gray-400 font-semibold flex items-center gap-1">🤖 切換 Gemini 模型避分流</label>
+                <select id="modelSelect" class="w-full bg-gray-950 border border-gray-800 rounded px-2 py-1.5 text-sm focus:outline-none focus:border-cyan-500 text-gray-300">
+                    <option value="gemini-2.0-flash">gemini-2.0-flash (預設高速度)</option>
+                    <option value="gemini-2.0-flash-lite">gemini-2.0-flash-lite (低消耗避429)</option>
+                    <option value="gemini-1.5-flash">gemini-1.5-flash (經典舊版備用)</option>
+                </select>
+            </div>
+
+            <div class="flex flex-col gap-2">
+                <label class="text-xs text-gray-400 font-semibold flex items-center gap-1">🔍 擴充字庫關鍵字</label>
+                <input id="keywordInput" type="text" 
+                       placeholder="例如：熱血動漫金句、J-POP高頻詞" 
+                       class="w-full bg-gray-950 border border-gray-800 rounded px-3 py-1.5 text-sm focus:outline-none focus:border-cyan-500">
+                <button id="fetchBtn" 
+                        class="w-full bg-cyan-600 hover:bg-cyan-500 text-white font-medium py-2 px-4 rounded text-sm transition-colors flex items-center justify-center gap-2"
+                        style="pointer-events: auto;">
+                    <span id="fetchBtnText">線上抓取單字落地</span>
+                </button>
+            </div>
+
+            <div class="mt-auto pt-4 border-t border-gray-800 text-xs text-gray-400 flex flex-col gap-2">
+                <div class="flex justify-between items-center">
+                    <span>當前字庫總數：<strong id="vocabCount" class="text-cyan-400 text-sm">0</strong> 字</span>
+                    <button id="clearBtn" class="text-red-400 hover:text-red-300 transition-colors hidden" style="pointer-events: auto;">清空重置</button>
+                </div>
+                <p class="text-[10px] text-gray-500 leading-relaxed">提示：若線上 API 頻繁限制，可直接使用內建 20 組精選日K高頻詞庫進行抽卡訓練。</p>
+            </div>
+        </div>
+
+        <div class="flex-1 bg-gray-950 p-6 flex flex-col justify-between items-center overflow-y-auto">
+            
+            <div class="w-full max-w-xl text-center min-h-[32px]">
+                <div id="statusAlert" class="px-4 py-1.5 rounded text-xs inline-block hidden"></div>
+            </div>
+
+            <div class="w-full max-w-2xl bg-gradient-to-b from-gray-900 to-gray-950 border border-gray-800 rounded-2xl p-8 shadow-2xl flex flex-col items-center justify-center min-h-[340px] relative">
+                <div class="absolute inset-0 bg-cyan-500/5 pointer-events-none rounded-2xl"></div>
+                
+                <div id="cardContent" class="w-full flex flex-col items-center text-center z-10 hidden animate-fade-in">
+                    <div class="mb-5">
+                        <ruby id="displayRuby" class="text-5xl md:text-6xl font-bold tracking-widest text-white leading-loose">
+                            </ruby>
+                    </div>
+                    <div id="displayRomaji" class="text-2xl md:text-3xl font-mono text-emerald-400 font-bold tracking-wider mb-4"></div>
+                    <div id="displayMeaning" class="text-gray-400 text-base md:text-lg max-w-md"></div>
+                </div>
+
+                <div id="cardEmpty" class="text-center text-gray-500 z-10">
+                    <span class="text-5xl block mb-4 opacity-40">🎴</span>
+                    <p class="text-lg">本地字庫暫無資料</p>
+                    <p class="text-xs mt-1 text-gray-600">請先在左側欄位輸入關鍵字，抓取歌曲字庫。</p>
+                </div>
+            </div>
+
+            <div class="w-full max-w-xl flex justify-center py-4">
+                <button id="drawBtn" disabled
+                        class="px-12 py-4 bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-500 hover:to-blue-500 disabled:from-gray-800 disabled:to-gray-800 disabled:text-gray-500 disabled:cursor-not-allowed text-xl font-bold text-white rounded-full shadow-lg shadow-cyan-500/10 active:scale-95 transition-all flex items-center gap-3 tracking-widest"
+                        style="pointer-events: auto;">
+                    🎲 隨機抽選單字
+                </button>
+            </div>
+        </div>
+
+        <div class="w-full lg:w-96 bg-gray-900 border-t lg:border-t-0 lg:border-l border-gray-800 p-4 flex flex-col overflow-y-auto shrink-0">
+            <div class="flex items-center justify-between pb-2 mb-3 border-b border-gray-800">
+                <div class="flex items-center gap-2">
+                    <span class="text-emerald-400">📋</span>
+                    <h2 class="text-sm font-bold tracking-wider text-emerald-400">假名快速對照表</h2>
+                </div>
+                <div class="flex bg-gray-950 p-0.5 rounded text-[11px] font-semibold border border-gray-800">
+                    <button id="tabSeion" class="px-2 py-0.5 rounded text-emerald-400 bg-gray-800" style="pointer-events: auto;">清音</button>
+                    <button id="tabDakuon" class="px-2 py-0.5 rounded text-gray-400 hover:text-gray-200" style="pointer-events: auto;">濁/半濁</button>
+                </div>
+            </div>
+            
+            <div class="grid grid-cols-6 gap-1 text-center text-xs">
+                <div class="text-[10px] text-gray-500 font-bold py-1 bg-gray-950/60 rounded">行\段</div>
+                <div class="text-[10px] text-cyan-400 font-bold py-1 bg-gray-950/60 rounded">あ段</div>
+                <div class="text-[10px] text-cyan-400 font-bold py-1 bg-gray-950/60 rounded">い段</div>
+                <div class="text-[10px] text-cyan-400 font-bold py-1 bg-gray-950/60 rounded">う段</div>
+                <div class="text-[10px] text-cyan-400 font-bold py-1 bg-gray-950/60 rounded">え段</div>
+                <div class="text-[10px] text-cyan-400 font-bold py-1 bg-gray-950/60 rounded">お段</div>
+                
+                <div id="gojuonContainer" class="contents"></div>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        // 假名基礎結構資料庫
+        const seionData = [
+            { row: 'あ行', items: [{k:'あ', r:'a'}, {k:'い', r:'i'}, {k:'う', r:'u'}, {k:'え', r:'e'}, {k:'お', r:'o'}] },
+            { row: 'か行', items: [{k:'か', r:'ka'},{k:'き', r:'ki'},{k:'く', r:'ku'},{k:'け', r:'ke'},{k:'こ', r:'ko'}] },
+            { row: 'さ行', items: [{k:'さ', r:'sa'},{k:'し', r:'shi'},{k:'す', r:'su'},{k:'せ', r:'se'},{k:'そ', r:'so'}] },
+            { row: 'た行', items: [{k:'た', r:'ta'},{k:'ち', r:'chi'},{k:'つ', r:'tsu'},{k:'て', r:'te'},{k:'と', r:'to'}] },
+            { row: 'な行', items: [{k:'な', r:'na'},{k:'に', r:'ni'},{k:'ぬ', r:'nu'},{k:'ね', r:'ne'},{k:'の', r:'no'}] },
+            { row: 'は行', items: [{k:'は', r:'ha'},{k:'ひ', r:'hi'},{k:'ふ', r:'fu'},{k:'へ', r:'he'},{k:'ほ', r:'ho'}] },
+            { row: 'ま行', items: [{k:'ま', r:'ma'},{k:'み', r:'mi'},{k:'む', r:'mu'},{k:'め', r:'me'},{k:'も', r:'mo'}] },
+            { row: 'や行', items: [{k:'や', r:'ya'},{k:'', r:''},     {k:'ゆ', r:'yu'},{k:'', r:''},     {k:'よ', r:'yo'}] },
+            { row: 'ら行', items: [{k:'ら', r:'ra'},{k:'り', r:'ri'},{k:'る', r:'ru'},{k:'れ', r:'re'},{k:'ろ', r:'ro'}] },
+            { row: 'わ行', items: [{k:'わ', r:'wa'},{k:'', r:''},     {k:'', r:''},     {k:'', r:''},     {k:'を', r:'wo'}] },
+            { row: 'ん行', items: [{k:'ん', r:'n'}, {k:'', r:''},     {k:'', r:''},     {k:'', r:''},     {k:'', r:''}] }
+        ];
+
+        const dakuonData = [
+            { row: 'が行', items: [{k:'が', r:'ga'},{k:'ぎ', r:'gi'},{k:'ぐ', r:'gu'},{k:'げ', r:'ge'},{k:'ご', r:'go'}] },
+            { row: 'ざ行', items: [{k:'ざ', r:'za'},{k:'じ', r:'ji'},{k:'ず', r:'zu'},{k:'ぜ', r:'ze'},{k:'ぞ', r:'zo'}] },
+            { row: 'だ行', items: [{k:'だ', r:'da'},{k:'ぢ', r:'ji'},{k:'づ', r:'zu'},{k:'de', r:'de'},{k:'ど', r:'do'}] },
+            { row: 'ば行', items: [{k:'ば', r:'ba'},{k:'び', r:'bi'},{k:'ぶ', r:'bu'},{k:'べ', r:'be'},{k:'ぼ', r:'bo'}] },
+            { row: 'ぱ行', items: [{k:'ぱ', r:'pa'},{k:'ぴ', r:'pi'},{k:'ぷ', r:'pu'},{k:'ぺ', r:'pe'},{k:'ぽ', r:'po'}] }
+        ];
+
+        // 核心改動 2：內建日K核心高頻單字備用庫 (Test Resource)
+        const defaultTestResource = [
+            { "kanji": "残酷", "kana": "ざんこく", "romaji": "zankoku", "meaning": "殘酷的 (殘酷天使的行動綱領)" },
+            { "kanji": "運命", "kana": "うんめい", "romaji": "unmei", "meaning": "命運" },
+            { "kanji": "世界", "kana": "せかい", "romaji": "sekai", "meaning": "世界" },
+            { "kanji": "秘密", "kana": "ひみつ", "romaji": "himitsu", "meaning": "秘密 (Idol 歌詞)" },
+            { "kanji": "完璧", "kana": "かんぺき", "romaji": "kanpeki", "meaning": "完美的" },
+            { "kanji": "未来", "kana": "みらい", "romaji": "mirai", "meaning": "未來" },
+            { "kanji": "心", "kana": "こころ", "romaji": "kokoro", "meaning": "心、心靈" },
+            { "kanji": "明日", "kana": "あした", "romaji": "ashita", "meaning": "明天" },
+            { "kanji": "絆", "kana": "きずな", "romaji": "kizuna", "meaning": "羈絆" },
+            { "kanji": "奇跡", "kana": "きせき", "romaji": "kiseki", "meaning": "奇蹟" },
+            { "kanji": "情熱", "kana": "じょうねつ", "romaji": "jounetsu", "meaning": "熱情" },
+            { "kanji": "孤独", "kana": "こどく", "romaji": "kodoku", "meaning": "孤獨" },
+            { "kanji": "記憶", "kana": "きおく", "romaji": "kioku", "meaning": "記憶" },
+            { "kanji": "真実", "kana": "しんじつ", "romaji": "shinjitsu", "meaning": "真實" },
+            { "kanji": "永遠", "kana": "えいえん", "romaji": "eien", "meaning": "永遠" },
+            { "kanji": "自由", "kana": "じゆう", "romaji": "jiyuu", "meaning": "自由 (進擊的巨人)" },
+            { "kanji": "希望", "kana": "きぼう", "romaji": "kibou", "meaning": "希望" },
+            { "kanji": "光", "kana": "ひかり", "romaji": "hikari", "meaning": "光芒" },
+            { "kanji": "魂", "kana": "たましい", "romaji": "tamashii", "meaning": "靈魂" },
+            { "kanji": "一歩", "kana": "いっぽ", "romaji": "ippo", "meaning": "一步" }
+        ];
+
+        // DOM 元素綁定
+        const apiKeyInput = document.getElementById('apiKeyInput');
+        const toggleApiBtn = document.getElementById('toggleApiBtn');
+        const modelSelect = document.getElementById('modelSelect');
+        const keywordInput = document.getElementById('keywordInput');
+        const fetchBtn = document.getElementById('fetchBtn');
+        const fetchBtnText = document.getElementById('fetchBtnText');
+        const vocabCount = document.getElementById('vocabCount');
+        const clearBtn = document.getElementById('clearBtn');
+        const drawBtn = document.getElementById('drawBtn');
+        const statusAlert = document.getElementById('statusAlert');
+        const cardContent = document.getElementById('cardContent');
+        const cardEmpty = document.getElementById('cardEmpty');
+        const displayRuby = document.getElementById('displayRuby');
+        const displayRomaji = document.getElementById('displayRomaji');
+        const displayMeaning = document.getElementById('displayMeaning');
+        const gojuonContainer = document.getElementById('gojuonContainer');
+        const tabSeion = document.getElementById('tabSeion');
+        const tabDakuon = document.getElementById('tabDakuon');
+
+        let vocabList = [];
+        let currentCard = null;
+
+        function renderTable(data) {
+            let html = '';
+            data.forEach(row => {
+                html += `<div class="text-[10px] font-bold text-gray-400 flex items-center justify-center bg-gray-950/30 rounded py-1">${row.row}</div>`;
+                row.items.forEach(item => {
+                    if (item.k) {
+                        html += `
+                            <div class="p-1 rounded bg-gray-950/70 border border-gray-800 flex flex-col items-center justify-center min-h-[40px] hover:border-emerald-500/50 transition-colors">
+                                <span class="text-sm font-semibold text-gray-200">${item.k}</span>
+                                <span class="text-[9px] font-mono text-emerald-500">${item.r}</span>
+                            </div>`;
+                    } else {
+                        html += `<div class="bg-gray-950/10 rounded border border-transparent min-h-[40px]"></div>`;
+                    }
+                });
+            });
+            gojuonContainer.innerHTML = html;
+        }
+
+        function init() {
+            renderTable(seionData);
+
+            // 讀取快取 API 金鑰
+            const savedKey = localStorage.getItem('jks_api_key');
+            if (savedKey) apiKeyInput.value = savedKey;
+
+            // 讀取快取字庫，如果完全沒有快取，則直接加載測試資源
+            const savedVocab = localStorage.getItem('jks_vocab_data');
+            if (savedVocab) {
+                vocabList = JSON.parse(savedVocab);
+            } else {
+                vocabList = [...defaultTestResource];
+                localStorage.setItem('jks_vocab_data', JSON.stringify(vocabList));
+            }
+            
+            updateVocabUI();
+            showAlert('已成功載入本地預設測試字庫！可直接開始抽選。', 'success');
+        }
+
+        function showAlert(msg, type = 'info') {
+            statusAlert.innerText = msg;
+            statusAlert.classList.remove('hidden', 'bg-red-950', 'text-red-400', 'border-red-800', 'bg-emerald-950', 'text-emerald-400', 'border-emerald-800', 'bg-gray-900', 'text-gray-400', 'border-gray-800');
+            if (type === 'error') statusAlert.classList.add('bg-red-950', 'text-red-400', 'border', 'border-red-800');
+            else if (type === 'success') statusAlert.classList.add('bg-emerald-950', 'text-emerald-400', 'border', 'border-emerald-800');
+            else statusAlert.classList.add('bg-gray-900', 'text-gray-400', 'border', 'border-gray-800');
+        }
+
+        function updateVocabUI() {
+            vocabCount.innerText = vocabList.length;
+            if (vocabList.length > 0) {
+                clearBtn.classList.remove('hidden');
+                drawBtn.removeAttribute('disabled');
+            } else {
+                clearBtn.classList.add('hidden');
+                drawBtn.setAttribute('disabled', 'true');
+                cardContent.classList.add('hidden');
+                cardEmpty.classList.remove('hidden');
+            }
+        }
+
+        // 頁籤切換
+        tabSeion.addEventListener('click', () => {
+            tabSeion.className = "px-2 py-0.5 rounded text-emerald-400 bg-gray-800";
+            tabDakuon.className = "px-2 py-0.5 rounded text-gray-400 hover:text-gray-200";
+            renderTable(seionData);
+        });
+
+        tabDakuon.addEventListener('click', () => {
+            tabDakuon.className = "px-2 py-0.5 rounded text-emerald-400 bg-gray-800";
+            tabSeion.className = "px-2 py-0.5 rounded text-gray-400 hover:text-gray-200";
+            renderTable(dakuonData);
+        });
+
+        toggleApiBtn.addEventListener('click', () => {
+            if (apiKeyInput.type === 'password') {
+                apiKeyInput.type = 'text';
+                toggleApiBtn.innerText = '🔒';
+            } else {
+                apiKeyInput.type = 'password';
+                toggleApiBtn.innerText = '👁️';
+            }
+        });
+
+        apiKeyInput.addEventListener('change', () => {
+            localStorage.setItem('jks_api_key', apiKeyInput.value.trim());
+        });
+
+        // 重置為預設測試資源庫
+        clearBtn.addEventListener('click', () => {
+            if (confirm('確定要將字庫恢復成內建的 20 組測試資料嗎？')) {
+                vocabList = [...defaultTestResource];
+                currentCard = null;
+                localStorage.setItem('jks_vocab_data', JSON.stringify(vocabList));
+                updateVocabUI();
+                showAlert('已恢復為本地測試資源庫。', 'info');
+            }
+        });
+
+        // 核心抽卡邏輯
+        drawBtn.addEventListener('click', () => {
+            if (vocabList.length === 0) return;
+            let index;
+            do {
+                index = Math.floor(Math.random() * vocabList.length);
+            } while (vocabList.length > 1 && currentCard && vocabList[index].kana === currentCard.kana);
+
+            currentCard = vocabList[index];
+
+            if (currentCard.kanji) {
+                displayRuby.innerHTML = `${currentCard.kanji} <rt class="text-xl md:text-2xl font-normal tracking-wide text-cyan-400 pb-2 bg-gray-950/80 px-2 rounded-md border border-cyan-900/30">${currentCard.kana}</rt>`;
+            } else {
+                displayRuby.innerHTML = `${currentCard.kana}`;
+            }
+            displayRomaji.innerText = currentCard.romaji;
+            displayMeaning.innerText = `意：${currentCard.meaning}`;
+
+            cardEmpty.classList.add('hidden');
+            cardContent.classList.remove('hidden');
+        });
+
+        // 串接線上 API 擴充
+        fetchBtn.addEventListener('click', async () => {
+            const key = apiKeyInput.value.trim();
+            const kw = keywordInput.value.trim();
+            const selectedModel = modelSelect.value;
+
+            if (!key) { showAlert('請先填入 Gemini API 金鑰！若只想測試可直接點擊核心的「隨機抽選單字」。', 'error'); return; }
+            if (!kw) { showAlert('請填寫欲擴充之單字庫關鍵字！', 'error'); return; }
+
+            fetchBtn.setAttribute('disabled', 'true');
+            fetchBtnText.innerText = 'AI 思考聯想中...';
+            showAlert(`正在透過 ${selectedModel} 進行字庫聯想落地...`, 'info');
+
+            const systemPrompt = `你是一個專業的日文老師。使用者的核心目的是「熟練五十音的直覺認讀與發音」，以便跟上日文KTV(日K)字幕。
+請根據使用者提供的關鍵字領域，聯想並篩選出在該領域「最常用、最具代表性、且非常適合拿來練習五十音（包含清音、濁音、半濁音）發音與認讀」的日文單字或短詞（不需整首歌詞）。
+
+請務必嚴格以下列的 JSON 陣列格式回傳，不要包含任何額外的 Markdown 標籤(如 \`\`\`json)、解說或開頭結尾文字：
+[
+  { "kanji": "漢字(若該單字原本無漢字，此欄位留空 \"\")", "kana": "全平假名或片假名(用來對照發音)", "romaji": "羅馬拼音", "meaning": "中文意思" }
+]
+請固定回傳 15 到 20 個精選詞彙。`;
+
+            // 動態路由模型名稱
+            const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/${selectedModel}:generateContent?key=${key}`;
+
+            try {
+                const response = await fetch(apiUrl, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        contents: [{ parts: [{ text: `${systemPrompt}\n\n使用者輸入的關鍵字：${kw}` }] }]
+                    })
+                });
+
+                if (!response.ok) {
+                    if (response.status === 429) {
+                        throw new Error('429 頻率上限！Google 拒絕了請求。請切換模型選單，或稍後再試。');
+                    }
+                    throw new Error(`HTTP 錯誤，狀態碼: ${response.status}`);
+                }
+                
+                const responseData = await response.json();
+                let rawText = responseData.candidates[0].content.parts[0].text.trim();
+                
+                rawText = rawText.replace(/^```json\s*/i, '')
+                                 .replace(/^```\s*/i, '')
+                                 .replace(/```$/, '')
+                                 .trim();
+                                 
+                const fetchedArray = JSON.parse(rawText);
+
+                if (Array.isArray(fetchedArray)) {
+                    const currentKeys = new Set(vocabList.map(v => `${v.kanji}_${v.kana}`));
+                    let insertCount = 0;
+
+                    fetchedArray.forEach(item => {
+                        const keyUnique = `${item.kanji || ''}_${item.kana}`;
+                        if (!currentKeys.has(keyUnique)) {
+                            vocabList.push(item);
+                            insertCount++;
+                        }
+                    });
+
+                    localStorage.setItem('jks_vocab_data', JSON.stringify(vocabList));
+                    updateVocabUI();
+                    keywordInput.value = '';
+                    showAlert(`線上擴充成功！成功新增了 ${insertCount} 個單字，與測試字庫合併！`, 'success');
+                } else {
+                    throw new Error('格式解析失敗');
+                }
+            } catch (err) {
+                console.error(err);
+                showAlert(err.message || '抓取失敗。請嘗試換個模型或確認網路環境。', 'error');
+            } finally {
+                fetchBtn.removeAttribute('disabled');
+                fetchBtnText.innerText = '線上抓取單字落地';
+            }
+        });
+
+        init();
+    </script>
+</body>
+</html>
