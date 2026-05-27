@@ -140,26 +140,27 @@
     <script src="./vocab.js"></script>
     <script>
         const seionData = [
-            { row: 'あ行', items: [{k:'あ', r:'a'}, {k:'い', r:'i'}, {k:'う', r:'u'}, {k:'え', r:'e'}, {k:'お', r:'o'}] },
-            { row: 'か行', items: [{k:'か', r:'ka'},{k:'き', r:'ki'},{k:'く', r:'ku'},{k:'け', r:'ke'},{k:'こ', r:'ko'}] },
-            { row: 'さ行', items: [{k:'さ', r:'sa'},{k:'し', r:'shi'},{k:'す', r:'su'},{k:'せ', r:'se'},{k:'そ', r:'so'}] },
-            { row: 'た行', items: [{k:'た', r:'ta'},{k:'ち', r:'chi'},{k:'つ', r:'tsu'},{k:'て', r:'te'},{k:'と', r:'to'}] },
-            { row: 'な行', items: [{k:'な', r:'na'},{k:'に', r:'ni'},{k:'ぬ', r:'nu'},{k:'ね', r:'ne'},{k:'の', r:'no'}] },
-            { row: 'は行', items: [{k:'は', r:'ha'},{k:'ひ', r:'hi'},{k:'ふ', r:'fu'},{k:'へ', r:'he'},{k:'ほ', r:'ho'}] },
-            { row: 'ま行', items: [{k:'ま', r:'ma'},{k:'み', r:'mi'},{k:'む', r:'mu'},{k:'め', r:'me'},{k:'も', r:'mo'}] },
-            { row: 'や行', items: [{k:'や', r:'ya'},{k:'', r:''},     {k:'ゆ', r:'yu'},{k:'', r:''},     {k:'よ', r:'yo'}] },
-            { row: 'ら行', items: [{k:'ら', r:'ra'},{k:'り', r:'ri'},{k:'る', r:'ru'},{k:'れ', r:'re'},{k:'ろ', r:'ro'}] },
-            { row: 'わ行', items: [{k:'わ', r:'wa'},{k:'', r:''},     {k:'', r:''},     {k:'', r:''},     {k:'を', r:'wo'}] },
-            { row: 'ん行', items: [{k:'ん', r:'n'}, {k:'', r:''},     {k:'', r:''},     {k:'', r:''},     {k:'', r:''}] }
-        ];
+			{ row: 'あ行', items: [{k:'あ', r:'a'},  {k:'い', r:'i'},   {k:'う', r:'u'},   {k:'え', r:'e'},   {k:'お', r:'o'}] },
+			{ row: 'か行', items: [{k:'か', r:'ka'}, {k:'き', r:'ki'},  {k:'く', r:'ku'},  {k:'け', r:'ke'},  {k:'こ', r:'ko'}] },
+			{ row: 'さ行', items: [{k:'さ', r:'sa'}, {k:'し', r:'shi'}, {k:'す', r:'su'},  {k:'せ', r:'se'},  {k:'そ', r:'so'}] },
+			{ row: 'た行', items: [{k:'た', r:'ta'}, {k:'ち', r:'chi'}, {k:'つ', r:'tsu'}, {k:'て', r:'te'},  {k:'と', r:'to'}] },
+			{ row: 'な行', items: [{k:'な', r:'na'}, {k:'に', r:'ni'},  {k:'ぬ', r:'nu'},  {k:'ね', r:'ne'},  {k:'の', r:'no'}] },
+			{ row: 'は行', items: [{k:'は', r:'ha'}, {k:'ひ', r:'hi'},  {k:'ふ', r:'fu'},  {k:'へ', r:'he'},  {k:'ほ', r:'ho'}] },
+			{ row: 'ま行', items: [{k:'ま', r:'ma'}, {k:'み', r:'mi'},  {k:'む', r:'mu'},  {k:'め', r:'me'},  {k:'も', r:'mo'}] },
+			{ row: 'や行', items: [{k:'や', r:'ya'}, {k:'', r:''},      {k:'ゆ', r:'yu'},  {k:'', r:''},      {k:'よ', r:'yo'}] },
+			{ row: 'ら行', items: [{k:'ら', r:'ra'}, {k:'り', r:'ri'},  {k:'る', r:'ru'},  {k:'れ', r:'re'},  {k:'ろ', r:'ro'}] },
+			{ row: 'わ行', items: [{k:'わ', r:'wa'}, {k:'', r:''},      {k:'', r:''},      {k:'', r:''},      {k:'を', r:'o'}] },
+			{ row: 'ん行', items: [{k:'ん', r:'n'},  {k:'', r:''},      {k:'', r:''},      {k:'', r:''},      {k:'', r:''}] }
+		];
 
-        const dakuonData = [
-            { row: 'が行', items: [{k:'が', r:'ga'},{k:'ぎ', r:'gi'},{k:'ぐ', r:'gu'},{k:'げ', r:'ge'},{k:'ご', r:'go'}] },
-            { row: 'ざ行', items: [{k:'ざ', r:'za'},{k:'じ', r:'ji'},{k:'ず', r:'zu'},{k:'ぜ', r:'ze'},{k:'ぞ', r:'zo'}] },
-            { row: 'だ行', items: [{k:'だ', r:'da'},{k:'ぢ', r:'ji'},{k:'づ', r:'zu'},{k:'de', r:'de'},{k:'ど', r:'do'}] },
-            { row: 'ば行', items: [{k:'ば', r:'ba'},{k:'び', r:'bi'},{k:'ぶ', r:'bu'},{k:'べ', r:'be'},{k:'ぼ', r:'bo'}] },
-            { row: 'ぱ行', items: [{k:'ぱ', r:'pa'},{k:'ぴ', r:'pi'},{k:'ぷ', r:'pu'},{k:'ぺ', r:'pe'},{k:'ぽ', r:'po'}] }
-        ];
+		const dakuonData = [
+			{ row: 'が行', items: [{k:'が', r:'ga'}, {k:'ぎ', r:'gi'}, {k:'ぐ', r:'gu'}, {k:'げ', r:'ge'}, {k:'ご', r:'go'}] },
+			{ row: 'ざ行', items: [{k:'ざ', r:'za'}, {k:'じ', r:'ji'}, {k:'ず', r:'zu'}, {k:'ぜ', r:'ze'}, {k:'ぞ', r:'zo'}] },
+			{ row: 'だ行', items: [{k:'だ', r:'da'}, {k:'ぢ', r:'ji'}, {k:'づ', r:'zu'}, {k:'で', r:'de'}, {k:'ど', r:'do'}] },
+			{ row: 'ば行', items: [{k:'ば', r:'ba'}, {k:'び', r:'bi'}, {k:'ぶ', r:'bu'}, {k:'べ', r:'be'}, {k:'ぼ', r:'bo'}] },
+			{ row: 'ぱ行', items: [{k:'ぱ', r:'pa'}, {k:'ぴ', r:'pi'}, {k:'ぷ', r:'pu'}, {k:'ぺ', r:'pe'}, {k:'ぽ', r:'po'}] }
+		];
+
 
         const defaultTestResource = [
             { "kanji": "残酷", "kana": "ざんこく", "romaji": "zankoku", "meaning": "殘酷的 (殘酷天使的行動綱領)" }
