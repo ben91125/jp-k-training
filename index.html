@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>日K五十音直覺認讀訓練器 (全音域解鎖版)</title>
+    <title>日K五十音直覺認讀訓練器)</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght=400;700&display=swap');
@@ -48,15 +48,18 @@
                 <div class="flex flex-col gap-1.5">
                     <label class="text-xs text-gray-400 font-semibold flex items-center gap-1">🤖 切換 AI 模型</label>
                     <select id="modelSelect" class="w-full bg-gray-950 border border-gray-800 rounded px-2 py-1.5 text-sm focus:outline-none focus:border-cyan-500 text-gray-300">
-                        <optgroup label="Gemini API" class="bg-gray-950 text-gray-300">
+                        <optgroup label="Groq API (超高速)" class="bg-gray-950 text-gray-300">
+                            <option value="groq/llama-3.1-8b-instant">llama-3.1-8b-instant (先用這個)</option>
+							<option value="groq/llama-3.3-70b-versatile">llama-3.3-70b-versatile (這品質比較好)</option>
+							<option value="groq/compound">compound (不能用)</option>
+							<option value="groq/compound-mini">compound-mini (不能用)</option>
+							<option value="groq/openai/gpt-oss-120b">openai/gpt-oss-120b (沒測過)</option>
+                            <option value="groq/openai/gpt-oss-20b">openai/gpt-oss-20b (沒測過)</option>
+                        </optgroup>
+						<optgroup label="Gemini API" class="bg-gray-950 text-gray-300">
                             <option value="gemini-2.0-flash" selected>gemini-2.0-flash (不能用)</option>
                             <option value="gemini-2.0-flash-lite">gemini-2.0-flash-lite (不能用)</option>
                             <option value="gemini-1.5-flash">gemini-1.5-flash (google關掉了)</option>
-                        </optgroup>
-                        <optgroup label="Groq API (超高速)" class="bg-gray-950 text-gray-300">
-                            <option value="groq/llama3-8b-8192">llama3-8b-8192 (沒測過)</option>
-                            <option value="groq/llama-3.1-8b-instant">llama-3.1-8b-instant(先用這個)</option>
-                            <option value="groq/mixtral-8x7b-32768">mixtral-8x7b-32768(沒測過)</option>
                         </optgroup>
                     </select>
                 </div>
