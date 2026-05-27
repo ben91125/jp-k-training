@@ -68,7 +68,7 @@
                     <span>當前字庫總數：<strong id="vocabCount" class="text-cyan-400 text-sm">0</strong> 字</span>
                     <button id="clearBtn" class="text-red-400 hover:text-red-300 transition-colors hidden" style="pointer-events: auto;">清空重置</button>
                 </div>
-                <p class="text-[10px] text-gray-500 leading-relaxed">提示：若線上 API 頻繁限制，可直接使用內建 20 組精選日K高頻詞庫進行抽卡訓練。</p>
+                <p class="text-[10px] text-gray-500 leading-relaxed">提示：若線上 API 頻繁限制，可直接使用內建外部精選日K高頻詞庫進行抽卡訓練。</p>
             </div>
         </div>
 
@@ -84,7 +84,7 @@
                 <div id="cardContent" class="w-full flex flex-col items-center text-center z-10 hidden animate-fade-in">
                     <div class="mb-5">
                         <ruby id="displayRuby" class="text-5xl md:text-6xl font-bold tracking-widest text-white leading-loose">
-                            </ruby>
+                        </ruby>
                     </div>
                     <div id="displayRomaji" class="text-2xl md:text-3xl font-mono text-emerald-400 font-bold tracking-wider mb-4"></div>
                     <div id="displayMeaning" class="text-gray-400 text-base md:text-lg max-w-md"></div>
@@ -93,7 +93,7 @@
                 <div id="cardEmpty" class="text-center text-gray-500 z-10">
                     <span class="text-5xl block mb-4 opacity-40">🎴</span>
                     <p class="text-lg">本地字庫暫無資料</p>
-                    <p class="text-xs mt-1 text-gray-600">請先在左側欄位輸入關鍵字，抓取歌曲字庫。</p>
+                    <p class="text-xs mt-1 text-gray-600">請確認是否正確引入 vocab.js 檔案。</p>
                 </div>
             </div>
 
@@ -132,6 +132,7 @@
 
     </div>
 
+    <script src="./vocab.js"></script>
     <script>
         // 假名基礎結構資料庫
         const seionData = [
@@ -156,28 +157,9 @@
             { row: 'ぱ行', items: [{k:'ぱ', r:'pa'},{k:'ぴ', r:'pi'},{k:'ぷ', r:'pu'},{k:'ぺ', r:'pe'},{k:'ぽ', r:'po'}] }
         ];
 
-        // 核心改動 2：內建日K核心高頻單字備用庫 (Test Resource)
+        // 內建日K後備資料
         const defaultTestResource = [
-            { "kanji": "残酷", "kana": "ざんこく", "romaji": "zankoku", "meaning": "殘酷的 (殘酷天使的行動綱領)" },
-            { "kanji": "運命", "kana": "うんめい", "romaji": "unmei", "meaning": "命運" },
-            { "kanji": "世界", "kana": "せかい", "romaji": "sekai", "meaning": "世界" },
-            { "kanji": "秘密", "kana": "ひみつ", "romaji": "himitsu", "meaning": "秘密 (Idol 歌詞)" },
-            { "kanji": "完璧", "kana": "かんぺき", "romaji": "kanpeki", "meaning": "完美的" },
-            { "kanji": "未来", "kana": "みらい", "romaji": "mirai", "meaning": "未來" },
-            { "kanji": "心", "kana": "こころ", "romaji": "kokoro", "meaning": "心、心靈" },
-            { "kanji": "明日", "kana": "あした", "romaji": "ashita", "meaning": "明天" },
-            { "kanji": "絆", "kana": "きずな", "romaji": "kizuna", "meaning": "羈絆" },
-            { "kanji": "奇跡", "kana": "きせき", "romaji": "kiseki", "meaning": "奇蹟" },
-            { "kanji": "情熱", "kana": "じょうねつ", "romaji": "jounetsu", "meaning": "熱情" },
-            { "kanji": "孤独", "kana": "こどく", "romaji": "kodoku", "meaning": "孤獨" },
-            { "kanji": "記憶", "kana": "きおく", "romaji": "kioku", "meaning": "記憶" },
-            { "kanji": "真実", "kana": "しんじつ", "romaji": "shinjitsu", "meaning": "真實" },
-            { "kanji": "永遠", "kana": "えいえん", "romaji": "eien", "meaning": "永遠" },
-            { "kanji": "自由", "kana": "じゆう", "romaji": "jiyuu", "meaning": "自由 (進擊的巨人)" },
-            { "kanji": "希望", "kana": "きぼう", "romaji": "kibou", "meaning": "希望" },
-            { "kanji": "光", "kana": "ひかり", "romaji": "hikari", "meaning": "光芒" },
-            { "kanji": "魂", "kana": "たましい", "romaji": "tamashii", "meaning": "靈魂" },
-            { "kanji": "一歩", "kana": "いっぽ", "romaji": "ippo", "meaning": "一步" }
+            { "kanji": "残酷", "kana": "ざんこく", "romaji": "zankoku", "meaning": "殘酷的 (殘酷天使的行動綱領)" }
         ];
 
         // DOM 元素綁定
@@ -225,21 +207,36 @@
         function init() {
             renderTable(seionData);
 
+            // 優先判定並讀取外部檔案 vocab.js 的 OFFLINE_VOCAB_DB
+            let targetSource = defaultTestResource;
+            if (typeof OFFLINE_VOCAB_DB !== 'undefined' && Array.isArray(OFFLINE_VOCAB_DB)) {
+                targetSource = OFFLINE_VOCAB_DB;
+            }
+
             // 讀取快取 API 金鑰
             const savedKey = localStorage.getItem('jks_api_key');
             if (savedKey) apiKeyInput.value = savedKey;
 
-            // 讀取快取字庫，如果完全沒有快取，則直接加載測試資源
+            // 讀取快取字庫
             const savedVocab = localStorage.getItem('jks_vocab_data');
             if (savedVocab) {
                 vocabList = JSON.parse(savedVocab);
+                // 防禦機制：如果發現快取內的筆數與外部檔案對不上，自動用外部檔案覆蓋更新
+                if (vocabList.length < targetSource.length && targetSource !== defaultTestResource) {
+                    vocabList = [...targetSource];
+                    localStorage.setItem('jks_vocab_data', JSON.stringify(vocabList));
+                }
             } else {
-                vocabList = [...defaultTestResource];
+                vocabList = [...targetSource];
                 localStorage.setItem('jks_vocab_data', JSON.stringify(vocabList));
             }
             
             updateVocabUI();
-            showAlert('已成功載入本地預設測試字庫！可直接開始抽選。', 'success');
+            if (typeof OFFLINE_VOCAB_DB !== 'undefined') {
+                showAlert(`已無縫載入外部 vocab.js 字庫 (共 ${vocabList.length} 筆)！`, 'success');
+            } else {
+                showAlert('目前使用內建備用單字，請確認外部 vocab.js 是否在相同目錄下。', 'info');
+            }
         }
 
         function showAlert(msg, type = 'info') {
@@ -290,14 +287,19 @@
             localStorage.setItem('jks_api_key', apiKeyInput.value.trim());
         });
 
-        // 重置為預設測試資源庫
+        // 重置回外部/內建資源庫
         clearBtn.addEventListener('click', () => {
-            if (confirm('確定要將字庫恢復成內建的 20 組測試資料嗎？')) {
-                vocabList = [...defaultTestResource];
+            let targetSource = defaultTestResource;
+            if (typeof OFFLINE_VOCAB_DB !== 'undefined' && Array.isArray(OFFLINE_VOCAB_DB)) {
+                targetSource = OFFLINE_VOCAB_DB;
+            }
+
+            if (confirm(`確定要清除快取並恢復為初始本地字庫嗎？ (共 ${targetSource.length} 筆資料)`)) {
+                vocabList = [...targetSource];
                 currentCard = null;
                 localStorage.setItem('jks_vocab_data', JSON.stringify(vocabList));
                 updateVocabUI();
-                showAlert('已恢復為本地測試資源庫。', 'info');
+                showAlert('已恢復為初始本地資料庫！', 'info');
             }
         });
 
@@ -339,13 +341,12 @@
             const systemPrompt = `你是一個專業的日文老師。使用者的核心目的是「熟練五十音的直覺認讀與發音」，以便跟上日文KTV(日K)字幕。
 請根據使用者提供的關鍵字領域，聯想並篩選出在該領域「最常用、最具代表性、且非常適合拿來練習五十音（包含清音、濁音、半濁音）發音與認讀」的日文單字或短詞（不需整首歌詞）。
 
-請務必嚴格以下列的 JSON 陣列格式回傳，不要包含任何額外的 Markdown 標籤(如 \`\`\`json)、解說或開頭結尾文字：
+請務必嚴格以下列的 JSON 陣列格式回傳，不要包含 any 額外的 Markdown 標籤(如 \`\`\`json)、解說或開頭結尾文字：
 [
   { "kanji": "漢字(若該單字原本無漢字，此欄位留空 \"\")", "kana": "全平假名或片假名(用來對照發音)", "romaji": "羅馬拼音", "meaning": "中文意思" }
 ]
 請固定回傳 15 到 20 個精選詞彙。`;
 
-            // 動態路由模型名稱
             const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/${selectedModel}:generateContent?key=${key}`;
 
             try {
