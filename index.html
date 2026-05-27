@@ -69,6 +69,19 @@
                     </button>
                 </div>
 
+                <div class="pt-3 border-t border-gray-800 flex flex-col gap-2">
+                    <label class="text-xs text-gray-400 font-semibold flex items-center gap-1">💾 字庫備份與管理</label>
+                    <div class="grid grid-cols-2 gap-2">
+                        <button id="exportBtn" class="bg-gray-800 hover:bg-gray-700 text-gray-200 text-xs py-1.5 px-2 rounded border border-gray-700 transition-colors">
+                            📤 匯出 JSON
+                        </button>
+                        <button id="importBtn" class="bg-gray-800 hover:bg-gray-700 text-gray-200 text-xs py-1.5 px-2 rounded border border-gray-700 transition-colors">
+                            📥 匯入 JSON
+                        </button>
+                        <input type="file" id="importFileInput" accept=".json" class="hidden">
+                    </div>
+                </div>
+
                 <div class="pt-3 border-t border-gray-800 text-xs text-gray-400 flex flex-col gap-2">
                     <div class="flex justify-between items-center">
                         <span>當前字庫總數：<strong id="vocabCount" class="text-cyan-400 text-sm">0</strong> 字</span>
@@ -132,8 +145,8 @@
         <div class="bg-gray-900 border border-gray-800 rounded-2xl max-w-2xl w-full max-h-[85vh] flex flex-col shadow-2xl">
             <div class="p-4 border-b border-gray-800 flex justify-between items-center bg-gray-900/50 rounded-t-2xl">
                 <div>
-                    <h3 class="text-base font-bold text-cyan-400 flex items-center gap-2">🧐 AI 獲取單字預覽審查</h3>
-                    <p class="text-xs text-gray-400 mt-0.5">請勾選你想加入本地字庫的單字，排除不準確或無關的詞彙。</p>
+                    <h3 class="text-base font-bold text-cyan-400 flex items-center gap-2">🧐 字庫資料預覽審查</h3>
+                    <p class="text-xs text-gray-400 mt-0.5">請勾選你想加入本地字庫的單字。系統已準備好自動過濾重複詞彙。</p>
                 </div>
                 <div class="text-xs text-gray-500 bg-gray-950 px-2.5 py-1 rounded border border-gray-800">
                     已選 <span id="selectedCount" class="text-emerald-400 font-bold">0</span> / <span id="totalIncomingCount">0</span>
@@ -145,8 +158,7 @@
                 <button id="selectNoneBtn" class="text-gray-400 hover:text-gray-300 transition-colors">全不選</button>
             </div>
 
-            <div id="previewListContainer" class="flex-1 overflow-y-auto p-4 flex flex-col gap-2 bg-gray-950/20">
-                </div>
+            <div id="previewListContainer" class="flex-1 overflow-y-auto p-4 flex flex-col gap-2 bg-gray-950/20"></div>
 
             <div class="p-4 border-t border-gray-800 flex justify-end gap-3 bg-gray-900/50 rounded-b-2xl">
                 <button id="cancelImportBtn" class="px-4 py-2 bg-gray-800 hover:bg-gray-700 text-gray-300 text-sm font-medium rounded transition-colors">
@@ -161,7 +173,7 @@
 
     <script src="./vocab.js"></script>
     <script>
-        // 資料庫定義維持不變
+        // 資料庫定義
         const seionData = [
             { row: 'あ行', items: [{k:'あ', r:'a'}, {k:'い', r:'i'}, {k:'う', r:'u'}, {k:'え', r:'e'}, {k:'お', r:'o'}] },
             { row: 'か行', items: [{k:'か', r:'ka'},{k:'き', r:'ki'},{k:'く', r:'ku'},{k:'け', r:'ke'},{k:'こ', r:'ko'}] },
@@ -208,7 +220,7 @@
             { "kanji": "残酷", "kana": "ざんこく", "romaji": "zankoku", "meaning": "殘酷的 (殘酷天使的行動綱領)" }
         ];
 
-        // 原有 DOM 元素
+        // DOM 元素
         const toggleConfigBtn = document.getElementById('toggleConfigBtn');
         const configMenu = document.getElementById('configMenu');
         const apiKeyInput = document.getElementById('apiKeyInput');
@@ -234,7 +246,7 @@
         const tabYouon = document.getElementById('tabYouon');
         const tabTokushu = document.getElementById('tabTokushu');
 
-        // 🌟 新增：Modal 控制相關 DOM 元素
+        // Modal 控制與匯入出 DOM 元素
         const previewModal = document.getElementById('previewModal');
         const previewListContainer = document.getElementById('previewListContainer');
         const selectedCount = document.getElementById('selectedCount');
@@ -243,12 +255,16 @@
         const selectNoneBtn = document.getElementById('selectNoneBtn');
         const cancelImportBtn = document.getElementById('cancelImportBtn');
         const confirmImportBtn = document.getElementById('confirmImportBtn');
+        
+        const exportBtn = document.getElementById('exportBtn');
+        const importBtn = document.getElementById('importBtn');
+        const importFileInput = document.getElementById('importFileInput');
 
         let vocabList = [];
         let currentCard = null;
-        let incomingVocabBuffer = []; // 暫存 AI 吐回來的資料庫陣列
+        let incomingVocabBuffer = []; 
 
-        // 手機選單與視圖切換邏輯不變
+        // 側邊欄收合
         toggleConfigBtn.addEventListener('click', () => {
             if (configMenu.classList.contains('hidden')) {
                 configMenu.classList.remove('hidden'); configMenu.classList.add('flex');
@@ -259,6 +275,7 @@
             }
         });
 
+        // 五十音切換標籤頁
         function switchView(type) {
             [tabSeion, tabDakuon, tabYouon, tabTokushu].forEach(b => {
                 b.className = "py-1 rounded text-gray-400 hover:text-gray-200";
@@ -327,6 +344,7 @@
         tabYouon.addEventListener('click', () => switchView('youon'));
         tabTokushu.addEventListener('click', () => switchView('tokushu'));
 
+        // 模型選單與 Key 切換
         modelSelect.addEventListener('change', () => {
             const isGroq = modelSelect.value.startsWith('groq/');
             const apiKeyLabel = document.getElementById('apiKeyLabel');
@@ -387,7 +405,6 @@
 
         apiKeyInput.addEventListener('change', () => {
             const isGroq = modelSelect.value.startsWith('groq/');
-            localStorage.setItem(isGroq ? 'groq_api_key' : 'apiKeyInput'.value.trim());
             localStorage.setItem(isGroq ? 'groq_api_key' : 'jks_api_key', apiKeyInput.value.trim());
         });
 
@@ -401,6 +418,7 @@
             }
         });
 
+        // 隨機抽卡
         drawBtn.addEventListener('click', () => {
             if (vocabList.length === 0) return;
             let index;
@@ -418,7 +436,7 @@
             cardEmpty.classList.add('hidden'); cardContent.classList.remove('hidden');
         });
 
-        // 🌟 新增：Modal 互動邏輯函式
+        // 開啟審查 Modal
         function openPreviewModal(dataArray) {
             incomingVocabBuffer = dataArray;
             totalIncomingCount.innerText = dataArray.length;
@@ -461,7 +479,6 @@
                 previewListContainer.appendChild(itemDiv);
             });
 
-            // 綁定動態生成的 Checkbox 事件以即時更新計數
             document.querySelectorAll('.vocab-checkbox').forEach(chk => {
                 chk.addEventListener('change', calculateSelectedCount);
             });
@@ -475,7 +492,6 @@
             selectedCount.innerText = checkedCount;
         }
 
-        // 全選 / 全不選事件
         selectAllBtn.addEventListener('click', () => {
             document.querySelectorAll('.vocab-checkbox').forEach(chk => chk.checked = true);
             calculateSelectedCount();
@@ -486,14 +502,13 @@
             calculateSelectedCount();
         });
 
-        // 放棄匯入
         cancelImportBtn.addEventListener('click', () => {
             previewModal.classList.add('hidden');
             incomingVocabBuffer = [];
             showAlert('已取消匯入。', 'info');
         });
 
-        // 確認匯入寫入資料庫（原落地邏輯移至此處）
+        // 【確認落地且同時進行去重複過濾】
         confirmImportBtn.addEventListener('click', () => {
             const checkedBoxes = document.querySelectorAll('.vocab-checkbox:checked');
             if (checkedBoxes.length === 0) {
@@ -501,18 +516,23 @@
                 return;
             }
 
+            // 用 Set 快速查詢本地現有字庫中是否已具備該「漢字+假名」組合
             const currentKeys = new Set(vocabList.map(v => `${v.kanji || ''}_${v.kana}`));
             let insertCount = 0;
+            let skippedCount = 0;
 
             checkedBoxes.forEach(chk => {
                 const index = parseInt(chk.getAttribute('data-index'));
                 const item = incomingVocabBuffer[index];
                 const keyStr = `${item.kanji || ''}_${item.kana}`;
 
-                // 再次過濾防重疊
+                // 只有本地完全不存在該字時才塞入，達成完美去重複
                 if (!currentKeys.has(keyStr)) {
                     vocabList.push(item);
+                    currentKeys.add(keyStr); // 同批次匯入若內部有重複也能一併過濾
                     insertCount++;
+                } else {
+                    skippedCount++;
                 }
             });
 
@@ -521,11 +541,15 @@
             keywordInput.value = '';
             previewModal.classList.add('hidden');
             incomingVocabBuffer = [];
-            showAlert(`審查匯入成功！新增了 ${insertCount} 個單字！`, 'success');
+
+            if (skippedCount > 0) {
+                showAlert(`審查匯入完成！成功新增 ${insertCount} 個單字（自動過濾了 ${skippedCount} 個重複詞彙）。`, 'success');
+            } else {
+                showAlert(`審查匯入成功！新增了 ${insertCount} 個單字！`, 'success');
+            }
         });
 
-
-        // 原有 fetchBtn 事件監聽，分流後直接導向 openPreviewModal 緩衝
+        // AI 線上抓取單字邏輯
         fetchBtn.addEventListener('click', async () => {
             const key = apiKeyInput.value.trim(); const kw = keywordInput.value.trim(); const selectedModel = modelSelect.value;
             if (!key || !kw) { showAlert('請填入金鑰與關鍵字！', 'error'); return; }
@@ -595,7 +619,6 @@
                     fetchedArray = JSON.parse(rawText);
                 }
 
-                // 🌟 修改：不再直接寫入，改交給 Modal 預覽界面讓使用者確認
                 if (Array.isArray(fetchedArray)) {
                     openPreviewModal(fetchedArray);
                     showAlert('字庫獲取完畢，請在中央彈窗審查單字。', 'info');
@@ -607,6 +630,79 @@
             }
         });
 
+        // 實作：純前端 Export (匯出) 功能
+        exportBtn.addEventListener('click', () => {
+            try {
+                if (vocabList.length === 0) {
+                    showAlert('目前字庫沒有任何資料可以匯出。', 'error');
+                    return;
+                }
+                const exportObj = {
+                    version: "1.0",
+                    exportAt: new Date().toISOString(),
+                    vocabData: vocabList
+                };
+                const jsonString = JSON.stringify(exportObj, null, 2);
+                const blob = new Blob([jsonString], { type: "application/json;charset=utf-8;" });
+                const downloadUrl = URL.createObjectURL(blob);
+                const downloadLink = document.createElement("a");
+                
+                downloadLink.href = downloadUrl;
+                downloadLink.download = `jks_vocab_export_${new Date().toISOString().slice(0,10)}.json`;
+                document.body.appendChild(downloadLink);
+                downloadLink.click();
+                
+                document.body.removeChild(downloadLink);
+                URL.revokeObjectURL(downloadUrl);
+                showAlert('字庫檔案匯出成功！', 'success');
+            } catch (error) {
+                showAlert('匯出失敗: ' + error.message, 'error');
+            }
+        });
+
+        // 實作：純前端 Import (匯入) 功能
+        importBtn.addEventListener('click', () => {
+            importFileInput.click();
+        });
+
+        importFileInput.addEventListener('change', (e) => {
+            const file = e.target.files[0];
+            if (!file) return;
+
+            const reader = new FileReader();
+            reader.onload = function(evt) {
+                try {
+                    const rawContent = evt.target.result;
+                    const importedJson = JSON.parse(rawContent);
+
+                    let targetArray = [];
+                    if (Array.isArray(importedJson)) {
+                        targetArray = importedJson;
+                    } else if (importedJson && Array.isArray(importedJson.vocabData)) {
+                        targetArray = importedJson.vocabData;
+                    } else {
+                        throw new Error('未知的 JSON 結構，找不到合法的單字陣列。');
+                    }
+
+                    const validatedArray = targetArray.filter(item => item && item.kana && item.romaji && item.meaning);
+                    
+                    if (validatedArray.length === 0) {
+                        throw new Error('找不到包含有效 kana, romaji, meaning 欄位的單字資料。');
+                    }
+
+                    showAlert('讀取外部檔案成功，正在開啟審查視窗...', 'info');
+                    openPreviewModal(validatedArray);
+
+                } catch (error) {
+                    alert('匯入失敗: ' + error.message);
+                } finally {
+                    importFileInput.value = ''; 
+                }
+            };
+            reader.readAsText(file, "UTF-8");
+        });
+
+        // 頁面初始化
         init();
     </script>
 </body>
