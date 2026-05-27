@@ -121,18 +121,47 @@
                 </div>
             </div>
             
-            <div id="tableHeader" class="grid grid-cols-6 gap-0.5 md:gap-1 text-center text-[9px] md:text-[10px] text-gray-500 font-bold mb-1">
-                </div>
+            <div id="tableHeader" class="grid grid-cols-6 gap-0.5 md:gap-1 text-center text-[9px] md:text-[10px] text-gray-500 font-bold mb-1"></div>
             
-            <div id="gojuonContainer" class="grid grid-cols-6 gap-0.5 md:gap-1 text-center text-[11px] md:text-xs">
-                </div>
+            <div id="gojuonContainer" class="grid grid-cols-6 gap-0.5 md:gap-1 text-center text-[11px] md:text-xs"></div>
         </div>
 
     </div>
 
+    <div id="previewModal" class="fixed inset-0 bg-black/80 flex items-center justify-center z-50 p-4 hidden animate-fade-in">
+        <div class="bg-gray-900 border border-gray-800 rounded-2xl max-w-2xl w-full max-h-[85vh] flex flex-col shadow-2xl">
+            <div class="p-4 border-b border-gray-800 flex justify-between items-center bg-gray-900/50 rounded-t-2xl">
+                <div>
+                    <h3 class="text-base font-bold text-cyan-400 flex items-center gap-2">🧐 AI 獲取單字預覽審查</h3>
+                    <p class="text-xs text-gray-400 mt-0.5">請勾選你想加入本地字庫的單字，排除不準確或無關的詞彙。</p>
+                </div>
+                <div class="text-xs text-gray-500 bg-gray-950 px-2.5 py-1 rounded border border-gray-800">
+                    已選 <span id="selectedCount" class="text-emerald-400 font-bold">0</span> / <span id="totalIncomingCount">0</span>
+                </div>
+            </div>
+            
+            <div class="px-4 py-2 bg-gray-950/40 border-b border-gray-800/60 flex gap-4 text-xs">
+                <button id="selectAllBtn" class="text-cyan-400 hover:text-cyan-300 transition-colors">全選</button>
+                <button id="selectNoneBtn" class="text-gray-400 hover:text-gray-300 transition-colors">全不選</button>
+            </div>
+
+            <div id="previewListContainer" class="flex-1 overflow-y-auto p-4 flex flex-col gap-2 bg-gray-950/20">
+                </div>
+
+            <div class="p-4 border-t border-gray-800 flex justify-end gap-3 bg-gray-900/50 rounded-b-2xl">
+                <button id="cancelImportBtn" class="px-4 py-2 bg-gray-800 hover:bg-gray-700 text-gray-300 text-sm font-medium rounded transition-colors">
+                    放棄匯入
+                </button>
+                <button id="confirmImportBtn" class="px-5 py-2 bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 text-white text-sm font-bold rounded shadow-md transition-all">
+                    確認選取單字落地
+                </button>
+            </div>
+        </div>
+    </div>
+
     <script src="./vocab.js"></script>
     <script>
-        // 資料庫定義
+        // 資料庫定義維持不變
         const seionData = [
             { row: 'あ行', items: [{k:'あ', r:'a'}, {k:'い', r:'i'}, {k:'う', r:'u'}, {k:'え', r:'e'}, {k:'お', r:'o'}] },
             { row: 'か行', items: [{k:'か', r:'ka'},{k:'き', r:'ki'},{k:'く', r:'ku'},{k:'け', r:'ke'},{k:'こ', r:'ko'}] },
@@ -150,12 +179,11 @@
         const dakuonData = [
             { row: 'が行', items: [{k:'が', r:'ga'}, {k:'ぎ', r:'gi'}, {k:'ぐ', r:'gu'}, {k:'げ', r:'ge'}, {k:'ご', r:'go'}] },
             { row: 'ざ行', items: [{k:'ざ', r:'za'},{k:'じ', r:'ji'},{k:'ず', r:'zu'},{k:'ぜ', r:'ze'},{k:'ぞ', r:'zo'}] },
-            { row: 'だ行', items: [{k:'だ', r:'da'},{k:'ぢ', r:'ji'},{k:'づ', r:'zu'},{k:'で', r:'de'},{k:'ど', r:'do'}] },
+            { row: 'だ行', items: [{k:'だ', r:'da'},{k:'ぢ', r:'ji'},{k:'づ', r:'zu'},{k:'de', r:'de'},{k:'ど', r:'do'}] },
             { row: 'ば行', items: [{k:'ば', r:'ba'},{k:'び', r:'bi'},{k:'ぶ', r:'bu'},{k:'べ', r:'be'},{k:'ぼ', r:'bo'}] },
             { row: 'ぱ行', items: [{k:'ぱ', r:'pa'},{k:'ぴ', r:'pi'},{k:'ぷ', r:'pu'},{k:'ぺ', r:'pe'},{k:'ぽ', r:'po'}] }
         ];
 
-        // 拗音資料 (只有 3 個段，改用 4 欄配置：行 + 3個音)
         const youonData = [
             { row: 'きょ', items: [{k:'きゃ', r:'kya'}, {k:'きゅ', r:'kyu'}, {k:'きょ', r:'kyo'}] },
             { row: 'しゃ', items: [{k:'しゃ', r:'sha'}, {k:'しゅ', r:'shu'}, {k:'しょ', r:'sho'}] },
@@ -170,7 +198,6 @@
             { row: 'ぴゃ', items: [{k:'ぴゃ', r:'pya'}, {k:'ぴゅ', r:'pyu'}, {k:'ぴょ', r:'pyo'}] }
         ];
 
-        // 特殊音資料 (促音、長音、撥音說明)
         const tokushuData = [
             { name: '促音 (っ)', romaji: '雙寫後方子音', desc: '停頓一拍。如「きっと」(kit-to)' },
             { name: '長音 (ー)', romaji: '拉長一拍', desc: '外來語片假名常用。如「カード」(ka-do)' },
@@ -181,7 +208,7 @@
             { "kanji": "残酷", "kana": "ざんこく", "romaji": "zankoku", "meaning": "殘酷的 (殘酷天使的行動綱領)" }
         ];
 
-        // DOM 元素
+        // 原有 DOM 元素
         const toggleConfigBtn = document.getElementById('toggleConfigBtn');
         const configMenu = document.getElementById('configMenu');
         const apiKeyInput = document.getElementById('apiKeyInput');
@@ -207,10 +234,21 @@
         const tabYouon = document.getElementById('tabYouon');
         const tabTokushu = document.getElementById('tabTokushu');
 
+        // 🌟 新增：Modal 控制相關 DOM 元素
+        const previewModal = document.getElementById('previewModal');
+        const previewListContainer = document.getElementById('previewListContainer');
+        const selectedCount = document.getElementById('selectedCount');
+        const totalIncomingCount = document.getElementById('totalIncomingCount');
+        const selectAllBtn = document.getElementById('selectAllBtn');
+        const selectNoneBtn = document.getElementById('selectNoneBtn');
+        const cancelImportBtn = document.getElementById('cancelImportBtn');
+        const confirmImportBtn = document.getElementById('confirmImportBtn');
+
         let vocabList = [];
         let currentCard = null;
+        let incomingVocabBuffer = []; // 暫存 AI 吐回來的資料庫陣列
 
-        // 手機選單控制
+        // 手機選單與視圖切換邏輯不變
         toggleConfigBtn.addEventListener('click', () => {
             if (configMenu.classList.contains('hidden')) {
                 configMenu.classList.remove('hidden'); configMenu.classList.add('flex');
@@ -221,9 +259,7 @@
             }
         });
 
-        // 動態渲染表格 (整合 Grid 欄位變更)
         function switchView(type) {
-            // 重置樣式
             [tabSeion, tabDakuon, tabYouon, tabTokushu].forEach(b => {
                 b.className = "py-1 rounded text-gray-400 hover:text-gray-200";
             });
@@ -268,8 +304,8 @@
 
             } else if (type === 'tokushu') {
                 tabTokushu.className = "py-1 rounded text-emerald-400 bg-gray-800";
-                tableHeader.className = "hidden"; // 特殊音不需要表頭
-                gojuonContainer.classList.add('grid-cols-1'); // 直向清單
+                tableHeader.className = "hidden";
+                gojuonContainer.classList.add('grid-cols-1');
 
                 let html = '';
                 tokushuData.forEach(item => {
@@ -286,13 +322,11 @@
             }
         }
 
-        // 綁定標籤點擊事件
         tabSeion.addEventListener('click', () => switchView('seion'));
         tabDakuon.addEventListener('click', () => switchView('dakuon'));
         tabYouon.addEventListener('click', () => switchView('youon'));
         tabTokushu.addEventListener('click', () => switchView('tokushu'));
 
-        // 監聽模型切換，動態變更輸入框顯示的 Key 種類與標籤文字
         modelSelect.addEventListener('change', () => {
             const isGroq = modelSelect.value.startsWith('groq/');
             const apiKeyLabel = document.getElementById('apiKeyLabel');
@@ -307,15 +341,13 @@
             }
         });
 
-        // 初始化與其他不變的核心邏輯
         function init() {
-            switchView('seion'); // 預設顯示清音
+            switchView('seion');
             let targetSource = defaultTestResource;
             if (typeof OFFLINE_VOCAB_DB !== 'undefined' && Array.isArray(OFFLINE_VOCAB_DB)) {
                 targetSource = OFFLINE_VOCAB_DB;
             }
             
-            // 初始化時依據目前選定的模型載入對應的 Key
             const isGroq = modelSelect.value.startsWith('groq/');
             const savedKey = localStorage.getItem(isGroq ? 'groq_api_key' : 'jks_api_key');
             if (savedKey) apiKeyInput.value = savedKey;
@@ -353,9 +385,9 @@
             else { apiKeyInput.type = 'password'; toggleApiBtn.innerText = '👁️'; }
         });
 
-        // 依據當前選取的模型分開儲存 Key
         apiKeyInput.addEventListener('change', () => {
             const isGroq = modelSelect.value.startsWith('groq/');
+            localStorage.setItem(isGroq ? 'groq_api_key' : 'apiKeyInput'.value.trim());
             localStorage.setItem(isGroq ? 'groq_api_key' : 'jks_api_key', apiKeyInput.value.trim());
         });
 
@@ -386,14 +418,121 @@
             cardEmpty.classList.add('hidden'); cardContent.classList.remove('hidden');
         });
 
+        // 🌟 新增：Modal 互動邏輯函式
+        function openPreviewModal(dataArray) {
+            incomingVocabBuffer = dataArray;
+            totalIncomingCount.innerText = dataArray.length;
+            previewListContainer.innerHTML = '';
+
+            const currentKeys = new Set(vocabList.map(v => `${v.kanji || ''}_${v.kana}`));
+
+            dataArray.forEach((item, index) => {
+                const isDuplicate = currentKeys.has(`${item.kanji || ''}_${item.kana}`);
+                
+                const itemDiv = document.createElement('div');
+                itemDiv.className = `flex items-start gap-3 p-3 rounded-lg border text-sm transition-colors ${
+                    isDuplicate 
+                    ? 'bg-gray-950/20 border-gray-900 opacity-60' 
+                    : 'bg-gray-900/60 border-gray-800 hover:border-gray-700'
+                }`;
+
+                itemDiv.innerHTML = `
+                    <div class="flex items-center h-5 mt-0.5">
+                        <input id="vocab_chk_${index}" type="checkbox" data-index="${index}" ${isDuplicate ? '' : 'checked'} 
+                               class="vocab-checkbox w-4 h-4 text-cyan-600 bg-gray-950 border-gray-800 rounded focus:ring-cyan-500 focus:ring-offset-gray-900">
+                    </div>
+                    <div class="flex-1 grid grid-cols-1 sm:grid-cols-3 gap-1">
+                        <div>
+                            <span class="text-gray-400 text-xs block font-mono">漢字 / 假名</span>
+                            <span class="font-bold text-white text-base">${item.kanji || '（純假名）'}</span>
+                            <span class="text-cyan-400 text-xs font-medium block">${item.kana}</span>
+                        </div>
+                        <div>
+                            <span class="text-gray-400 text-xs block font-mono">羅馬拼音</span>
+                            <span class="text-emerald-400 font-mono font-bold block mt-1">${item.romaji}</span>
+                        </div>
+                        <div>
+                            <span class="text-gray-400 text-xs block font-mono">中文意思</span>
+                            <span class="text-gray-300 block mt-1 text-xs sm:text-sm">${item.meaning}</span>
+                            ${isDuplicate ? '<span class="text-[10px] text-amber-500 font-semibold bg-amber-950/40 px-1 py-0.5 rounded border border-amber-900/30 mt-1 inline-block">本地已存在</span>' : ''}
+                        </div>
+                    </div>
+                `;
+                previewListContainer.appendChild(itemDiv);
+            });
+
+            // 綁定動態生成的 Checkbox 事件以即時更新計數
+            document.querySelectorAll('.vocab-checkbox').forEach(chk => {
+                chk.addEventListener('change', calculateSelectedCount);
+            });
+
+            calculateSelectedCount();
+            previewModal.classList.remove('hidden');
+        }
+
+        function calculateSelectedCount() {
+            const checkedCount = document.querySelectorAll('.vocab-checkbox:checked').length;
+            selectedCount.innerText = checkedCount;
+        }
+
+        // 全選 / 全不選事件
+        selectAllBtn.addEventListener('click', () => {
+            document.querySelectorAll('.vocab-checkbox').forEach(chk => chk.checked = true);
+            calculateSelectedCount();
+        });
+
+        selectNoneBtn.addEventListener('click', () => {
+            document.querySelectorAll('.vocab-checkbox').forEach(chk => chk.checked = false);
+            calculateSelectedCount();
+        });
+
+        // 放棄匯入
+        cancelImportBtn.addEventListener('click', () => {
+            previewModal.classList.add('hidden');
+            incomingVocabBuffer = [];
+            showAlert('已取消匯入。', 'info');
+        });
+
+        // 確認匯入寫入資料庫（原落地邏輯移至此處）
+        confirmImportBtn.addEventListener('click', () => {
+            const checkedBoxes = document.querySelectorAll('.vocab-checkbox:checked');
+            if (checkedBoxes.length === 0) {
+                alert('請至少勾選一個單字！');
+                return;
+            }
+
+            const currentKeys = new Set(vocabList.map(v => `${v.kanji || ''}_${v.kana}`));
+            let insertCount = 0;
+
+            checkedBoxes.forEach(chk => {
+                const index = parseInt(chk.getAttribute('data-index'));
+                const item = incomingVocabBuffer[index];
+                const keyStr = `${item.kanji || ''}_${item.kana}`;
+
+                // 再次過濾防重疊
+                if (!currentKeys.has(keyStr)) {
+                    vocabList.push(item);
+                    insertCount++;
+                }
+            });
+
+            localStorage.setItem('jks_vocab_data', JSON.stringify(vocabList));
+            updateVocabUI();
+            keywordInput.value = '';
+            previewModal.classList.add('hidden');
+            incomingVocabBuffer = [];
+            showAlert(`審查匯入成功！新增了 ${insertCount} 個單字！`, 'success');
+        });
+
+
+        // 原有 fetchBtn 事件監聽，分流後直接導向 openPreviewModal 緩衝
         fetchBtn.addEventListener('click', async () => {
             const key = apiKeyInput.value.trim(); const kw = keywordInput.value.trim(); const selectedModel = modelSelect.value;
             if (!key || !kw) { showAlert('請填入金鑰與關鍵字！', 'error'); return; }
             fetchBtn.setAttribute('disabled', 'true'); fetchBtnText.innerText = 'AI 思考中...';
             showAlert(`正在進行字庫聯想落地...`, 'info');
 
-            // 提示詞微調，明確要求也包含拗音和特殊音的練習詞彙
-			const systemPrompt = `你是一個精通動漫音樂、J-POP 與日K(日文KTV)文化的日文老師。
+            const systemPrompt = `你是一個精通動漫音樂、J-POP 與日K(日文KTV)文化的日文老師。
 			使用者的核心目的是「藉由他們喜歡的作品/樂團歌曲歌詞，來練習五十音、拗音、促音、長音的直覺認讀」。
 
 			當使用者輸入關鍵字（可能為樂團名、樂曲名或作品名，例如：BanG Dream!、MyGO!!!!!、殘酷天使的行動綱領 等）時，請嚴格執行以下步驟：
@@ -411,7 +550,6 @@
             try {
                 let fetchedArray = null;
 
-                // 🌟 新增：利用簡潔的分流判斷目前是走 Groq 還是原本的 Gemini 路徑
                 if (selectedModel.startsWith('groq/')) {
                     const actualGroqModel = selectedModel.replace('groq/', '');
                     const response = await fetch(`https://api.groq.com/openai/v1/chat/completions`, {
@@ -436,7 +574,6 @@
                     rawText = rawText.replace(/^```json\s*/i, '').replace(/^```\s*/i, '').replace(/```$/, '').trim();
                     
                     let parsedJson = JSON.parse(rawText);
-                    // 容錯機制：若 Llama 在 JSON Mode 下將陣列包在外層物件中，自動將內部陣列取出
                     if (!Array.isArray(parsedJson) && typeof parsedJson === 'object') {
                         const keys = Object.keys(parsedJson);
                         if (keys.length > 0 && Array.isArray(parsedJson[keys[0]])) {
@@ -446,7 +583,6 @@
                     fetchedArray = parsedJson;
 
                 } else {
-                    // 原本的 Gemini API 傳輸路徑，完全一字不改
                     const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${selectedModel}:generateContent?key=${key}`, {
                         method: 'POST',
                         headers: { 'Content-Type': 'application/json' },
@@ -459,16 +595,10 @@
                     fetchedArray = JSON.parse(rawText);
                 }
 
-                // 資料寫入與更新 UI 邏輯（維持原本寫法）
+                // 🌟 修改：不再直接寫入，改交給 Modal 預覽界面讓使用者確認
                 if (Array.isArray(fetchedArray)) {
-                    const currentKeys = new Set(vocabList.map(v => `${v.kanji}_${v.kana}`));
-                    let insertCount = 0;
-                    fetchedArray.forEach(item => {
-                        if (!currentKeys.has(`${item.kanji || ''}_${item.kana}`)) { vocabList.push(item); insertCount++; }
-                    });
-                    localStorage.setItem('jks_vocab_data', JSON.stringify(vocabList));
-                    updateVocabUI(); keywordInput.value = '';
-                    showAlert(`線上擴充成功！新增了 ${insertCount} 個單字！`, 'success');
+                    openPreviewModal(fetchedArray);
+                    showAlert('字庫獲取完畢，請在中央彈窗審查單字。', 'info');
                 }
             } catch (err) {
                 console.error(err); showAlert('抓取或解析失敗。', 'error');
