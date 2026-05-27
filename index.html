@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>日K五十音直覺認讀訓練器 (RWD解鎖版)</title>
+    <title>日K五十音直覺認讀訓練器 (全音域解鎖版)</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght=400;700&display=swap');
@@ -40,30 +40,24 @@
                 <div class="flex flex-col gap-1.5">
                     <label class="text-xs text-gray-400 font-semibold flex items-center gap-1">🔑 Gemini API 金鑰</label>
                     <div class="relative">
-                        <input id="apiKeyInput" type="password" 
-                               placeholder="免 Key 可用本地預設字庫" 
-                               class="w-full bg-gray-950 border border-gray-800 rounded px-3 py-1.5 pr-8 text-sm focus:outline-none focus:border-cyan-500 text-cyan-300">
+                        <input id="apiKeyInput" type="password" placeholder="免 Key 可用本地預設字庫" class="w-full bg-gray-950 border border-gray-800 rounded px-3 py-1.5 pr-8 text-sm focus:outline-none focus:border-cyan-500 text-cyan-300">
                         <button id="toggleApiBtn" class="absolute right-2.5 top-2 text-gray-500 hover:text-gray-300 text-xs" style="pointer-events: auto;">👁️</button>
                     </div>
                 </div>
 
                 <div class="flex flex-col gap-1.5">
-                    <label class="text-xs text-gray-400 font-semibold flex items-center gap-1">🤖 切換 Gemini 模型避分流</label>
+                    <label class="text-xs text-gray-400 font-semibold flex items-center gap-1">🤖 切換 Gemini 模型</label>
                     <select id="modelSelect" class="w-full bg-gray-950 border border-gray-800 rounded px-2 py-1.5 text-sm focus:outline-none focus:border-cyan-500 text-gray-300">
                         <option value="gemini-2.0-flash">gemini-2.0-flash (預設高速度)</option>
                         <option value="gemini-2.0-flash-lite">gemini-2.0-flash-lite (低消耗避429)</option>
-                        <option value="gemini-1.5-flash">gemini-1.5-flash (經典舊版備用)</option>
+                        <option value="gemini-1.5-flash">gemini-1.5-flash</option>
                     </select>
                 </div>
 
                 <div class="flex flex-col gap-1.5">
                     <label class="text-xs text-gray-400 font-semibold flex items-center gap-1">🔍 擴充字庫關鍵字</label>
-                    <input id="keywordInput" type="text" 
-                           placeholder="例如：熱血動漫金句、J-POP高頻詞" 
-                           class="w-full bg-gray-950 border border-gray-800 rounded px-3 py-1.5 text-sm focus:outline-none focus:border-cyan-500">
-                    <button id="fetchBtn" 
-                            class="w-full bg-cyan-600 hover:bg-cyan-500 text-white font-medium py-2 px-4 rounded text-sm transition-colors flex items-center justify-center gap-2"
-                            style="pointer-events: auto;">
+                    <input id="keywordInput" type="text" placeholder="例如：熱血動漫金句、J-POP高頻詞" class="w-full bg-gray-950 border border-gray-800 rounded px-3 py-1.5 text-sm focus:outline-none focus:border-cyan-500">
+                    <button id="fetchBtn" class="w-full bg-cyan-600 hover:bg-cyan-500 text-white font-medium py-2 px-4 rounded text-sm transition-colors flex items-center justify-center gap-2" style="pointer-events: auto;">
                         <span id="fetchBtnText">線上抓取單字落地</span>
                     </button>
                 </div>
@@ -78,7 +72,6 @@
         </div>
 
         <div class="flex-1 bg-gray-950 p-4 md:p-6 flex flex-col justify-between items-center lg:overflow-y-auto min-h-[450px]">
-            
             <div class="w-full max-w-xl text-center min-h-[32px]">
                 <div id="statusAlert" class="px-4 py-1.5 rounded text-xs inline-block hidden"></div>
             </div>
@@ -88,8 +81,7 @@
                 
                 <div id="cardContent" class="w-full flex flex-col items-center text-center z-10 hidden animate-fade-in">
                     <div class="mb-4 md:mb-5">
-                        <ruby id="displayRuby" class="text-4xl md:text-6xl font-bold tracking-widest text-white leading-loose">
-                        </ruby>
+                        <ruby id="displayRuby" class="text-4xl md:text-6xl font-bold tracking-widest text-white leading-loose"></ruby>
                     </div>
                     <div id="displayRomaji" class="text-xl md:text-3xl font-mono text-emerald-400 font-bold tracking-wider mb-3"></div>
                     <div id="displayMeaning" class="text-gray-400 text-sm md:text-lg max-w-md px-2"></div>
@@ -98,75 +90,91 @@
                 <div id="cardEmpty" class="text-center text-gray-500 z-10">
                     <span class="text-4xl block mb-3 opacity-40">🎴</span>
                     <p class="text-base">本地字庫暫無資料</p>
-                    <p class="text-xs mt-1 text-gray-600 px-4">請確認外部 vocab.js 是否載入，或展開設定輸入金鑰擴充。</p>
                 </div>
             </div>
 
             <div class="w-full max-w-xl flex justify-center py-2 md:py-4">
-                <button id="drawBtn" disabled
-                        class="w-full sm:w-auto px-12 py-3.5 md:py-4 bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-500 hover:to-blue-500 disabled:from-gray-800 disabled:to-gray-800 disabled:text-gray-500 disabled:cursor-not-allowed text-lg md:text-xl font-bold text-white rounded-full shadow-lg shadow-cyan-500/10 active:scale-95 transition-all flex items-center justify-center gap-3 tracking-widest"
-                        style="pointer-events: auto;">
+                <button id="drawBtn" disabled class="w-full sm:w-auto px-12 py-3.5 md:py-4 bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-500 hover:to-blue-500 disabled:from-gray-800 disabled:to-gray-800 disabled:text-gray-500 disabled:cursor-not-allowed text-lg md:text-xl font-bold text-white rounded-full shadow-lg active:scale-95 transition-all flex items-center justify-center gap-3 tracking-widest" style="pointer-events: auto;">
                     🎲 隨機抽選單字
                 </button>
             </div>
         </div>
 
         <div class="w-full lg:w-96 bg-gray-900 border-t lg:border-t-0 lg:border-l border-gray-800 p-4 flex flex-col lg:overflow-y-auto shrink-0 pb-12 lg:pb-4">
-            <div class="flex items-center justify-between pb-2 mb-3 border-b border-gray-800">
+            <div class="flex flex-col gap-2 pb-2 mb-3 border-b border-gray-800">
                 <div class="flex items-center gap-2">
                     <span class="text-emerald-400">📋</span>
                     <h2 class="text-xs md:text-sm font-bold tracking-wider text-emerald-400">假名快速對照表</h2>
                 </div>
-                <div class="flex bg-gray-950 p-0.5 rounded text-[10px] md:text-[11px] font-semibold border border-gray-800">
-                    <button id="tabSeion" class="px-2 py-0.5 rounded text-emerald-400 bg-gray-800" style="pointer-events: auto;">清音</button>
-                    <button id="tabDakuon" class="px-2 py-0.5 rounded text-gray-400 hover:text-gray-200" style="pointer-events: auto;">濁/半濁</button>
+                <div class="grid grid-cols-4 gap-1 bg-gray-950 p-1 rounded text-[10px] font-semibold border border-gray-800 text-center">
+                    <button id="tabSeion" class="py-1 rounded text-emerald-400 bg-gray-800" style="pointer-events: auto;">清音</button>
+                    <button id="tabDakuon" class="py-1 rounded text-gray-400 hover:text-gray-200" style="pointer-events: auto;">濁/半</button>
+                    <button id="tabYouon" class="py-1 rounded text-gray-400 hover:text-gray-200" style="pointer-events: auto;">拗音</button>
+                    <button id="tabTokushu" class="py-1 rounded text-gray-400 hover:text-gray-200" style="pointer-events: auto;">特殊</button>
                 </div>
             </div>
             
-            <div class="grid grid-cols-6 gap-0.5 md:gap-1 text-center text-[11px] md:text-xs">
-                <div class="text-[9px] md:text-[10px] text-gray-500 font-bold py-1 bg-gray-950/60 rounded flex items-center justify-center">行\段</div>
-                <div class="text-[9px] md:text-[10px] text-cyan-400 font-bold py-1 bg-gray-950/60 rounded flex items-center justify-center">あ段</div>
-                <div class="text-[9px] md:text-[10px] text-cyan-400 font-bold py-1 bg-gray-950/60 rounded flex items-center justify-center">い段</div>
-                <div class="text-[9px] md:text-[10px] text-cyan-400 font-bold py-1 bg-gray-950/60 rounded flex items-center justify-center">う段</div>
-                <div class="text-[9px] md:text-[10px] text-cyan-400 font-bold py-1 bg-gray-950/60 rounded flex items-center justify-center">え段</div>
-                <div class="text-[9px] md:text-[10px] text-cyan-400 font-bold py-1 bg-gray-950/60 rounded flex items-center justify-center">お段</div>
-                
-                <div id="gojuonContainer" class="contents"></div>
-            </div>
+            <div id="tableHeader" class="grid grid-cols-6 gap-0.5 md:gap-1 text-center text-[9px] md:text-[10px] text-gray-500 font-bold mb-1">
+                </div>
+            
+            <div id="gojuonContainer" class="grid grid-cols-6 gap-0.5 md:gap-1 text-center text-[11px] md:text-xs">
+                </div>
         </div>
 
     </div>
 
     <script src="./vocab.js"></script>
     <script>
+        // 資料庫定義
         const seionData = [
-			{ row: 'あ行', items: [{k:'あ', r:'a'},  {k:'い', r:'i'},   {k:'う', r:'u'},   {k:'え', r:'e'},   {k:'お', r:'o'}] },
-			{ row: 'か行', items: [{k:'か', r:'ka'}, {k:'き', r:'ki'},  {k:'く', r:'ku'},  {k:'け', r:'ke'},  {k:'こ', r:'ko'}] },
-			{ row: 'さ行', items: [{k:'さ', r:'sa'}, {k:'し', r:'shi'}, {k:'す', r:'su'},  {k:'せ', r:'se'},  {k:'そ', r:'so'}] },
-			{ row: 'た行', items: [{k:'た', r:'ta'}, {k:'ち', r:'chi'}, {k:'つ', r:'tsu'}, {k:'て', r:'te'},  {k:'と', r:'to'}] },
-			{ row: 'な行', items: [{k:'な', r:'na'}, {k:'に', r:'ni'},  {k:'ぬ', r:'nu'},  {k:'ね', r:'ne'},  {k:'の', r:'no'}] },
-			{ row: 'は行', items: [{k:'は', r:'ha'}, {k:'ひ', r:'hi'},  {k:'ふ', r:'fu'},  {k:'へ', r:'he'},  {k:'ほ', r:'ho'}] },
-			{ row: 'ま行', items: [{k:'ま', r:'ma'}, {k:'み', r:'mi'},  {k:'む', r:'mu'},  {k:'め', r:'me'},  {k:'も', r:'mo'}] },
-			{ row: 'や行', items: [{k:'や', r:'ya'}, {k:'', r:''},      {k:'ゆ', r:'yu'},  {k:'', r:''},      {k:'よ', r:'yo'}] },
-			{ row: 'ら行', items: [{k:'ら', r:'ra'}, {k:'り', r:'ri'},  {k:'る', r:'ru'},  {k:'れ', r:'re'},  {k:'ろ', r:'ro'}] },
+            { row: 'あ行', items: [{k:'あ', r:'a'}, {k:'い', r:'i'}, {k:'う', r:'u'}, {k:'え', r:'e'}, {k:'お', r:'o'}] },
+            { row: 'か行', items: [{k:'か', r:'ka'},{k:'き', r:'ki'},{k:'く', r:'ku'},{k:'け', r:'ke'},{k:'こ', r:'ko'}] },
+            { row: 'さ行', items: [{k:'さ', r:'sa'},{k:'し', r:'shi'},{k:'す', r:'su'},{k:'せ', r:'se'},{k:'そ', r:'so'}] },
+            { row: 'た行', items: [{k:'た', r:'ta'},{k:'ち', r:'chi'},{k:'つ', r:'tsu'},{k:'て', r:'te'},{k:'と', r:'to'}] },
+            { row: 'な行', items: [{k:'な', r:'na'},{k:'に', r:'ni'},{k:'ぬ', r:'nu'},{k:'ね', r:'ne'},{k:'の', r:'no'}] },
+            { row: 'は行', items: [{k:'は', r:'ha'},{k:'ひ', r:'hi'},{k:'ふ', r:'fu'},{k:'へ', r:'he'},{k:'ほ', r:'ho'}] },
+            { row: 'ま行', items: [{k:'ま', r:'ma'},{k:'み', r:'mi'},{k:'む', r:'mu'},{k:'め', r:'me'},{k:'も', r:'mo'}] },
+            { row: 'や行', items: [{k:'や', r:'ya'},{k:'', r:''},     {k:'ゆ', r:'yu'},{k:'', r:''},     {k:'よ', r:'yo'}] },
+            { row: 'ら行', items: [{k:'ら', r:'ra'},{k:'り', r:'ri'},{k:'る', r:'ru'},{k:'れ', r:'re'},{k:'ろ', r:'ro'}] },
 			{ row: 'わ行', items: [{k:'わ', r:'wa'}, {k:'', r:''},      {k:'', r:''},      {k:'', r:''},      {k:'を', r:'o'}] },
-			{ row: 'ん行', items: [{k:'ん', r:'n'},  {k:'', r:''},      {k:'', r:''},      {k:'', r:''},      {k:'', r:''}] }
-		];
+            { row: 'ん行', items: [{k:'ん', r:'n'}, {k:'', r:''},     {k:'', r:''},     {k:'', r:''},     {k:'', r:''}] }
+        ];
 
-		const dakuonData = [
+        const dakuonData = [
 			{ row: 'が行', items: [{k:'が', r:'ga'}, {k:'ぎ', r:'gi'}, {k:'ぐ', r:'gu'}, {k:'げ', r:'ge'}, {k:'ご', r:'go'}] },
-			{ row: 'ざ行', items: [{k:'ざ', r:'za'}, {k:'じ', r:'ji'}, {k:'ず', r:'zu'}, {k:'ぜ', r:'ze'}, {k:'ぞ', r:'zo'}] },
-			{ row: 'だ行', items: [{k:'だ', r:'da'}, {k:'ぢ', r:'ji'}, {k:'づ', r:'zu'}, {k:'で', r:'de'}, {k:'ど', r:'do'}] },
-			{ row: 'ば行', items: [{k:'ば', r:'ba'}, {k:'び', r:'bi'}, {k:'ぶ', r:'bu'}, {k:'べ', r:'be'}, {k:'ぼ', r:'bo'}] },
-			{ row: 'ぱ行', items: [{k:'ぱ', r:'pa'}, {k:'ぴ', r:'pi'}, {k:'ぷ', r:'pu'}, {k:'ぺ', r:'pe'}, {k:'ぽ', r:'po'}] }
-		];
+            { row: 'ざ行', items: [{k:'ざ', r:'za'},{k:'じ', r:'ji'},{k:'ず', r:'zu'},{k:'ぜ', r:'ze'},{k:'ぞ', r:'zo'}] },
+            { row: 'だ行', items: [{k:'だ', r:'da'},{k:'ぢ', r:'ji'},{k:'づ', r:'zu'},{k:'で', r:'de'},{k:'ど', r:'do'}] },
+            { row: 'ば行', items: [{k:'ば', r:'ba'},{k:'び', r:'bi'},{k:'ぶ', r:'bu'},{k:'べ', r:'be'},{k:'ぼ', r:'bo'}] },
+            { row: 'ぱ行', items: [{k:'ぱ', r:'pa'},{k:'ぴ', r:'pi'},{k:'ぷ', r:'pu'},{k:'ぺ', r:'pe'},{k:'ぽ', r:'po'}] }
+        ];
 
+        // 拗音資料 (只有 3 個段，改用 4 欄配置：行 + 3個音)
+        const youonData = [
+            { row: 'きょ', items: [{k:'きゃ', r:'kya'}, {k:'きゅ', r:'kyu'}, {k:'きょ', r:'kyo'}] },
+            { row: 'しゃ', items: [{k:'しゃ', r:'sha'}, {k:'しゅ', r:'shu'}, {k:'しょ', r:'sho'}] },
+            { row: 'ちゃ', items: [{k:'ちゃ', r:'cha'}, {k:'ちゅ', r:'chu'}, {k:'ちょ', r:'cho'}] },
+            { row: 'にゃ', items: [{k:'にゃ', r:'nya'}, {k:'にゅ', r:'nyu'}, {k:'にょ', r:'nyo'}] },
+            { row: 'ひゃ', items: [{k:'ひゃ', r:'hya'}, {k:'ひゅ', r:'hyu'}, {k:'ひょ', r:'hyo'}] },
+            { row: 'みゃ', items: [{k:'みゃ', r:'mya'}, {k:'みゅ', r:'myu'}, {k:'みょ', r:'myo'}] },
+            { row: 'りゃ', items: [{k:'りゃ', r:'rya'}, {k:'りゅ', r:'ryu'}, {k:'りょ', r:'ryo'}] },
+            { row: 'ぎゃ', items: [{k:'ぎゃ', r:'gya'}, {k:'ぎゅ', r:'gyu'}, {k:'ぎょ', r:'gyo'}] },
+            { row: 'じゃ', items: [{k:'じゃ', r:'ja'},  {k:'じゅ', r:'ju'},  {k:'じょ', r:'jo'}] },
+            { row: 'びゃ', items: [{k:'びゃ', r:'bya'}, {k:'びゅ', r:'byu'}, {k:'びょ', r:'byo'}] },
+            { row: 'ぴゃ', items: [{k:'ぴゃ', r:'pya'}, {k:'ぴゅ', r:'pyu'}, {k:'ぴょ', r:'pyo'}] }
+        ];
+
+        // 特殊音資料 (促音、長音、撥音說明)
+        const tokushuData = [
+            { name: '促音 (っ)', romaji: '雙寫後方子音', desc: '停頓一拍。如「きっと」(kit-to)' },
+            { name: '長音 (ー)', romaji: '拉長一拍', desc: '外來語片假名常用。如「カード」(ka-do)' },
+            { name: '撥音 (ん)', romaji: 'n', desc: '單獨算一拍的鼻音。如「あん」(an)' }
+        ];
 
         const defaultTestResource = [
             { "kanji": "残酷", "kana": "ざんこく", "romaji": "zankoku", "meaning": "殘酷的 (殘酷天使的行動綱領)" }
         ];
 
-        // DOM 元素綁定
+        // DOM 元素
         const toggleConfigBtn = document.getElementById('toggleConfigBtn');
         const configMenu = document.getElementById('configMenu');
         const apiKeyInput = document.getElementById('apiKeyInput');
@@ -184,74 +192,117 @@
         const displayRuby = document.getElementById('displayRuby');
         const displayRomaji = document.getElementById('displayRomaji');
         const displayMeaning = document.getElementById('displayMeaning');
+        
+        const tableHeader = document.getElementById('tableHeader');
         const gojuonContainer = document.getElementById('gojuonContainer');
         const tabSeion = document.getElementById('tabSeion');
         const tabDakuon = document.getElementById('tabDakuon');
+        const tabYouon = document.getElementById('tabYouon');
+        const tabTokushu = document.getElementById('tabTokushu');
 
         let vocabList = [];
         let currentCard = null;
 
-        // 手機版切換選單顯示邏輯
+        // 手機選單控制
         toggleConfigBtn.addEventListener('click', () => {
             if (configMenu.classList.contains('hidden')) {
-                configMenu.classList.remove('hidden');
-                configMenu.classList.add('flex');
+                configMenu.classList.remove('hidden'); configMenu.classList.add('flex');
                 toggleConfigBtn.innerText = '🔼 收合系統設定';
             } else {
-                configMenu.classList.remove('flex');
-                configMenu.classList.add('hidden');
+                configMenu.classList.remove('flex'); configMenu.classList.add('hidden');
                 toggleConfigBtn.innerText = '⚙️ 展開系統設定';
             }
         });
 
-        function renderTable(data) {
-            let html = '';
-            data.forEach(row => {
-                html += `<div class="text-[9px] md:text-[10px] font-bold text-gray-400 flex items-center justify-center bg-gray-950/30 rounded py-1">${row.row}</div>`;
-                row.items.forEach(item => {
-                    if (item.k) {
-                        html += `
-                            <div class="p-0.5 md:p-1 rounded bg-gray-950/70 border border-gray-800 flex flex-col items-center justify-center min-h-[36px] md:min-h-[40px] hover:border-emerald-500/50 transition-colors">
-                                <span class="text-xs md:text-sm font-semibold text-gray-200">${item.k}</span>
-                                <span class="text-[8px] md:text-[9px] font-mono text-emerald-500">${item.r}</span>
-                            </div>`;
-                    } else {
-                        html += `<div class="bg-gray-950/10 rounded border border-transparent min-h-[36px] md:min-h-[40px]"></div>`;
-                    }
-                });
+        // 動態渲染表格 (整合 Grid 欄位變更)
+        function switchView(type) {
+            // 重置樣式
+            [tabSeion, tabDakuon, tabYouon, tabTokushu].forEach(b => {
+                b.className = "py-1 rounded text-gray-400 hover:text-gray-200";
             });
-            gojuonContainer.innerHTML = html;
+            gojuonContainer.className = "grid gap-0.5 md:gap-1 text-center text-[11px] md:text-xs";
+
+            if (type === 'seion' || type === 'dakuon') {
+                tableHeader.className = "grid grid-cols-6 gap-0.5 md:gap-1 text-center text-[9px] md:text-[10px] text-gray-500 font-bold mb-1";
+                tableHeader.innerHTML = `<div>行\\段</div><div class="text-cyan-400">あ段</div><div class="text-cyan-400">い段</div><div class="text-cyan-400">う段</div><div class="text-cyan-400">え段</div><div class="text-cyan-400">お段</div>`;
+                gojuonContainer.classList.add('grid-cols-6');
+                
+                const data = (type === 'seion') ? seionData : dakuonData;
+                if(type === 'seion') tabSeion.className = "py-1 rounded text-emerald-400 bg-gray-800";
+                else tabDakuon.className = "py-1 rounded text-emerald-400 bg-gray-800";
+
+                let html = '';
+                data.forEach(row => {
+                    html += `<div class="text-[9px] md:text-[10px] font-bold text-gray-400 flex items-center justify-center bg-gray-950/30 rounded py-1">${row.row}</div>`;
+                    row.items.forEach(item => {
+                        if (item.k) {
+                            html += `<div class="p-0.5 md:p-1 rounded bg-gray-950/70 border border-gray-800 flex flex-col items-center justify-center min-h-[36px]"><span class="text-xs md:text-sm font-semibold text-gray-200">${item.k}</span><span class="text-[8px] md:text-[9px] font-mono text-emerald-500">${item.r}</span></div>`;
+                        } else {
+                            html += `<div class="bg-gray-950/10 rounded border border-transparent"></div>`;
+                        }
+                    });
+                });
+                gojuonContainer.innerHTML = html;
+
+            } else if (type === 'youon') {
+                tabYouon.className = "py-1 rounded text-emerald-400 bg-gray-800";
+                tableHeader.className = "grid grid-cols-4 gap-0.5 md:gap-1 text-center text-[9px] md:text-[10px] text-gray-500 font-bold mb-1";
+                tableHeader.innerHTML = `<div>基礎</div><div class="text-orange-400">ゃ 結尾</div><div class="text-orange-400">ゅ 結尾</div><div class="text-orange-400">ょ 結尾</div>`;
+                gojuonContainer.classList.add('grid-cols-4');
+
+                let html = '';
+                youonData.forEach(row => {
+                    html += `<div class="text-[9px] md:text-[10px] font-bold text-gray-400 flex items-center justify-center bg-gray-950/30 rounded py-1">${row.row}</div>`;
+                    row.items.forEach(item => {
+                        html += `<div class="p-0.5 md:p-1 rounded bg-gray-950/70 border border-gray-800 flex flex-col items-center justify-center min-h-[36px]"><span class="text-xs md:text-sm font-semibold text-gray-200">${item.k}</span><span class="text-[8px] md:text-[9px] font-mono text-orange-400">${item.r}</span></div>`;
+                    });
+                });
+                gojuonContainer.innerHTML = html;
+
+            } else if (type === 'tokushu') {
+                tabTokushu.className = "py-1 rounded text-emerald-400 bg-gray-800";
+                tableHeader.className = "hidden"; // 特殊音不需要表頭
+                gojuonContainer.classList.add('grid-cols-1'); // 直向清單
+
+                let html = '';
+                tokushuData.forEach(item => {
+                    html += `
+                        <div class="p-2.5 rounded bg-gray-950/70 border border-gray-800 text-left flex flex-col gap-0.5">
+                            <div class="flex justify-between items-center">
+                                <span class="text-xs md:text-sm font-bold text-amber-400">${item.name}</span>
+                                <span class="text-[10px] font-mono text-gray-500">拼音規則: ${item.romaji}</span>
+                            </div>
+                            <p class="text-[11px] text-gray-400 font-sans">${item.desc}</p>
+                        </div>`;
+                });
+                gojuonContainer.innerHTML = html;
+            }
         }
 
-        function init() {
-            renderTable(seionData);
+        // 綁定標籤點擊事件
+        tabSeion.addEventListener('click', () => switchView('seion'));
+        tabDakuon.addEventListener('click', () => switchView('dakuon'));
+        tabYouon.addEventListener('click', () => switchView('youon'));
+        tabTokushu.addEventListener('click', () => switchView('tokushu'));
 
+        // 初始化與其他不變的核心邏輯
+        function init() {
+            switchView('seion'); // 預設顯示清音
             let targetSource = defaultTestResource;
             if (typeof OFFLINE_VOCAB_DB !== 'undefined' && Array.isArray(OFFLINE_VOCAB_DB)) {
                 targetSource = OFFLINE_VOCAB_DB;
             }
-
             const savedKey = localStorage.getItem('jks_api_key');
             if (savedKey) apiKeyInput.value = savedKey;
 
             const savedVocab = localStorage.getItem('jks_vocab_data');
             if (savedVocab) {
                 vocabList = JSON.parse(savedVocab);
-                if (vocabList.length < targetSource.length && targetSource !== defaultTestResource) {
-                    vocabList = [...targetSource];
-                    localStorage.setItem('jks_vocab_data', JSON.stringify(vocabList));
-                }
             } else {
                 vocabList = [...targetSource];
                 localStorage.setItem('jks_vocab_data', JSON.stringify(vocabList));
             }
-            
             updateVocabUI();
-            if (typeof OFFLINE_VOCAB_DB !== 'undefined') {
-                showAlert(`已載入外部字庫 (共 ${vocabList.length} 筆)！`, 'success');
-            } else {
-                showAlert('目前使用預設測試資料。', 'info');
-            }
         }
 
         function showAlert(msg, type = 'info') {
@@ -265,65 +316,37 @@
         function updateVocabUI() {
             vocabCount.innerText = vocabList.length;
             if (vocabList.length > 0) {
-                clearBtn.classList.remove('hidden');
-                drawBtn.removeAttribute('disabled');
+                clearBtn.classList.remove('hidden'); drawBtn.removeAttribute('disabled');
             } else {
-                clearBtn.classList.add('hidden');
-                drawBtn.setAttribute('disabled', 'true');
-                cardContent.classList.add('hidden');
-                cardEmpty.classList.remove('hidden');
+                clearBtn.classList.add('hidden'); drawBtn.setAttribute('disabled', 'true');
+                cardContent.classList.add('hidden'); cardEmpty.classList.remove('hidden');
             }
         }
 
-        tabSeion.addEventListener('click', () => {
-            tabSeion.className = "px-2 py-0.5 rounded text-emerald-400 bg-gray-800";
-            tabDakuon.className = "px-2 py-0.5 rounded text-gray-400 hover:text-gray-200";
-            renderTable(seionData);
-        });
-
-        tabDakuon.addEventListener('click', () => {
-            tabDakuon.className = "px-2 py-0.5 rounded text-emerald-400 bg-gray-800";
-            tabSeion.className = "px-2 py-0.5 rounded text-gray-400 hover:text-gray-200";
-            renderTable(dakuonData);
-        });
-
         toggleApiBtn.addEventListener('click', () => {
-            if (apiKeyInput.type === 'password') {
-                apiKeyInput.type = 'text';
-                toggleApiBtn.innerText = '🔒';
-            } else {
-                apiKeyInput.type = 'password';
-                toggleApiBtn.innerText = '👁️';
-            }
+            if (apiKeyInput.type === 'password') { apiKeyInput.type = 'text'; toggleApiBtn.innerText = '🔒'; }
+            else { apiKeyInput.type = 'password'; toggleApiBtn.innerText = '👁️'; }
         });
 
-        apiKeyInput.addEventListener('change', () => {
-            localStorage.setItem('jks_api_key', apiKeyInput.value.trim());
-        });
+        apiKeyInput.addEventListener('change', () => localStorage.setItem('jks_api_key', apiKeyInput.value.trim()));
 
         clearBtn.addEventListener('click', () => {
             let targetSource = defaultTestResource;
-            if (typeof OFFLINE_VOCAB_DB !== 'undefined' && Array.isArray(OFFLINE_VOCAB_DB)) {
-                targetSource = OFFLINE_VOCAB_DB;
-            }
-            if (confirm(`確定要還原字庫嗎？ (共 ${targetSource.length} 筆)`)) {
-                vocabList = [...targetSource];
-                currentCard = null;
+            if (typeof OFFLINE_VOCAB_DB !== 'undefined' && Array.isArray(OFFLINE_VOCAB_DB)) targetSource = OFFLINE_VOCAB_DB;
+            if (confirm(`確定要還原字庫嗎？`)) {
+                vocabList = [...targetSource]; currentCard = null;
                 localStorage.setItem('jks_vocab_data', JSON.stringify(vocabList));
-                updateVocabUI();
-                showAlert('已還原本地初始資料庫。', 'info');
+                updateVocabUI(); showAlert('已還原本地初始資料庫。', 'info');
             }
         });
 
         drawBtn.addEventListener('click', () => {
             if (vocabList.length === 0) return;
             let index;
-            do {
-                index = Math.floor(Math.random() * vocabList.length);
-            } while (vocabList.length > 1 && currentCard && vocabList[index].kana === currentCard.kana);
+            do { index = Math.floor(Math.random() * vocabList.length); } 
+            while (vocabList.length > 1 && currentCard && vocabList[index].kana === currentCard.kana);
 
             currentCard = vocabList[index];
-
             if (currentCard.kanji) {
                 displayRuby.innerHTML = `${currentCard.kanji} <rt class="text-lg md:text-2xl font-normal tracking-wide text-cyan-400 pb-1 bg-gray-950/80 px-1.5 rounded border border-cyan-900/30">${currentCard.kana}</rt>`;
             } else {
@@ -331,76 +354,49 @@
             }
             displayRomaji.innerText = currentCard.romaji;
             displayMeaning.innerText = `意：${currentCard.meaning}`;
-
-            cardEmpty.classList.add('hidden');
-            cardContent.classList.remove('hidden');
+            cardEmpty.classList.add('hidden'); cardContent.classList.remove('hidden');
         });
 
         fetchBtn.addEventListener('click', async () => {
-            const key = apiKeyInput.value.trim();
-            const kw = keywordInput.value.trim();
-            const selectedModel = modelSelect.value;
-
-            if (!key) { showAlert('請先填入 Gemini API 金鑰！', 'error'); return; }
-            if (!kw) { showAlert('請填寫關鍵字！', 'error'); return; }
-
-            fetchBtn.setAttribute('disabled', 'true');
-            fetchBtnText.innerText = 'AI 思考中...';
+            const key = apiKeyInput.value.trim(); const kw = keywordInput.value.trim(); const selectedModel = modelSelect.value;
+            if (!key || !kw) { showAlert('請填入金鑰與關鍵字！', 'error'); return; }
+            fetchBtn.setAttribute('disabled', 'true'); fetchBtnText.innerText = 'AI 思考中...';
             showAlert(`正在進行字庫聯想落地...`, 'info');
 
-            const systemPrompt = `你是一個專業的日文老師。使用者的核心目的是「熟練五十音的直覺認讀與發音」，以便跟上日文KTV(日K)字幕。
-請根據使用者提供的關鍵字領域，聯想並篩選出在該領域「最常用、最具代表性、且非常適合拿來練習五十音（包含清音、濁音、半濁音）發音與認讀」的日文單字或短詞。
-請務必嚴格以下列的 JSON 陣列格式回傳，不要包含 any 額外的 Markdown 標籤(如 \`\`\`json)、解說或開頭結尾文字：
+            // 提示詞微調，明確要求也包含拗音和特殊音的練習詞彙
+            const systemPrompt = `你是一個專業的日文老師。使用者的核心目的是「熟練五十音與拗音、促音、長音的直覺認讀」，以便跟上日文KTV(日K)字幕。
+請根據關鍵字領域聯想15-20個最具代表性的日文單字（請刻意混合包含清音、濁音、拗音、促音或長音的詞彙以利全面練習）。
+嚴格以下列 JSON 陣列格式回傳，不要包含任何額外解說或 Markdown 標籤：
 [
-  { "kanji": "漢字(若該單字原本無漢字，此欄位留空 \"\")", "kana": "全平假名或片假名(用來對照發音)", "romaji": "羅馬拼音", "meaning": "中文意思" }
-]
-請固定回傳 15 到 20 個精選詞彙。`;
-
-            const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/${selectedModel}:generateContent?key=${key}`;
+  { "kanji": "漢字(若無則留空 \"\")", "kana": "全假名", "romaji": "羅馬拼音", "meaning": "中文意思" }
+]`;
 
             try {
-                const response = await fetch(apiUrl, {
+                const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${selectedModel}:generateContent?key=${key}`, {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({
-                        contents: [{ parts: [{ text: `${systemPrompt}\n\n使用者輸入的關鍵字：${kw}` }] }]
-                    })
+                    body: JSON.stringify({ contents: [{ parts: [{ text: `${systemPrompt}\n\n關鍵字：${kw}` }] }] })
                 });
-
-                if (!response.ok) {
-                    throw new Error(`HTTP 錯誤，狀態碼: ${response.status}`);
-                }
-                
+                if (!response.ok) throw new Error(`HTTP 錯誤: ${response.status}`);
                 const responseData = await response.json();
                 let rawText = responseData.candidates[0].content.parts[0].text.trim();
-                
                 rawText = rawText.replace(/^```json\s*/i, '').replace(/^```\s*/i, '').replace(/```$/, '').trim();
-                                 
                 const fetchedArray = JSON.parse(rawText);
 
                 if (Array.isArray(fetchedArray)) {
                     const currentKeys = new Set(vocabList.map(v => `${v.kanji}_${v.kana}`));
                     let insertCount = 0;
-
                     fetchedArray.forEach(item => {
-                        const keyUnique = `${item.kanji || ''}_${item.kana}`;
-                        if (!currentKeys.has(keyUnique)) {
-                            vocabList.push(item);
-                            insertCount++;
-                        }
+                        if (!currentKeys.has(`${item.kanji || ''}_${item.kana}`)) { vocabList.push(item); insertCount++; }
                     });
-
                     localStorage.setItem('jks_vocab_data', JSON.stringify(vocabList));
-                    updateVocabUI();
-                    keywordInput.value = '';
+                    updateVocabUI(); keywordInput.value = '';
                     showAlert(`線上擴充成功！新增了 ${insertCount} 個單字！`, 'success');
                 }
             } catch (err) {
-                console.error(err);
-                showAlert(err.message || '抓取失敗。', 'error');
+                console.error(err); showAlert('抓取或解析失敗。', 'error');
             } finally {
-                fetchBtn.removeAttribute('disabled');
-                fetchBtnText.innerText = '線上抓取單字落地';
+                fetchBtn.removeAttribute('disabled'); fetchBtnText.innerText = '線上抓取單字落地';
             }
         });
 
