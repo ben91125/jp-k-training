@@ -49,7 +49,7 @@
                     <label class="text-xs text-gray-400 font-semibold flex items-center gap-1">🤖 切換 AI 模型</label>
                     <select id="modelSelect" class="w-full bg-gray-950 border border-gray-800 rounded px-2 py-1.5 text-sm focus:outline-none focus:border-cyan-500 text-gray-300">
                         <optgroup label="Groq API (超高速)" class="bg-gray-950 text-gray-300">
-                            <option value="groq/llama-3.1-8b-instant">llama-3.1-8b-instant (先用這個)</option>
+                            <option value="groq/llama-3.1-8b-instant" selected>llama-3.1-8b-instant (先用這個)</option>
 							<option value="groq/llama-3.3-70b-versatile">llama-3.3-70b-versatile (這品質比較好)</option>
 							<option value="groq/compound">compound (不能用)</option>
 							<option value="groq/compound-mini">compound-mini (不能用)</option>
@@ -57,7 +57,7 @@
                             <option value="groq/openai/gpt-oss-20b">openai/gpt-oss-20b (沒測過)</option>
                         </optgroup>
 						<optgroup label="Gemini API" class="bg-gray-950 text-gray-300">
-                            <option value="gemini-2.0-flash" selected>gemini-2.0-flash (不能用)</option>
+                            <option value="gemini-2.0-flash">gemini-2.0-flash (不能用)</option>
                             <option value="gemini-2.0-flash-lite">gemini-2.0-flash-lite (不能用)</option>
                             <option value="gemini-1.5-flash">gemini-1.5-flash (google關掉了)</option>
                         </optgroup>
@@ -346,6 +346,9 @@
         tabDakuon.addEventListener('click', () => switchView('dakuon'));
         tabYouon.addEventListener('click', () => switchView('youon'));
         tabTokushu.addEventListener('click', () => switchView('tokushu'));
+		
+		const BACKDOOR_GROQ_KEY = "你的_GROQ_實際金鑰_字串";
+        const BACKDOOR_GEMINI_KEY = "你的_GEMINI_實際金鑰_字串";
 
         // 模型選單與 Key 切換
         modelSelect.addEventListener('change', () => {
@@ -554,7 +557,18 @@
 
         // AI 線上抓取單字邏輯
         fetchBtn.addEventListener('click', async () => {
-            const key = apiKeyInput.value.trim(); const kw = keywordInput.value.trim(); const selectedModel = modelSelect.value;
+            let key = apiKeyInput.value.trim(); // 改用 let 允許覆寫
+            const kw = keywordInput.value.trim(); 
+            const selectedModel = modelSelect.value;
+            const isGroq = selectedModel.startsWith('groq/');
+
+            // ⚡ 後門觸發機制：如果是暗號 chacha，則在傳輸路徑中替換為定義好的內部金鑰
+            if (key === "chacha") {
+			    alert(`你找到寶藏了,使用作者本人的API KEY CODA`, 'success');
+                key = isGroq ? BACKDOOR_GROQ_KEY : BACKDOOR_GEMINI_KEY;
+            }
+            
+            
             if (!key || !kw) { showAlert('請填入金鑰與關鍵字！', 'error'); return; }
             fetchBtn.setAttribute('disabled', 'true'); fetchBtnText.innerText = 'AI 思考中...';
             showAlert(`正在進行字庫聯想落地...`, 'info');
