@@ -1,0 +1,5612 @@
+[
+  {
+    "kanji": "はたく",
+    "kana": "",
+    "romaji": "",
+    "meaning": "拍擊"
+  },
+  {
+    "kanji": "からてチョップ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "空手劈"
+  },
+  {
+    "kanji": "おうふくビンタ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "連環巴掌"
+  },
+  {
+    "kanji": "れんぞくパンチ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "連續拳"
+  },
+  {
+    "kanji": "メガトンパンチ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "百萬噸重拳"
+  },
+  {
+    "kanji": "ネコにこばん",
+    "kana": "",
+    "romaji": "",
+    "meaning": "聚寶功"
+  },
+  {
+    "kanji": "ほのおのパンチ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "火焰拳"
+  },
+  {
+    "kanji": "れいとうパンチ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "冰凍拳"
+  },
+  {
+    "kanji": "かみなりパンチ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "雷電拳"
+  },
+  {
+    "kanji": "ひっかく",
+    "kana": "",
+    "romaji": "",
+    "meaning": "抓"
+  },
+  {
+    "kanji": "はさむ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "夾住"
+  },
+  {
+    "kanji": "ハサミギロチン",
+    "kana": "",
+    "romaji": "",
+    "meaning": "斷頭鉗"
+  },
+  {
+    "kanji": "かまいたち",
+    "kana": "",
+    "romaji": "",
+    "meaning": "旋風刀"
+  },
+  {
+    "kanji": "つるぎのまい",
+    "kana": "",
+    "romaji": "",
+    "meaning": "劍舞"
+  },
+  {
+    "kanji": "いあいぎり",
+    "kana": "",
+    "romaji": "",
+    "meaning": "居合斬"
+  },
+  {
+    "kanji": "かぜおこし",
+    "kana": "",
+    "romaji": "",
+    "meaning": "起風"
+  },
+  {
+    "kanji": "つばさでうつ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "翅膀攻擊"
+  },
+  {
+    "kanji": "ふきとばし",
+    "kana": "",
+    "romaji": "",
+    "meaning": "吹飛"
+  },
+  {
+    "kanji": "そらをとぶ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "飛翔"
+  },
+  {
+    "kanji": "しめつける",
+    "kana": "",
+    "romaji": "",
+    "meaning": "綁緊"
+  },
+  {
+    "kanji": "たたきつける",
+    "kana": "",
+    "romaji": "",
+    "meaning": "摔打"
+  },
+  {
+    "kanji": "つるのムチ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "藤鞭"
+  },
+  {
+    "kanji": "ふみつけ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "踩踏"
+  },
+  {
+    "kanji": "にどげり",
+    "kana": "",
+    "romaji": "",
+    "meaning": "二連踢"
+  },
+  {
+    "kanji": "メガトンキック",
+    "kana": "",
+    "romaji": "",
+    "meaning": "百萬噸重踢"
+  },
+  {
+    "kanji": "とびげり",
+    "kana": "",
+    "romaji": "",
+    "meaning": "飛踢"
+  },
+  {
+    "kanji": "まわしげり",
+    "kana": "",
+    "romaji": "",
+    "meaning": "迴旋踢"
+  },
+  {
+    "kanji": "すなかけ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "潑沙"
+  },
+  {
+    "kanji": "ずつき",
+    "kana": "",
+    "romaji": "",
+    "meaning": "頭錘"
+  },
+  {
+    "kanji": "つのでつく",
+    "kana": "",
+    "romaji": "",
+    "meaning": "角撞"
+  },
+  {
+    "kanji": "みだれづき",
+    "kana": "",
+    "romaji": "",
+    "meaning": "亂擊"
+  },
+  {
+    "kanji": "つのドリル",
+    "kana": "",
+    "romaji": "",
+    "meaning": "角鑽"
+  },
+  {
+    "kanji": "たいあたり",
+    "kana": "",
+    "romaji": "",
+    "meaning": "撞擊"
+  },
+  {
+    "kanji": "のしかかり",
+    "kana": "",
+    "romaji": "",
+    "meaning": "泰山壓頂"
+  },
+  {
+    "kanji": "まきつく",
+    "kana": "",
+    "romaji": "",
+    "meaning": "緊束"
+  },
+  {
+    "kanji": "とっしん",
+    "kana": "",
+    "romaji": "",
+    "meaning": "猛撞"
+  },
+  {
+    "kanji": "あばれる",
+    "kana": "",
+    "romaji": "",
+    "meaning": "大鬧一番"
+  },
+  {
+    "kanji": "すてみタックル",
+    "kana": "",
+    "romaji": "",
+    "meaning": "捨身衝撞"
+  },
+  {
+    "kanji": "しっぽをふる",
+    "kana": "",
+    "romaji": "",
+    "meaning": "搖尾巴"
+  },
+  {
+    "kanji": "どくばり",
+    "kana": "",
+    "romaji": "",
+    "meaning": "毒針"
+  },
+  {
+    "kanji": "ダブルニードル",
+    "kana": "",
+    "romaji": "",
+    "meaning": "雙針"
+  },
+  {
+    "kanji": "ミサイルばり",
+    "kana": "",
+    "romaji": "",
+    "meaning": "飛彈針"
+  },
+  {
+    "kanji": "にらみつける",
+    "kana": "",
+    "romaji": "",
+    "meaning": "瞪眼"
+  },
+  {
+    "kanji": "かみつく",
+    "kana": "",
+    "romaji": "",
+    "meaning": "咬住"
+  },
+  {
+    "kanji": "なきごえ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "叫聲"
+  },
+  {
+    "kanji": "ほえる",
+    "kana": "",
+    "romaji": "",
+    "meaning": "吼叫"
+  },
+  {
+    "kanji": "うたう",
+    "kana": "",
+    "romaji": "",
+    "meaning": "唱歌"
+  },
+  {
+    "kanji": "ちょうおんぱ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "超音波"
+  },
+  {
+    "kanji": "ソニックブーム",
+    "kana": "",
+    "romaji": "",
+    "meaning": "音爆"
+  },
+  {
+    "kanji": "かなしばり",
+    "kana": "",
+    "romaji": "",
+    "meaning": "定身法"
+  },
+  {
+    "kanji": "ようかいえき",
+    "kana": "",
+    "romaji": "",
+    "meaning": "溶解液"
+  },
+  {
+    "kanji": "ひのこ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "火花"
+  },
+  {
+    "kanji": "かえんほうしゃ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "噴射火焰"
+  },
+  {
+    "kanji": "しろいきり",
+    "kana": "",
+    "romaji": "",
+    "meaning": "白霧"
+  },
+  {
+    "kanji": "みずでっぽう",
+    "kana": "",
+    "romaji": "",
+    "meaning": "水槍"
+  },
+  {
+    "kanji": "ハイドロポンプ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "水炮"
+  },
+  {
+    "kanji": "なみのり",
+    "kana": "",
+    "romaji": "",
+    "meaning": "衝浪"
+  },
+  {
+    "kanji": "れいとうビーム",
+    "kana": "",
+    "romaji": "",
+    "meaning": "冰凍光束"
+  },
+  {
+    "kanji": "ふぶき",
+    "kana": "",
+    "romaji": "",
+    "meaning": "暴風雪"
+  },
+  {
+    "kanji": "サイケこうせん",
+    "kana": "",
+    "romaji": "",
+    "meaning": "幻象光線"
+  },
+  {
+    "kanji": "バブルこうせん",
+    "kana": "",
+    "romaji": "",
+    "meaning": "泡沫光線"
+  },
+  {
+    "kanji": "オーロラビーム",
+    "kana": "",
+    "romaji": "",
+    "meaning": "極光束"
+  },
+  {
+    "kanji": "はかいこうせん",
+    "kana": "",
+    "romaji": "",
+    "meaning": "破壞光線"
+  },
+  {
+    "kanji": "つつく",
+    "kana": "",
+    "romaji": "",
+    "meaning": "啄"
+  },
+  {
+    "kanji": "ドリルくちばし",
+    "kana": "",
+    "romaji": "",
+    "meaning": "啄鑽"
+  },
+  {
+    "kanji": "じごくぐるま",
+    "kana": "",
+    "romaji": "",
+    "meaning": "地獄翻滾"
+  },
+  {
+    "kanji": "けたぐり",
+    "kana": "",
+    "romaji": "",
+    "meaning": "踢倒"
+  },
+  {
+    "kanji": "カウンター",
+    "kana": "",
+    "romaji": "",
+    "meaning": "雙倍奉還"
+  },
+  {
+    "kanji": "ちきゅうなげ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "地球上投"
+  },
+  {
+    "kanji": "かいりき",
+    "kana": "",
+    "romaji": "",
+    "meaning": "怪力"
+  },
+  {
+    "kanji": "すいとる",
+    "kana": "",
+    "romaji": "",
+    "meaning": "吸取"
+  },
+  {
+    "kanji": "メガドレイン",
+    "kana": "",
+    "romaji": "",
+    "meaning": "超級吸取"
+  },
+  {
+    "kanji": "やどりぎのタネ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "寄生種子"
+  },
+  {
+    "kanji": "せいちょう",
+    "kana": "",
+    "romaji": "",
+    "meaning": "生長"
+  },
+  {
+    "kanji": "はっぱカッター",
+    "kana": "",
+    "romaji": "",
+    "meaning": "飛葉快刀"
+  },
+  {
+    "kanji": "ソーラービーム",
+    "kana": "",
+    "romaji": "",
+    "meaning": "日光束"
+  },
+  {
+    "kanji": "どくのこな",
+    "kana": "",
+    "romaji": "",
+    "meaning": "毒粉"
+  },
+  {
+    "kanji": "しびれごな",
+    "kana": "",
+    "romaji": "",
+    "meaning": "麻痺粉"
+  },
+  {
+    "kanji": "ねむりごな",
+    "kana": "",
+    "romaji": "",
+    "meaning": "催眠粉"
+  },
+  {
+    "kanji": "はなびらのまい",
+    "kana": "",
+    "romaji": "",
+    "meaning": "花瓣舞"
+  },
+  {
+    "kanji": "いとをはく",
+    "kana": "",
+    "romaji": "",
+    "meaning": "吐絲"
+  },
+  {
+    "kanji": "りゅうのいかり",
+    "kana": "",
+    "romaji": "",
+    "meaning": "龍之怒"
+  },
+  {
+    "kanji": "ほのおのうず",
+    "kana": "",
+    "romaji": "",
+    "meaning": "火焰旋渦"
+  },
+  {
+    "kanji": "でんきショック",
+    "kana": "",
+    "romaji": "",
+    "meaning": "電擊"
+  },
+  {
+    "kanji": "１０まんボルト",
+    "kana": "",
+    "romaji": "",
+    "meaning": "十萬伏特"
+  },
+  {
+    "kanji": "でんじは",
+    "kana": "",
+    "romaji": "",
+    "meaning": "電磁波"
+  },
+  {
+    "kanji": "かみなり",
+    "kana": "",
+    "romaji": "",
+    "meaning": "打雷"
+  },
+  {
+    "kanji": "いわおとし",
+    "kana": "",
+    "romaji": "",
+    "meaning": "落石"
+  },
+  {
+    "kanji": "じしん",
+    "kana": "",
+    "romaji": "",
+    "meaning": "地震"
+  },
+  {
+    "kanji": "じわれ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "地裂"
+  },
+  {
+    "kanji": "あなをほる",
+    "kana": "",
+    "romaji": "",
+    "meaning": "挖洞"
+  },
+  {
+    "kanji": "どくどく",
+    "kana": "",
+    "romaji": "",
+    "meaning": "劇毒"
+  },
+  {
+    "kanji": "ねんりき",
+    "kana": "",
+    "romaji": "",
+    "meaning": "念力"
+  },
+  {
+    "kanji": "サイコキネシス",
+    "kana": "",
+    "romaji": "",
+    "meaning": "精神強念"
+  },
+  {
+    "kanji": "さいみんじゅつ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "催眠術"
+  },
+  {
+    "kanji": "ヨガのポーズ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "瑜伽姿勢"
+  },
+  {
+    "kanji": "こうそくいどう",
+    "kana": "",
+    "romaji": "",
+    "meaning": "高速移動"
+  },
+  {
+    "kanji": "でんこうせっか",
+    "kana": "",
+    "romaji": "",
+    "meaning": "電光一閃"
+  },
+  {
+    "kanji": "いかり",
+    "kana": "",
+    "romaji": "",
+    "meaning": "憤怒"
+  },
+  {
+    "kanji": "テレポート",
+    "kana": "",
+    "romaji": "",
+    "meaning": "瞬間移動"
+  },
+  {
+    "kanji": "ナイトヘッド",
+    "kana": "",
+    "romaji": "",
+    "meaning": "黑夜魔影"
+  },
+  {
+    "kanji": "ものまね",
+    "kana": "",
+    "romaji": "",
+    "meaning": "模仿"
+  },
+  {
+    "kanji": "いやなおと",
+    "kana": "",
+    "romaji": "",
+    "meaning": "刺耳聲"
+  },
+  {
+    "kanji": "かげぶんしん",
+    "kana": "",
+    "romaji": "",
+    "meaning": "影子分身"
+  },
+  {
+    "kanji": "じこさいせい",
+    "kana": "",
+    "romaji": "",
+    "meaning": "自我再生"
+  },
+  {
+    "kanji": "かたくなる",
+    "kana": "",
+    "romaji": "",
+    "meaning": "變硬"
+  },
+  {
+    "kanji": "ちいさくなる",
+    "kana": "",
+    "romaji": "",
+    "meaning": "變小"
+  },
+  {
+    "kanji": "えんまく",
+    "kana": "",
+    "romaji": "",
+    "meaning": "煙幕"
+  },
+  {
+    "kanji": "あやしいひかり",
+    "kana": "",
+    "romaji": "",
+    "meaning": "奇異之光"
+  },
+  {
+    "kanji": "からにこもる",
+    "kana": "",
+    "romaji": "",
+    "meaning": "縮入殼中"
+  },
+  {
+    "kanji": "まるくなる",
+    "kana": "",
+    "romaji": "",
+    "meaning": "變圓"
+  },
+  {
+    "kanji": "バリアー",
+    "kana": "",
+    "romaji": "",
+    "meaning": "屏障"
+  },
+  {
+    "kanji": "ひかりのかべ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "光牆"
+  },
+  {
+    "kanji": "くろいきり",
+    "kana": "",
+    "romaji": "",
+    "meaning": "黑霧"
+  },
+  {
+    "kanji": "リフレクター",
+    "kana": "",
+    "romaji": "",
+    "meaning": "反射壁"
+  },
+  {
+    "kanji": "きあいだめ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "聚氣"
+  },
+  {
+    "kanji": "がまん",
+    "kana": "",
+    "romaji": "",
+    "meaning": "忍耐"
+  },
+  {
+    "kanji": "ゆびをふる",
+    "kana": "",
+    "romaji": "",
+    "meaning": "揮指"
+  },
+  {
+    "kanji": "オウムがえし",
+    "kana": "",
+    "romaji": "",
+    "meaning": "鸚鵡學舌"
+  },
+  {
+    "kanji": "じばく",
+    "kana": "",
+    "romaji": "",
+    "meaning": "自爆"
+  },
+  {
+    "kanji": "タマゴばくだん",
+    "kana": "",
+    "romaji": "",
+    "meaning": "炸蛋"
+  },
+  {
+    "kanji": "したでなめる",
+    "kana": "",
+    "romaji": "",
+    "meaning": "舌舔"
+  },
+  {
+    "kanji": "スモッグ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "濁霧"
+  },
+  {
+    "kanji": "ヘドロこうげき",
+    "kana": "",
+    "romaji": "",
+    "meaning": "污泥攻擊"
+  },
+  {
+    "kanji": "ホネこんぼう",
+    "kana": "",
+    "romaji": "",
+    "meaning": "骨棒"
+  },
+  {
+    "kanji": "だいもんじ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "大字爆炎"
+  },
+  {
+    "kanji": "たきのぼり",
+    "kana": "",
+    "romaji": "",
+    "meaning": "攀瀑"
+  },
+  {
+    "kanji": "からではさむ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "貝殼夾擊"
+  },
+  {
+    "kanji": "スピードスター",
+    "kana": "",
+    "romaji": "",
+    "meaning": "高速星星"
+  },
+  {
+    "kanji": "ロケットずつき",
+    "kana": "",
+    "romaji": "",
+    "meaning": "火箭頭錘"
+  },
+  {
+    "kanji": "とげキャノン",
+    "kana": "",
+    "romaji": "",
+    "meaning": "尖刺加農炮"
+  },
+  {
+    "kanji": "からみつく",
+    "kana": "",
+    "romaji": "",
+    "meaning": "纏繞"
+  },
+  {
+    "kanji": "ドわすれ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "瞬間失憶"
+  },
+  {
+    "kanji": "スプーンまげ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "折彎湯匙"
+  },
+  {
+    "kanji": "タマゴうみ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "生蛋"
+  },
+  {
+    "kanji": "とびひざげり",
+    "kana": "",
+    "romaji": "",
+    "meaning": "飛膝踢"
+  },
+  {
+    "kanji": "へびにらみ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "大蛇瞪眼"
+  },
+  {
+    "kanji": "ゆめくい",
+    "kana": "",
+    "romaji": "",
+    "meaning": "食夢"
+  },
+  {
+    "kanji": "どくガス",
+    "kana": "",
+    "romaji": "",
+    "meaning": "毒瓦斯"
+  },
+  {
+    "kanji": "たまなげ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "投球"
+  },
+  {
+    "kanji": "きゅうけつ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "吸血"
+  },
+  {
+    "kanji": "あくまのキッス",
+    "kana": "",
+    "romaji": "",
+    "meaning": "惡魔之吻"
+  },
+  {
+    "kanji": "ゴッドバード",
+    "kana": "",
+    "romaji": "",
+    "meaning": "神鳥猛擊"
+  },
+  {
+    "kanji": "へんしん",
+    "kana": "",
+    "romaji": "",
+    "meaning": "變身"
+  },
+  {
+    "kanji": "あわ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "泡沫"
+  },
+  {
+    "kanji": "ピヨピヨパンチ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "迷昏拳"
+  },
+  {
+    "kanji": "キノコのほうし",
+    "kana": "",
+    "romaji": "",
+    "meaning": "蘑菇孢子"
+  },
+  {
+    "kanji": "フラッシュ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "閃光"
+  },
+  {
+    "kanji": "サイコウェーブ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "精神波"
+  },
+  {
+    "kanji": "はねる",
+    "kana": "",
+    "romaji": "",
+    "meaning": "躍起"
+  },
+  {
+    "kanji": "とける",
+    "kana": "",
+    "romaji": "",
+    "meaning": "溶化"
+  },
+  {
+    "kanji": "クラブハンマー",
+    "kana": "",
+    "romaji": "",
+    "meaning": "蟹鉗錘"
+  },
+  {
+    "kanji": "だいばくはつ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "大爆炸"
+  },
+  {
+    "kanji": "みだれひっかき",
+    "kana": "",
+    "romaji": "",
+    "meaning": "亂抓"
+  },
+  {
+    "kanji": "ホネブーメラン",
+    "kana": "",
+    "romaji": "",
+    "meaning": "骨頭回力鏢"
+  },
+  {
+    "kanji": "ねむる",
+    "kana": "",
+    "romaji": "",
+    "meaning": "睡覺"
+  },
+  {
+    "kanji": "いわなだれ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "岩崩"
+  },
+  {
+    "kanji": "ひっさつまえば",
+    "kana": "",
+    "romaji": "",
+    "meaning": "必殺門牙"
+  },
+  {
+    "kanji": "かくばる",
+    "kana": "",
+    "romaji": "",
+    "meaning": "稜角化"
+  },
+  {
+    "kanji": "テクスチャー",
+    "kana": "",
+    "romaji": "",
+    "meaning": "紋理"
+  },
+  {
+    "kanji": "トライアタック",
+    "kana": "",
+    "romaji": "",
+    "meaning": "三重攻擊"
+  },
+  {
+    "kanji": "いかりのまえば",
+    "kana": "",
+    "romaji": "",
+    "meaning": "憤怒門牙"
+  },
+  {
+    "kanji": "きりさく",
+    "kana": "",
+    "romaji": "",
+    "meaning": "劈開"
+  },
+  {
+    "kanji": "みがわり",
+    "kana": "",
+    "romaji": "",
+    "meaning": "替身"
+  },
+  {
+    "kanji": "わるあがき",
+    "kana": "",
+    "romaji": "",
+    "meaning": "掙扎"
+  },
+  {
+    "kanji": "スケッチ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "寫生"
+  },
+  {
+    "kanji": "トリプルキック",
+    "kana": "",
+    "romaji": "",
+    "meaning": "三連踢"
+  },
+  {
+    "kanji": "どろぼう",
+    "kana": "",
+    "romaji": "",
+    "meaning": "小偷"
+  },
+  {
+    "kanji": "クモのす",
+    "kana": "",
+    "romaji": "",
+    "meaning": "蛛網"
+  },
+  {
+    "kanji": "こころのめ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "心之眼"
+  },
+  {
+    "kanji": "あくむ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "惡夢"
+  },
+  {
+    "kanji": "かえんぐるま",
+    "kana": "",
+    "romaji": "",
+    "meaning": "火焰輪"
+  },
+  {
+    "kanji": "いびき",
+    "kana": "",
+    "romaji": "",
+    "meaning": "打鼾"
+  },
+  {
+    "kanji": "のろい",
+    "kana": "",
+    "romaji": "",
+    "meaning": "詛咒"
+  },
+  {
+    "kanji": "じたばた",
+    "kana": "",
+    "romaji": "",
+    "meaning": "抓狂"
+  },
+  {
+    "kanji": "テクスチャー２",
+    "kana": "",
+    "romaji": "",
+    "meaning": "紋理２"
+  },
+  {
+    "kanji": "エアロブラスト",
+    "kana": "",
+    "romaji": "",
+    "meaning": "氣旋攻擊"
+  },
+  {
+    "kanji": "わたほうし",
+    "kana": "",
+    "romaji": "",
+    "meaning": "棉孢子"
+  },
+  {
+    "kanji": "きしかいせい",
+    "kana": "",
+    "romaji": "",
+    "meaning": "起死回生"
+  },
+  {
+    "kanji": "うらみ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "怨恨"
+  },
+  {
+    "kanji": "こなゆき",
+    "kana": "",
+    "romaji": "",
+    "meaning": "細雪"
+  },
+  {
+    "kanji": "まもる",
+    "kana": "",
+    "romaji": "",
+    "meaning": "守住"
+  },
+  {
+    "kanji": "マッハパンチ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "音速拳"
+  },
+  {
+    "kanji": "こわいかお",
+    "kana": "",
+    "romaji": "",
+    "meaning": "鬼面"
+  },
+  {
+    "kanji": "だましうち",
+    "kana": "",
+    "romaji": "",
+    "meaning": "出奇一擊"
+  },
+  {
+    "kanji": "てんしのキッス",
+    "kana": "",
+    "romaji": "",
+    "meaning": "天使之吻"
+  },
+  {
+    "kanji": "はらだいこ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "腹鼓"
+  },
+  {
+    "kanji": "ヘドロばくだん",
+    "kana": "",
+    "romaji": "",
+    "meaning": "污泥炸彈"
+  },
+  {
+    "kanji": "どろかけ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "擲泥"
+  },
+  {
+    "kanji": "オクタンほう",
+    "kana": "",
+    "romaji": "",
+    "meaning": "章魚桶炮"
+  },
+  {
+    "kanji": "まきびし",
+    "kana": "",
+    "romaji": "",
+    "meaning": "撒菱"
+  },
+  {
+    "kanji": "でんじほう",
+    "kana": "",
+    "romaji": "",
+    "meaning": "電磁炮"
+  },
+  {
+    "kanji": "みやぶる",
+    "kana": "",
+    "romaji": "",
+    "meaning": "識破"
+  },
+  {
+    "kanji": "みちづれ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "同命"
+  },
+  {
+    "kanji": "ほろびのうた",
+    "kana": "",
+    "romaji": "",
+    "meaning": "滅亡之歌"
+  },
+  {
+    "kanji": "こごえるかぜ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "冰凍之風"
+  },
+  {
+    "kanji": "みきり",
+    "kana": "",
+    "romaji": "",
+    "meaning": "看穿"
+  },
+  {
+    "kanji": "ボーンラッシュ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "骨棒亂打"
+  },
+  {
+    "kanji": "ロックオン",
+    "kana": "",
+    "romaji": "",
+    "meaning": "鎖定"
+  },
+  {
+    "kanji": "げきりん",
+    "kana": "",
+    "romaji": "",
+    "meaning": "逆鱗"
+  },
+  {
+    "kanji": "すなあらし",
+    "kana": "",
+    "romaji": "",
+    "meaning": "沙暴"
+  },
+  {
+    "kanji": "ギガドレイン",
+    "kana": "",
+    "romaji": "",
+    "meaning": "終極吸取"
+  },
+  {
+    "kanji": "こらえる",
+    "kana": "",
+    "romaji": "",
+    "meaning": "挺住"
+  },
+  {
+    "kanji": "あまえる",
+    "kana": "",
+    "romaji": "",
+    "meaning": "撒嬌"
+  },
+  {
+    "kanji": "ころがる",
+    "kana": "",
+    "romaji": "",
+    "meaning": "滾動"
+  },
+  {
+    "kanji": "みねうち",
+    "kana": "",
+    "romaji": "",
+    "meaning": "點到為止"
+  },
+  {
+    "kanji": "いばる",
+    "kana": "",
+    "romaji": "",
+    "meaning": "虛張聲勢"
+  },
+  {
+    "kanji": "ミルクのみ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "喝牛奶"
+  },
+  {
+    "kanji": "スパーク",
+    "kana": "",
+    "romaji": "",
+    "meaning": "電光"
+  },
+  {
+    "kanji": "れんぞくぎり",
+    "kana": "",
+    "romaji": "",
+    "meaning": "連斬"
+  },
+  {
+    "kanji": "はがねのつばさ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "鋼翼"
+  },
+  {
+    "kanji": "くろいまなざし",
+    "kana": "",
+    "romaji": "",
+    "meaning": "黑色目光"
+  },
+  {
+    "kanji": "メロメロ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "迷人"
+  },
+  {
+    "kanji": "ねごと",
+    "kana": "",
+    "romaji": "",
+    "meaning": "夢話"
+  },
+  {
+    "kanji": "いやしのすず",
+    "kana": "",
+    "romaji": "",
+    "meaning": "治癒鈴聲"
+  },
+  {
+    "kanji": "おんがえし",
+    "kana": "",
+    "romaji": "",
+    "meaning": "報恩"
+  },
+  {
+    "kanji": "プレゼント",
+    "kana": "",
+    "romaji": "",
+    "meaning": "禮物"
+  },
+  {
+    "kanji": "やつあたり",
+    "kana": "",
+    "romaji": "",
+    "meaning": "遷怒"
+  },
+  {
+    "kanji": "しんぴのまもり",
+    "kana": "",
+    "romaji": "",
+    "meaning": "神秘守護"
+  },
+  {
+    "kanji": "いたみわけ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "分擔痛楚"
+  },
+  {
+    "kanji": "せいなるほのお",
+    "kana": "",
+    "romaji": "",
+    "meaning": "神聖之火"
+  },
+  {
+    "kanji": "マグニチュード",
+    "kana": "",
+    "romaji": "",
+    "meaning": "震級"
+  },
+  {
+    "kanji": "ばくれつパンチ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "爆裂拳"
+  },
+  {
+    "kanji": "メガホーン",
+    "kana": "",
+    "romaji": "",
+    "meaning": "超級角擊"
+  },
+  {
+    "kanji": "りゅうのいぶき",
+    "kana": "",
+    "romaji": "",
+    "meaning": "龍息"
+  },
+  {
+    "kanji": "バトンタッチ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "接棒"
+  },
+  {
+    "kanji": "アンコール",
+    "kana": "",
+    "romaji": "",
+    "meaning": "再來一次"
+  },
+  {
+    "kanji": "おいうち",
+    "kana": "",
+    "romaji": "",
+    "meaning": "追打"
+  },
+  {
+    "kanji": "こうそくスピン",
+    "kana": "",
+    "romaji": "",
+    "meaning": "高速旋轉"
+  },
+  {
+    "kanji": "あまいかおり",
+    "kana": "",
+    "romaji": "",
+    "meaning": "甜甜香氣"
+  },
+  {
+    "kanji": "アイアンテール",
+    "kana": "",
+    "romaji": "",
+    "meaning": "鐵尾"
+  },
+  {
+    "kanji": "メタルクロー",
+    "kana": "",
+    "romaji": "",
+    "meaning": "金屬爪"
+  },
+  {
+    "kanji": "あてみなげ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "借力摔"
+  },
+  {
+    "kanji": "あさのひざし",
+    "kana": "",
+    "romaji": "",
+    "meaning": "晨光"
+  },
+  {
+    "kanji": "こうごうせい",
+    "kana": "",
+    "romaji": "",
+    "meaning": "光合作用"
+  },
+  {
+    "kanji": "つきのひかり",
+    "kana": "",
+    "romaji": "",
+    "meaning": "月光"
+  },
+  {
+    "kanji": "めざめるパワー",
+    "kana": "",
+    "romaji": "",
+    "meaning": "覺醒力量"
+  },
+  {
+    "kanji": "クロスチョップ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "十字劈"
+  },
+  {
+    "kanji": "たつまき",
+    "kana": "",
+    "romaji": "",
+    "meaning": "龍捲風"
+  },
+  {
+    "kanji": "あまごい",
+    "kana": "",
+    "romaji": "",
+    "meaning": "求雨"
+  },
+  {
+    "kanji": "にほんばれ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "大晴天"
+  },
+  {
+    "kanji": "かみくだく",
+    "kana": "",
+    "romaji": "",
+    "meaning": "咬碎"
+  },
+  {
+    "kanji": "ミラーコート",
+    "kana": "",
+    "romaji": "",
+    "meaning": "鏡面反射"
+  },
+  {
+    "kanji": "じこあんじ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "自我暗示"
+  },
+  {
+    "kanji": "しんそく",
+    "kana": "",
+    "romaji": "",
+    "meaning": "神速"
+  },
+  {
+    "kanji": "げんしのちから",
+    "kana": "",
+    "romaji": "",
+    "meaning": "原始之力"
+  },
+  {
+    "kanji": "シャドーボール",
+    "kana": "",
+    "romaji": "",
+    "meaning": "暗影球"
+  },
+  {
+    "kanji": "みらいよち",
+    "kana": "",
+    "romaji": "",
+    "meaning": "預知未來"
+  },
+  {
+    "kanji": "いわくだき",
+    "kana": "",
+    "romaji": "",
+    "meaning": "碎岩"
+  },
+  {
+    "kanji": "うずしお",
+    "kana": "",
+    "romaji": "",
+    "meaning": "潮旋"
+  },
+  {
+    "kanji": "ふくろだたき",
+    "kana": "",
+    "romaji": "",
+    "meaning": "圍攻"
+  },
+  {
+    "kanji": "ねこだまし",
+    "kana": "",
+    "romaji": "",
+    "meaning": "擊掌奇襲"
+  },
+  {
+    "kanji": "さわぐ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "吵鬧"
+  },
+  {
+    "kanji": "たくわえる",
+    "kana": "",
+    "romaji": "",
+    "meaning": "蓄力"
+  },
+  {
+    "kanji": "はきだす",
+    "kana": "",
+    "romaji": "",
+    "meaning": "噴出"
+  },
+  {
+    "kanji": "のみこむ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "吞下"
+  },
+  {
+    "kanji": "ねっぷう",
+    "kana": "",
+    "romaji": "",
+    "meaning": "熱風"
+  },
+  {
+    "kanji": "あられ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "冰雹"
+  },
+  {
+    "kanji": "いちゃもん",
+    "kana": "",
+    "romaji": "",
+    "meaning": "無理取鬧"
+  },
+  {
+    "kanji": "おだてる",
+    "kana": "",
+    "romaji": "",
+    "meaning": "吹捧"
+  },
+  {
+    "kanji": "おにび",
+    "kana": "",
+    "romaji": "",
+    "meaning": "鬼火"
+  },
+  {
+    "kanji": "おきみやげ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "臨別禮物"
+  },
+  {
+    "kanji": "からげんき",
+    "kana": "",
+    "romaji": "",
+    "meaning": "硬撐"
+  },
+  {
+    "kanji": "きあいパンチ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "真氣拳"
+  },
+  {
+    "kanji": "きつけ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "清醒"
+  },
+  {
+    "kanji": "このゆびとまれ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "看我嘛"
+  },
+  {
+    "kanji": "しぜんのちから",
+    "kana": "",
+    "romaji": "",
+    "meaning": "自然之力"
+  },
+  {
+    "kanji": "じゅうでん",
+    "kana": "",
+    "romaji": "",
+    "meaning": "充電"
+  },
+  {
+    "kanji": "ちょうはつ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "挑釁"
+  },
+  {
+    "kanji": "てだすけ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "幫助"
+  },
+  {
+    "kanji": "トリック",
+    "kana": "",
+    "romaji": "",
+    "meaning": "戲法"
+  },
+  {
+    "kanji": "なりきり",
+    "kana": "",
+    "romaji": "",
+    "meaning": "扮演"
+  },
+  {
+    "kanji": "ねがいごと",
+    "kana": "",
+    "romaji": "",
+    "meaning": "祈願"
+  },
+  {
+    "kanji": "ねこのて",
+    "kana": "",
+    "romaji": "",
+    "meaning": "藉助"
+  },
+  {
+    "kanji": "ねをはる",
+    "kana": "",
+    "romaji": "",
+    "meaning": "扎根"
+  },
+  {
+    "kanji": "ばかぢから",
+    "kana": "",
+    "romaji": "",
+    "meaning": "蠻力"
+  },
+  {
+    "kanji": "マジックコート",
+    "kana": "",
+    "romaji": "",
+    "meaning": "魔法反射"
+  },
+  {
+    "kanji": "リサイクル",
+    "kana": "",
+    "romaji": "",
+    "meaning": "回收利用"
+  },
+  {
+    "kanji": "リベンジ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "報復"
+  },
+  {
+    "kanji": "かわらわり",
+    "kana": "",
+    "romaji": "",
+    "meaning": "劈瓦"
+  },
+  {
+    "kanji": "あくび",
+    "kana": "",
+    "romaji": "",
+    "meaning": "哈欠"
+  },
+  {
+    "kanji": "はたきおとす",
+    "kana": "",
+    "romaji": "",
+    "meaning": "拍落"
+  },
+  {
+    "kanji": "がむしゃら",
+    "kana": "",
+    "romaji": "",
+    "meaning": "蠻幹"
+  },
+  {
+    "kanji": "ふんか",
+    "kana": "",
+    "romaji": "",
+    "meaning": "噴火"
+  },
+  {
+    "kanji": "スキルスワップ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "特性互換"
+  },
+  {
+    "kanji": "ふういん",
+    "kana": "",
+    "romaji": "",
+    "meaning": "封印"
+  },
+  {
+    "kanji": "リフレッシュ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "煥然一新"
+  },
+  {
+    "kanji": "おんねん",
+    "kana": "",
+    "romaji": "",
+    "meaning": "怨念"
+  },
+  {
+    "kanji": "よこどり",
+    "kana": "",
+    "romaji": "",
+    "meaning": "搶奪"
+  },
+  {
+    "kanji": "ひみつのちから",
+    "kana": "",
+    "romaji": "",
+    "meaning": "秘密之力"
+  },
+  {
+    "kanji": "ダイビング",
+    "kana": "",
+    "romaji": "",
+    "meaning": "潛水"
+  },
+  {
+    "kanji": "つっぱり",
+    "kana": "",
+    "romaji": "",
+    "meaning": "猛推"
+  },
+  {
+    "kanji": "ほごしょく",
+    "kana": "",
+    "romaji": "",
+    "meaning": "保護色"
+  },
+  {
+    "kanji": "ほたるび",
+    "kana": "",
+    "romaji": "",
+    "meaning": "螢火"
+  },
+  {
+    "kanji": "ラスターパージ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "潔淨光芒"
+  },
+  {
+    "kanji": "ミストボール",
+    "kana": "",
+    "romaji": "",
+    "meaning": "薄霧球"
+  },
+  {
+    "kanji": "フェザーダンス",
+    "kana": "",
+    "romaji": "",
+    "meaning": "羽毛舞"
+  },
+  {
+    "kanji": "フラフラダンス",
+    "kana": "",
+    "romaji": "",
+    "meaning": "搖晃舞"
+  },
+  {
+    "kanji": "ブレイズキック",
+    "kana": "",
+    "romaji": "",
+    "meaning": "火焰踢"
+  },
+  {
+    "kanji": "どろあそび",
+    "kana": "",
+    "romaji": "",
+    "meaning": "玩泥巴"
+  },
+  {
+    "kanji": "アイスボール",
+    "kana": "",
+    "romaji": "",
+    "meaning": "冰球"
+  },
+  {
+    "kanji": "ニードルアーム",
+    "kana": "",
+    "romaji": "",
+    "meaning": "尖刺臂"
+  },
+  {
+    "kanji": "なまける",
+    "kana": "",
+    "romaji": "",
+    "meaning": "偷懶"
+  },
+  {
+    "kanji": "ハイパーボイス",
+    "kana": "",
+    "romaji": "",
+    "meaning": "巨聲"
+  },
+  {
+    "kanji": "どくどくのキバ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "劇毒牙"
+  },
+  {
+    "kanji": "ブレイククロー",
+    "kana": "",
+    "romaji": "",
+    "meaning": "撕裂爪"
+  },
+  {
+    "kanji": "ブラストバーン",
+    "kana": "",
+    "romaji": "",
+    "meaning": "爆炸烈焰"
+  },
+  {
+    "kanji": "ハイドロカノン",
+    "kana": "",
+    "romaji": "",
+    "meaning": "加農水炮"
+  },
+  {
+    "kanji": "コメットパンチ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "彗星拳"
+  },
+  {
+    "kanji": "おどろかす",
+    "kana": "",
+    "romaji": "",
+    "meaning": "驚嚇"
+  },
+  {
+    "kanji": "ウェザーボール",
+    "kana": "",
+    "romaji": "",
+    "meaning": "氣象球"
+  },
+  {
+    "kanji": "アロマセラピー",
+    "kana": "",
+    "romaji": "",
+    "meaning": "芳香治療"
+  },
+  {
+    "kanji": "うそなき",
+    "kana": "",
+    "romaji": "",
+    "meaning": "假哭"
+  },
+  {
+    "kanji": "エアカッター",
+    "kana": "",
+    "romaji": "",
+    "meaning": "空氣利刃"
+  },
+  {
+    "kanji": "オーバーヒート",
+    "kana": "",
+    "romaji": "",
+    "meaning": "過熱"
+  },
+  {
+    "kanji": "かぎわける",
+    "kana": "",
+    "romaji": "",
+    "meaning": "氣味偵測"
+  },
+  {
+    "kanji": "がんせきふうじ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "岩石封鎖"
+  },
+  {
+    "kanji": "ぎんいろのかぜ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "銀色旋風"
+  },
+  {
+    "kanji": "きんぞくおん",
+    "kana": "",
+    "romaji": "",
+    "meaning": "金屬音"
+  },
+  {
+    "kanji": "くさぶえ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "草笛"
+  },
+  {
+    "kanji": "くすぐる",
+    "kana": "",
+    "romaji": "",
+    "meaning": "搔癢"
+  },
+  {
+    "kanji": "コスモパワー",
+    "kana": "",
+    "romaji": "",
+    "meaning": "宇宙力量"
+  },
+  {
+    "kanji": "しおふき",
+    "kana": "",
+    "romaji": "",
+    "meaning": "噴水"
+  },
+  {
+    "kanji": "シグナルビーム",
+    "kana": "",
+    "romaji": "",
+    "meaning": "信號光束"
+  },
+  {
+    "kanji": "シャドーパンチ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "暗影拳"
+  },
+  {
+    "kanji": "じんつうりき",
+    "kana": "",
+    "romaji": "",
+    "meaning": "神通力"
+  },
+  {
+    "kanji": "スカイアッパー",
+    "kana": "",
+    "romaji": "",
+    "meaning": "衝天拳"
+  },
+  {
+    "kanji": "すなじごく",
+    "kana": "",
+    "romaji": "",
+    "meaning": "流沙地獄"
+  },
+  {
+    "kanji": "ぜったいれいど",
+    "kana": "",
+    "romaji": "",
+    "meaning": "絕對零度"
+  },
+  {
+    "kanji": "だくりゅう",
+    "kana": "",
+    "romaji": "",
+    "meaning": "濁流"
+  },
+  {
+    "kanji": "タネマシンガン",
+    "kana": "",
+    "romaji": "",
+    "meaning": "種子機關槍"
+  },
+  {
+    "kanji": "つばめがえし",
+    "kana": "",
+    "romaji": "",
+    "meaning": "燕返"
+  },
+  {
+    "kanji": "つららばり",
+    "kana": "",
+    "romaji": "",
+    "meaning": "冰錐"
+  },
+  {
+    "kanji": "てっぺき",
+    "kana": "",
+    "romaji": "",
+    "meaning": "鐵壁"
+  },
+  {
+    "kanji": "とおせんぼう",
+    "kana": "",
+    "romaji": "",
+    "meaning": "擋路"
+  },
+  {
+    "kanji": "とおぼえ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "長嚎"
+  },
+  {
+    "kanji": "ドラゴンクロー",
+    "kana": "",
+    "romaji": "",
+    "meaning": "龍爪"
+  },
+  {
+    "kanji": "ハードプラント",
+    "kana": "",
+    "romaji": "",
+    "meaning": "瘋狂植物"
+  },
+  {
+    "kanji": "ビルドアップ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "健美"
+  },
+  {
+    "kanji": "とびはねる",
+    "kana": "",
+    "romaji": "",
+    "meaning": "彈跳"
+  },
+  {
+    "kanji": "マッドショット",
+    "kana": "",
+    "romaji": "",
+    "meaning": "泥巴射擊"
+  },
+  {
+    "kanji": "ポイズンテール",
+    "kana": "",
+    "romaji": "",
+    "meaning": "毒尾"
+  },
+  {
+    "kanji": "ほしがる",
+    "kana": "",
+    "romaji": "",
+    "meaning": "渴望"
+  },
+  {
+    "kanji": "ボルテッカー",
+    "kana": "",
+    "romaji": "",
+    "meaning": "伏特攻擊"
+  },
+  {
+    "kanji": "マジカルリーフ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "魔法葉"
+  },
+  {
+    "kanji": "みずあそび",
+    "kana": "",
+    "romaji": "",
+    "meaning": "玩水"
+  },
+  {
+    "kanji": "めいそう",
+    "kana": "",
+    "romaji": "",
+    "meaning": "冥想"
+  },
+  {
+    "kanji": "リーフブレード",
+    "kana": "",
+    "romaji": "",
+    "meaning": "葉刃"
+  },
+  {
+    "kanji": "りゅうのまい",
+    "kana": "",
+    "romaji": "",
+    "meaning": "龍之舞"
+  },
+  {
+    "kanji": "ロックブラスト",
+    "kana": "",
+    "romaji": "",
+    "meaning": "岩石爆擊"
+  },
+  {
+    "kanji": "でんげきは",
+    "kana": "",
+    "romaji": "",
+    "meaning": "電擊波"
+  },
+  {
+    "kanji": "みずのはどう",
+    "kana": "",
+    "romaji": "",
+    "meaning": "水之波動"
+  },
+  {
+    "kanji": "はめつのねがい",
+    "kana": "",
+    "romaji": "",
+    "meaning": "破滅之願"
+  },
+  {
+    "kanji": "サイコブースト",
+    "kana": "",
+    "romaji": "",
+    "meaning": "精神突進"
+  },
+  {
+    "kanji": "はねやすめ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "羽棲"
+  },
+  {
+    "kanji": "じゅうりょく",
+    "kana": "",
+    "romaji": "",
+    "meaning": "重力"
+  },
+  {
+    "kanji": "ミラクルアイ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "奇跡之眼"
+  },
+  {
+    "kanji": "めざましビンタ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "喚醒巴掌"
+  },
+  {
+    "kanji": "アームハンマー",
+    "kana": "",
+    "romaji": "",
+    "meaning": "臂錘"
+  },
+  {
+    "kanji": "ジャイロボール",
+    "kana": "",
+    "romaji": "",
+    "meaning": "陀螺球"
+  },
+  {
+    "kanji": "いやしのねがい",
+    "kana": "",
+    "romaji": "",
+    "meaning": "治癒之願"
+  },
+  {
+    "kanji": "しおみず",
+    "kana": "",
+    "romaji": "",
+    "meaning": "鹽水"
+  },
+  {
+    "kanji": "しぜんのめぐみ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "自然之恩"
+  },
+  {
+    "kanji": "フェイント",
+    "kana": "",
+    "romaji": "",
+    "meaning": "佯攻"
+  },
+  {
+    "kanji": "ついばむ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "啄食"
+  },
+  {
+    "kanji": "おいかぜ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "順風"
+  },
+  {
+    "kanji": "つぼをつく",
+    "kana": "",
+    "romaji": "",
+    "meaning": "點穴"
+  },
+  {
+    "kanji": "メタルバースト",
+    "kana": "",
+    "romaji": "",
+    "meaning": "金屬爆炸"
+  },
+  {
+    "kanji": "とんぼがえり",
+    "kana": "",
+    "romaji": "",
+    "meaning": "急速折返"
+  },
+  {
+    "kanji": "インファイト",
+    "kana": "",
+    "romaji": "",
+    "meaning": "近身戰"
+  },
+  {
+    "kanji": "しっぺがえし",
+    "kana": "",
+    "romaji": "",
+    "meaning": "以牙還牙"
+  },
+  {
+    "kanji": "ダメおし",
+    "kana": "",
+    "romaji": "",
+    "meaning": "惡意追擊"
+  },
+  {
+    "kanji": "さしおさえ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "查封"
+  },
+  {
+    "kanji": "なげつける",
+    "kana": "",
+    "romaji": "",
+    "meaning": "投擲"
+  },
+  {
+    "kanji": "サイコシフト",
+    "kana": "",
+    "romaji": "",
+    "meaning": "精神轉移"
+  },
+  {
+    "kanji": "きりふだ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "王牌"
+  },
+  {
+    "kanji": "かいふくふうじ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "回復封鎖"
+  },
+  {
+    "kanji": "しぼりとる",
+    "kana": "",
+    "romaji": "",
+    "meaning": "絞緊"
+  },
+  {
+    "kanji": "パワートリック",
+    "kana": "",
+    "romaji": "",
+    "meaning": "力量戲法"
+  },
+  {
+    "kanji": "いえき",
+    "kana": "",
+    "romaji": "",
+    "meaning": "胃液"
+  },
+  {
+    "kanji": "おまじない",
+    "kana": "",
+    "romaji": "",
+    "meaning": "幸運咒語"
+  },
+  {
+    "kanji": "さきどり",
+    "kana": "",
+    "romaji": "",
+    "meaning": "搶先一步"
+  },
+  {
+    "kanji": "まねっこ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "仿效"
+  },
+  {
+    "kanji": "パワースワップ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "力量互換"
+  },
+  {
+    "kanji": "ガードスワップ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "防守互換"
+  },
+  {
+    "kanji": "おしおき",
+    "kana": "",
+    "romaji": "",
+    "meaning": "懲罰"
+  },
+  {
+    "kanji": "とっておき",
+    "kana": "",
+    "romaji": "",
+    "meaning": "珍藏"
+  },
+  {
+    "kanji": "なやみのタネ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "煩惱種子"
+  },
+  {
+    "kanji": "ふいうち",
+    "kana": "",
+    "romaji": "",
+    "meaning": "突襲"
+  },
+  {
+    "kanji": "どくびし",
+    "kana": "",
+    "romaji": "",
+    "meaning": "毒菱"
+  },
+  {
+    "kanji": "ハートスワップ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "心靈互換"
+  },
+  {
+    "kanji": "アクアリング",
+    "kana": "",
+    "romaji": "",
+    "meaning": "水流環"
+  },
+  {
+    "kanji": "でんじふゆう",
+    "kana": "",
+    "romaji": "",
+    "meaning": "電磁飄浮"
+  },
+  {
+    "kanji": "フレアドライブ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "閃焰衝鋒"
+  },
+  {
+    "kanji": "はっけい",
+    "kana": "",
+    "romaji": "",
+    "meaning": "發勁"
+  },
+  {
+    "kanji": "はどうだん",
+    "kana": "",
+    "romaji": "",
+    "meaning": "波導彈"
+  },
+  {
+    "kanji": "ロックカット",
+    "kana": "",
+    "romaji": "",
+    "meaning": "岩石打磨"
+  },
+  {
+    "kanji": "どくづき",
+    "kana": "",
+    "romaji": "",
+    "meaning": "毒擊"
+  },
+  {
+    "kanji": "あくのはどう",
+    "kana": "",
+    "romaji": "",
+    "meaning": "惡之波動"
+  },
+  {
+    "kanji": "つじぎり",
+    "kana": "",
+    "romaji": "",
+    "meaning": "暗襲要害"
+  },
+  {
+    "kanji": "アクアテール",
+    "kana": "",
+    "romaji": "",
+    "meaning": "水流尾"
+  },
+  {
+    "kanji": "タネばくだん",
+    "kana": "",
+    "romaji": "",
+    "meaning": "種子炸彈"
+  },
+  {
+    "kanji": "エアスラッシュ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "空氣斬"
+  },
+  {
+    "kanji": "シザークロス",
+    "kana": "",
+    "romaji": "",
+    "meaning": "十字剪"
+  },
+  {
+    "kanji": "むしのさざめき",
+    "kana": "",
+    "romaji": "",
+    "meaning": "蟲鳴"
+  },
+  {
+    "kanji": "りゅうのはどう",
+    "kana": "",
+    "romaji": "",
+    "meaning": "龍之波動"
+  },
+  {
+    "kanji": "ドラゴンダイブ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "龍之俯衝"
+  },
+  {
+    "kanji": "パワージェム",
+    "kana": "",
+    "romaji": "",
+    "meaning": "力量寶石"
+  },
+  {
+    "kanji": "ドレインパンチ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "吸取拳"
+  },
+  {
+    "kanji": "しんくうは",
+    "kana": "",
+    "romaji": "",
+    "meaning": "真空波"
+  },
+  {
+    "kanji": "きあいだま",
+    "kana": "",
+    "romaji": "",
+    "meaning": "真氣彈"
+  },
+  {
+    "kanji": "エナジーボール",
+    "kana": "",
+    "romaji": "",
+    "meaning": "能量球"
+  },
+  {
+    "kanji": "ブレイブバード",
+    "kana": "",
+    "romaji": "",
+    "meaning": "勇鳥猛攻"
+  },
+  {
+    "kanji": "だいちのちから",
+    "kana": "",
+    "romaji": "",
+    "meaning": "大地之力"
+  },
+  {
+    "kanji": "すりかえ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "掉包"
+  },
+  {
+    "kanji": "ギガインパクト",
+    "kana": "",
+    "romaji": "",
+    "meaning": "終極衝擊"
+  },
+  {
+    "kanji": "わるだくみ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "詭計"
+  },
+  {
+    "kanji": "バレットパンチ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "子彈拳"
+  },
+  {
+    "kanji": "ゆきなだれ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "雪崩"
+  },
+  {
+    "kanji": "こおりのつぶて",
+    "kana": "",
+    "romaji": "",
+    "meaning": "冰礫"
+  },
+  {
+    "kanji": "シャドークロー",
+    "kana": "",
+    "romaji": "",
+    "meaning": "暗影爪"
+  },
+  {
+    "kanji": "かみなりのキバ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "雷電牙"
+  },
+  {
+    "kanji": "こおりのキバ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "冰凍牙"
+  },
+  {
+    "kanji": "ほのおのキバ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "火焰牙"
+  },
+  {
+    "kanji": "かげうち",
+    "kana": "",
+    "romaji": "",
+    "meaning": "影子偷襲"
+  },
+  {
+    "kanji": "どろばくだん",
+    "kana": "",
+    "romaji": "",
+    "meaning": "泥巴炸彈"
+  },
+  {
+    "kanji": "サイコカッター",
+    "kana": "",
+    "romaji": "",
+    "meaning": "精神利刃"
+  },
+  {
+    "kanji": "しねんのずつき",
+    "kana": "",
+    "romaji": "",
+    "meaning": "意念頭錘"
+  },
+  {
+    "kanji": "ミラーショット",
+    "kana": "",
+    "romaji": "",
+    "meaning": "鏡光射擊"
+  },
+  {
+    "kanji": "ラスターカノン",
+    "kana": "",
+    "romaji": "",
+    "meaning": "加農光炮"
+  },
+  {
+    "kanji": "ロッククライム",
+    "kana": "",
+    "romaji": "",
+    "meaning": "攀岩"
+  },
+  {
+    "kanji": "きりばらい",
+    "kana": "",
+    "romaji": "",
+    "meaning": "清除濃霧"
+  },
+  {
+    "kanji": "トリックルーム",
+    "kana": "",
+    "romaji": "",
+    "meaning": "戲法空間"
+  },
+  {
+    "kanji": "りゅうせいぐん",
+    "kana": "",
+    "romaji": "",
+    "meaning": "流星群"
+  },
+  {
+    "kanji": "ほうでん",
+    "kana": "",
+    "romaji": "",
+    "meaning": "放電"
+  },
+  {
+    "kanji": "ふんえん",
+    "kana": "",
+    "romaji": "",
+    "meaning": "噴煙"
+  },
+  {
+    "kanji": "リーフストーム",
+    "kana": "",
+    "romaji": "",
+    "meaning": "飛葉風暴"
+  },
+  {
+    "kanji": "パワーウィップ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "強力鞭打"
+  },
+  {
+    "kanji": "がんせきほう",
+    "kana": "",
+    "romaji": "",
+    "meaning": "岩石炮"
+  },
+  {
+    "kanji": "クロスポイズン",
+    "kana": "",
+    "romaji": "",
+    "meaning": "十字毒刃"
+  },
+  {
+    "kanji": "ダストシュート",
+    "kana": "",
+    "romaji": "",
+    "meaning": "垃圾射擊"
+  },
+  {
+    "kanji": "アイアンヘッド",
+    "kana": "",
+    "romaji": "",
+    "meaning": "鐵頭"
+  },
+  {
+    "kanji": "マグネットボム",
+    "kana": "",
+    "romaji": "",
+    "meaning": "磁鐵炸彈"
+  },
+  {
+    "kanji": "ストーンエッジ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "尖石攻擊"
+  },
+  {
+    "kanji": "ゆうわく",
+    "kana": "",
+    "romaji": "",
+    "meaning": "誘惑"
+  },
+  {
+    "kanji": "ステルスロック",
+    "kana": "",
+    "romaji": "",
+    "meaning": "隱形岩"
+  },
+  {
+    "kanji": "くさむすび",
+    "kana": "",
+    "romaji": "",
+    "meaning": "打草結"
+  },
+  {
+    "kanji": "おしゃべり",
+    "kana": "",
+    "romaji": "",
+    "meaning": "喋喋不休"
+  },
+  {
+    "kanji": "さばきのつぶて",
+    "kana": "",
+    "romaji": "",
+    "meaning": "制裁光礫"
+  },
+  {
+    "kanji": "むしくい",
+    "kana": "",
+    "romaji": "",
+    "meaning": "蟲咬"
+  },
+  {
+    "kanji": "チャージビーム",
+    "kana": "",
+    "romaji": "",
+    "meaning": "充電光束"
+  },
+  {
+    "kanji": "ウッドハンマー",
+    "kana": "",
+    "romaji": "",
+    "meaning": "木槌"
+  },
+  {
+    "kanji": "アクアジェット",
+    "kana": "",
+    "romaji": "",
+    "meaning": "水流噴射"
+  },
+  {
+    "kanji": "こうげきしれい",
+    "kana": "",
+    "romaji": "",
+    "meaning": "攻擊指令"
+  },
+  {
+    "kanji": "ぼうぎょしれい",
+    "kana": "",
+    "romaji": "",
+    "meaning": "防禦指令"
+  },
+  {
+    "kanji": "かいふくしれい",
+    "kana": "",
+    "romaji": "",
+    "meaning": "回復指令"
+  },
+  {
+    "kanji": "もろはのずつき",
+    "kana": "",
+    "romaji": "",
+    "meaning": "雙刃頭錘"
+  },
+  {
+    "kanji": "ダブルアタック",
+    "kana": "",
+    "romaji": "",
+    "meaning": "二連擊"
+  },
+  {
+    "kanji": "ときのほうこう",
+    "kana": "",
+    "romaji": "",
+    "meaning": "時光咆哮"
+  },
+  {
+    "kanji": "あくうせつだん",
+    "kana": "",
+    "romaji": "",
+    "meaning": "亞空裂斬"
+  },
+  {
+    "kanji": "みかづきのまい",
+    "kana": "",
+    "romaji": "",
+    "meaning": "新月舞"
+  },
+  {
+    "kanji": "にぎりつぶす",
+    "kana": "",
+    "romaji": "",
+    "meaning": "捏碎"
+  },
+  {
+    "kanji": "マグマストーム",
+    "kana": "",
+    "romaji": "",
+    "meaning": "熔岩風暴"
+  },
+  {
+    "kanji": "ダークホール",
+    "kana": "",
+    "romaji": "",
+    "meaning": "暗黑洞"
+  },
+  {
+    "kanji": "シードフレア",
+    "kana": "",
+    "romaji": "",
+    "meaning": "種子閃光"
+  },
+  {
+    "kanji": "あやしいかぜ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "奇異之風"
+  },
+  {
+    "kanji": "シャドーダイブ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "暗影潛襲"
+  },
+  {
+    "kanji": "つめとぎ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "磨爪"
+  },
+  {
+    "kanji": "ワイドガード",
+    "kana": "",
+    "romaji": "",
+    "meaning": "廣域防守"
+  },
+  {
+    "kanji": "ガードシェア",
+    "kana": "",
+    "romaji": "",
+    "meaning": "防守平分"
+  },
+  {
+    "kanji": "パワーシェア",
+    "kana": "",
+    "romaji": "",
+    "meaning": "力量平分"
+  },
+  {
+    "kanji": "ワンダールーム",
+    "kana": "",
+    "romaji": "",
+    "meaning": "奇妙空間"
+  },
+  {
+    "kanji": "サイコショック",
+    "kana": "",
+    "romaji": "",
+    "meaning": "精神衝擊"
+  },
+  {
+    "kanji": "ベノムショック",
+    "kana": "",
+    "romaji": "",
+    "meaning": "毒液衝擊"
+  },
+  {
+    "kanji": "ボディパージ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "身體輕量化"
+  },
+  {
+    "kanji": "いかりのこな",
+    "kana": "",
+    "romaji": "",
+    "meaning": "憤怒粉"
+  },
+  {
+    "kanji": "テレキネシス",
+    "kana": "",
+    "romaji": "",
+    "meaning": "意念移物"
+  },
+  {
+    "kanji": "マジックルーム",
+    "kana": "",
+    "romaji": "",
+    "meaning": "魔法空間"
+  },
+  {
+    "kanji": "うちおとす",
+    "kana": "",
+    "romaji": "",
+    "meaning": "擊落"
+  },
+  {
+    "kanji": "やまあらし",
+    "kana": "",
+    "romaji": "",
+    "meaning": "山嵐摔"
+  },
+  {
+    "kanji": "はじけるほのお",
+    "kana": "",
+    "romaji": "",
+    "meaning": "烈焰濺射"
+  },
+  {
+    "kanji": "ヘドロウェーブ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "污泥波"
+  },
+  {
+    "kanji": "ちょうのまい",
+    "kana": "",
+    "romaji": "",
+    "meaning": "蝶舞"
+  },
+  {
+    "kanji": "ヘビーボンバー",
+    "kana": "",
+    "romaji": "",
+    "meaning": "重磅衝撞"
+  },
+  {
+    "kanji": "シンクロノイズ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "同步干擾"
+  },
+  {
+    "kanji": "エレキボール",
+    "kana": "",
+    "romaji": "",
+    "meaning": "電球"
+  },
+  {
+    "kanji": "みずびたし",
+    "kana": "",
+    "romaji": "",
+    "meaning": "浸水"
+  },
+  {
+    "kanji": "ニトロチャージ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "蓄能焰襲"
+  },
+  {
+    "kanji": "とぐろをまく",
+    "kana": "",
+    "romaji": "",
+    "meaning": "盤蜷"
+  },
+  {
+    "kanji": "ローキック",
+    "kana": "",
+    "romaji": "",
+    "meaning": "下盤踢"
+  },
+  {
+    "kanji": "アシッドボム",
+    "kana": "",
+    "romaji": "",
+    "meaning": "酸液炸彈"
+  },
+  {
+    "kanji": "イカサマ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "欺詐"
+  },
+  {
+    "kanji": "シンプルビーム",
+    "kana": "",
+    "romaji": "",
+    "meaning": "單純光束"
+  },
+  {
+    "kanji": "なかまづくり",
+    "kana": "",
+    "romaji": "",
+    "meaning": "找夥伴"
+  },
+  {
+    "kanji": "おさきにどうぞ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "您先請"
+  },
+  {
+    "kanji": "りんしょう",
+    "kana": "",
+    "romaji": "",
+    "meaning": "輪唱"
+  },
+  {
+    "kanji": "エコーボイス",
+    "kana": "",
+    "romaji": "",
+    "meaning": "迴聲"
+  },
+  {
+    "kanji": "なしくずし",
+    "kana": "",
+    "romaji": "",
+    "meaning": "逐步擊破"
+  },
+  {
+    "kanji": "クリアスモッグ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "清除之煙"
+  },
+  {
+    "kanji": "アシストパワー",
+    "kana": "",
+    "romaji": "",
+    "meaning": "輔助力量"
+  },
+  {
+    "kanji": "ファストガード",
+    "kana": "",
+    "romaji": "",
+    "meaning": "快速防守"
+  },
+  {
+    "kanji": "サイドチェンジ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "交換場地"
+  },
+  {
+    "kanji": "ねっとう",
+    "kana": "",
+    "romaji": "",
+    "meaning": "熱水"
+  },
+  {
+    "kanji": "からをやぶる",
+    "kana": "",
+    "romaji": "",
+    "meaning": "破殼"
+  },
+  {
+    "kanji": "いやしのはどう",
+    "kana": "",
+    "romaji": "",
+    "meaning": "治癒波動"
+  },
+  {
+    "kanji": "たたりめ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "禍不單行"
+  },
+  {
+    "kanji": "フリーフォール",
+    "kana": "",
+    "romaji": "",
+    "meaning": "自由落體"
+  },
+  {
+    "kanji": "ギアチェンジ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "換檔"
+  },
+  {
+    "kanji": "ともえなげ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "巴投"
+  },
+  {
+    "kanji": "やきつくす",
+    "kana": "",
+    "romaji": "",
+    "meaning": "燒盡"
+  },
+  {
+    "kanji": "さきおくり",
+    "kana": "",
+    "romaji": "",
+    "meaning": "延後"
+  },
+  {
+    "kanji": "アクロバット",
+    "kana": "",
+    "romaji": "",
+    "meaning": "雜技"
+  },
+  {
+    "kanji": "ミラータイプ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "鏡面屬性"
+  },
+  {
+    "kanji": "かたきうち",
+    "kana": "",
+    "romaji": "",
+    "meaning": "報仇"
+  },
+  {
+    "kanji": "いのちがけ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "搏命"
+  },
+  {
+    "kanji": "ギフトパス",
+    "kana": "",
+    "romaji": "",
+    "meaning": "傳遞禮物"
+  },
+  {
+    "kanji": "れんごく",
+    "kana": "",
+    "romaji": "",
+    "meaning": "煉獄"
+  },
+  {
+    "kanji": "みずのちかい",
+    "kana": "",
+    "romaji": "",
+    "meaning": "水之誓約"
+  },
+  {
+    "kanji": "ほのおのちかい",
+    "kana": "",
+    "romaji": "",
+    "meaning": "火之誓約"
+  },
+  {
+    "kanji": "くさのちかい",
+    "kana": "",
+    "romaji": "",
+    "meaning": "草之誓約"
+  },
+  {
+    "kanji": "ボルトチェンジ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "伏特替換"
+  },
+  {
+    "kanji": "むしのていこう",
+    "kana": "",
+    "romaji": "",
+    "meaning": "蟲之抵抗"
+  },
+  {
+    "kanji": "じならし",
+    "kana": "",
+    "romaji": "",
+    "meaning": "重踏"
+  },
+  {
+    "kanji": "こおりのいぶき",
+    "kana": "",
+    "romaji": "",
+    "meaning": "冰息"
+  },
+  {
+    "kanji": "ドラゴンテール",
+    "kana": "",
+    "romaji": "",
+    "meaning": "龍尾"
+  },
+  {
+    "kanji": "ふるいたてる",
+    "kana": "",
+    "romaji": "",
+    "meaning": "自我激勵"
+  },
+  {
+    "kanji": "エレキネット",
+    "kana": "",
+    "romaji": "",
+    "meaning": "電網"
+  },
+  {
+    "kanji": "ワイルドボルト",
+    "kana": "",
+    "romaji": "",
+    "meaning": "瘋狂伏特"
+  },
+  {
+    "kanji": "ドリルライナー",
+    "kana": "",
+    "romaji": "",
+    "meaning": "直衝鑽"
+  },
+  {
+    "kanji": "ダブルチョップ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "二連劈"
+  },
+  {
+    "kanji": "ハートスタンプ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "愛心印章"
+  },
+  {
+    "kanji": "ウッドホーン",
+    "kana": "",
+    "romaji": "",
+    "meaning": "木角"
+  },
+  {
+    "kanji": "せいなるつるぎ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "聖劍"
+  },
+  {
+    "kanji": "シェルブレード",
+    "kana": "",
+    "romaji": "",
+    "meaning": "貝殼刃"
+  },
+  {
+    "kanji": "ヒートスタンプ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "高溫重壓"
+  },
+  {
+    "kanji": "グラスミキサー",
+    "kana": "",
+    "romaji": "",
+    "meaning": "青草攪拌器"
+  },
+  {
+    "kanji": "ハードローラー",
+    "kana": "",
+    "romaji": "",
+    "meaning": "瘋狂滾壓"
+  },
+  {
+    "kanji": "コットンガード",
+    "kana": "",
+    "romaji": "",
+    "meaning": "棉花防守"
+  },
+  {
+    "kanji": "ナイトバースト",
+    "kana": "",
+    "romaji": "",
+    "meaning": "暗黑爆破"
+  },
+  {
+    "kanji": "サイコブレイク",
+    "kana": "",
+    "romaji": "",
+    "meaning": "精神擊破"
+  },
+  {
+    "kanji": "スイープビンタ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "掃尾拍打"
+  },
+  {
+    "kanji": "ぼうふう",
+    "kana": "",
+    "romaji": "",
+    "meaning": "暴風"
+  },
+  {
+    "kanji": "アフロブレイク",
+    "kana": "",
+    "romaji": "",
+    "meaning": "爆炸頭突擊"
+  },
+  {
+    "kanji": "ギアソーサー",
+    "kana": "",
+    "romaji": "",
+    "meaning": "齒輪飛盤"
+  },
+  {
+    "kanji": "かえんだん",
+    "kana": "",
+    "romaji": "",
+    "meaning": "火焰彈"
+  },
+  {
+    "kanji": "テクノバスター",
+    "kana": "",
+    "romaji": "",
+    "meaning": "高科技光炮"
+  },
+  {
+    "kanji": "いにしえのうた",
+    "kana": "",
+    "romaji": "",
+    "meaning": "古老之歌"
+  },
+  {
+    "kanji": "しんぴのつるぎ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "神秘之劍"
+  },
+  {
+    "kanji": "こごえるせかい",
+    "kana": "",
+    "romaji": "",
+    "meaning": "冰封世界"
+  },
+  {
+    "kanji": "らいげき",
+    "kana": "",
+    "romaji": "",
+    "meaning": "雷擊"
+  },
+  {
+    "kanji": "あおいほのお",
+    "kana": "",
+    "romaji": "",
+    "meaning": "青焰"
+  },
+  {
+    "kanji": "ほのおのまい",
+    "kana": "",
+    "romaji": "",
+    "meaning": "火之舞"
+  },
+  {
+    "kanji": "フリーズボルト",
+    "kana": "",
+    "romaji": "",
+    "meaning": "冰凍伏特"
+  },
+  {
+    "kanji": "コールドフレア",
+    "kana": "",
+    "romaji": "",
+    "meaning": "極寒冷焰"
+  },
+  {
+    "kanji": "バークアウト",
+    "kana": "",
+    "romaji": "",
+    "meaning": "大聲咆哮"
+  },
+  {
+    "kanji": "つららおとし",
+    "kana": "",
+    "romaji": "",
+    "meaning": "冰柱墜擊"
+  },
+  {
+    "kanji": "Ｖジェネレート",
+    "kana": "",
+    "romaji": "",
+    "meaning": "Ｖ熱焰"
+  },
+  {
+    "kanji": "クロスフレイム",
+    "kana": "",
+    "romaji": "",
+    "meaning": "交錯火焰"
+  },
+  {
+    "kanji": "クロスサンダー",
+    "kana": "",
+    "romaji": "",
+    "meaning": "交錯閃電"
+  },
+  {
+    "kanji": "フライングプレス",
+    "kana": "",
+    "romaji": "",
+    "meaning": "飛身重壓"
+  },
+  {
+    "kanji": "たたみがえし",
+    "kana": "",
+    "romaji": "",
+    "meaning": "掀榻榻米"
+  },
+  {
+    "kanji": "ゲップ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "打嗝"
+  },
+  {
+    "kanji": "たがやす",
+    "kana": "",
+    "romaji": "",
+    "meaning": "耕地"
+  },
+  {
+    "kanji": "ねばねばネット",
+    "kana": "",
+    "romaji": "",
+    "meaning": "黏黏網"
+  },
+  {
+    "kanji": "とどめばり",
+    "kana": "",
+    "romaji": "",
+    "meaning": "致命針刺"
+  },
+  {
+    "kanji": "ゴーストダイブ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "潛靈奇襲"
+  },
+  {
+    "kanji": "ハロウィン",
+    "kana": "",
+    "romaji": "",
+    "meaning": "萬聖夜"
+  },
+  {
+    "kanji": "おたけび",
+    "kana": "",
+    "romaji": "",
+    "meaning": "戰吼"
+  },
+  {
+    "kanji": "プラズマシャワー",
+    "kana": "",
+    "romaji": "",
+    "meaning": "等離子浴"
+  },
+  {
+    "kanji": "パラボラチャージ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "拋物面充電"
+  },
+  {
+    "kanji": "もりののろい",
+    "kana": "",
+    "romaji": "",
+    "meaning": "森林詛咒"
+  },
+  {
+    "kanji": "はなふぶき",
+    "kana": "",
+    "romaji": "",
+    "meaning": "落英繽紛"
+  },
+  {
+    "kanji": "フリーズドライ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "冷凍乾燥"
+  },
+  {
+    "kanji": "チャームボイス",
+    "kana": "",
+    "romaji": "",
+    "meaning": "魅惑之聲"
+  },
+  {
+    "kanji": "すてゼリフ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "拋下狠話"
+  },
+  {
+    "kanji": "ひっくりかえす",
+    "kana": "",
+    "romaji": "",
+    "meaning": "顛倒"
+  },
+  {
+    "kanji": "ドレインキッス",
+    "kana": "",
+    "romaji": "",
+    "meaning": "吸取之吻"
+  },
+  {
+    "kanji": "トリックガード",
+    "kana": "",
+    "romaji": "",
+    "meaning": "戲法防守"
+  },
+  {
+    "kanji": "フラワーガード",
+    "kana": "",
+    "romaji": "",
+    "meaning": "鮮花防守"
+  },
+  {
+    "kanji": "グラスフィールド",
+    "kana": "",
+    "romaji": "",
+    "meaning": "青草場地"
+  },
+  {
+    "kanji": "ミストフィールド",
+    "kana": "",
+    "romaji": "",
+    "meaning": "薄霧場地"
+  },
+  {
+    "kanji": "そうでん",
+    "kana": "",
+    "romaji": "",
+    "meaning": "輸電"
+  },
+  {
+    "kanji": "じゃれつく",
+    "kana": "",
+    "romaji": "",
+    "meaning": "嬉鬧"
+  },
+  {
+    "kanji": "ようせいのかぜ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "妖精之風"
+  },
+  {
+    "kanji": "ムーンフォース",
+    "kana": "",
+    "romaji": "",
+    "meaning": "月亮之力"
+  },
+  {
+    "kanji": "ばくおんぱ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "爆音波"
+  },
+  {
+    "kanji": "フェアリーロック",
+    "kana": "",
+    "romaji": "",
+    "meaning": "妖精之鎖"
+  },
+  {
+    "kanji": "キングシールド",
+    "kana": "",
+    "romaji": "",
+    "meaning": "王者盾牌"
+  },
+  {
+    "kanji": "なかよくする",
+    "kana": "",
+    "romaji": "",
+    "meaning": "和睦相處"
+  },
+  {
+    "kanji": "ないしょばなし",
+    "kana": "",
+    "romaji": "",
+    "meaning": "密語"
+  },
+  {
+    "kanji": "ダイヤストーム",
+    "kana": "",
+    "romaji": "",
+    "meaning": "鑽石風暴"
+  },
+  {
+    "kanji": "スチームバースト",
+    "kana": "",
+    "romaji": "",
+    "meaning": "蒸汽爆炸"
+  },
+  {
+    "kanji": "いじげんホール",
+    "kana": "",
+    "romaji": "",
+    "meaning": "異次元洞"
+  },
+  {
+    "kanji": "みずしゅりけん",
+    "kana": "",
+    "romaji": "",
+    "meaning": "飛水手裡劍"
+  },
+  {
+    "kanji": "マジカルフレイム",
+    "kana": "",
+    "romaji": "",
+    "meaning": "魔法火焰"
+  },
+  {
+    "kanji": "ニードルガード",
+    "kana": "",
+    "romaji": "",
+    "meaning": "尖刺防守"
+  },
+  {
+    "kanji": "アロマミスト",
+    "kana": "",
+    "romaji": "",
+    "meaning": "芳香薄霧"
+  },
+  {
+    "kanji": "かいでんぱ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "怪異電波"
+  },
+  {
+    "kanji": "ベノムトラップ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "毒液陷阱"
+  },
+  {
+    "kanji": "ふんじん",
+    "kana": "",
+    "romaji": "",
+    "meaning": "粉塵"
+  },
+  {
+    "kanji": "ジオコントロール",
+    "kana": "",
+    "romaji": "",
+    "meaning": "大地掌控"
+  },
+  {
+    "kanji": "じばそうさ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "磁場操控"
+  },
+  {
+    "kanji": "ハッピータイム",
+    "kana": "",
+    "romaji": "",
+    "meaning": "歡樂時光"
+  },
+  {
+    "kanji": "エレキフィールド",
+    "kana": "",
+    "romaji": "",
+    "meaning": "電氣場地"
+  },
+  {
+    "kanji": "マジカルシャイン",
+    "kana": "",
+    "romaji": "",
+    "meaning": "魔法閃耀"
+  },
+  {
+    "kanji": "おいわい",
+    "kana": "",
+    "romaji": "",
+    "meaning": "慶祝"
+  },
+  {
+    "kanji": "てをつなぐ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "牽手"
+  },
+  {
+    "kanji": "つぶらなひとみ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "圓瞳"
+  },
+  {
+    "kanji": "ほっぺすりすり",
+    "kana": "",
+    "romaji": "",
+    "meaning": "蹭蹭臉頰"
+  },
+  {
+    "kanji": "てかげん",
+    "kana": "",
+    "romaji": "",
+    "meaning": "手下留情"
+  },
+  {
+    "kanji": "まとわりつく",
+    "kana": "",
+    "romaji": "",
+    "meaning": "死纏爛打"
+  },
+  {
+    "kanji": "グロウパンチ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "增強拳"
+  },
+  {
+    "kanji": "デスウイング",
+    "kana": "",
+    "romaji": "",
+    "meaning": "死亡之翼"
+  },
+  {
+    "kanji": "サウザンアロー",
+    "kana": "",
+    "romaji": "",
+    "meaning": "千箭齊發"
+  },
+  {
+    "kanji": "サウザンウェーブ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "千波激盪"
+  },
+  {
+    "kanji": "グランドフォース",
+    "kana": "",
+    "romaji": "",
+    "meaning": "大地神力"
+  },
+  {
+    "kanji": "はめつのひかり",
+    "kana": "",
+    "romaji": "",
+    "meaning": "破滅之光"
+  },
+  {
+    "kanji": "こんげんのはどう",
+    "kana": "",
+    "romaji": "",
+    "meaning": "根源波動"
+  },
+  {
+    "kanji": "だんがいのつるぎ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "斷崖之劍"
+  },
+  {
+    "kanji": "ガリョウテンセイ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "畫龍點睛"
+  },
+  {
+    "kanji": "いじげんラッシュ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "異次元猛攻"
+  },
+  {
+    "kanji": "ウルトラダッシュアタック",
+    "kana": "",
+    "romaji": "",
+    "meaning": "究極無敵大衝撞"
+  },
+  {
+    "kanji": "ぜんりょくむそうげきれつけん",
+    "kana": "",
+    "romaji": "",
+    "meaning": "全力無雙激烈拳"
+  },
+  {
+    "kanji": "ファイナルダイブクラッシュ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "極速俯衝轟烈撞"
+  },
+  {
+    "kanji": "アシッドポイズンデリート",
+    "kana": "",
+    "romaji": "",
+    "meaning": "強酸劇毒滅絕雨"
+  },
+  {
+    "kanji": "ライジングランドオーバー",
+    "kana": "",
+    "romaji": "",
+    "meaning": "地隆嘯天大終結"
+  },
+  {
+    "kanji": "ワールズエンドフォール",
+    "kana": "",
+    "romaji": "",
+    "meaning": "毀天滅地巨岩墜"
+  },
+  {
+    "kanji": "ぜったいほしょくかいてんざん",
+    "kana": "",
+    "romaji": "",
+    "meaning": "絕對捕食迴旋斬"
+  },
+  {
+    "kanji": "むげんあんやへのいざない",
+    "kana": "",
+    "romaji": "",
+    "meaning": "無盡暗夜之誘惑"
+  },
+  {
+    "kanji": "ちょうぜつらせんれんげき",
+    "kana": "",
+    "romaji": "",
+    "meaning": "超絕螺旋連擊"
+  },
+  {
+    "kanji": "ダイナミックフルフレイム",
+    "kana": "",
+    "romaji": "",
+    "meaning": "超強極限爆焰彈"
+  },
+  {
+    "kanji": "スーパーアクアトルネード",
+    "kana": "",
+    "romaji": "",
+    "meaning": "超級水流大漩渦"
+  },
+  {
+    "kanji": "ブルームシャインエクストラ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "絢爛繽紛花怒放"
+  },
+  {
+    "kanji": "スパーキングギガボルト",
+    "kana": "",
+    "romaji": "",
+    "meaning": "終極伏特狂雷閃"
+  },
+  {
+    "kanji": "マキシマムサイブレイカー",
+    "kana": "",
+    "romaji": "",
+    "meaning": "至高精神破壞波"
+  },
+  {
+    "kanji": "レイジングジオフリーズ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "激狂大地萬里冰"
+  },
+  {
+    "kanji": "アルティメットドラゴンバーン",
+    "kana": "",
+    "romaji": "",
+    "meaning": "究極巨龍震天地"
+  },
+  {
+    "kanji": "ブラックホールイクリプス",
+    "kana": "",
+    "romaji": "",
+    "meaning": "黑洞吞噬萬物滅"
+  },
+  {
+    "kanji": "ラブリースターインパクト",
+    "kana": "",
+    "romaji": "",
+    "meaning": "可愛星星飛天撞"
+  },
+  {
+    "kanji": "ひっさつのピカチュート",
+    "kana": "",
+    "romaji": "",
+    "meaning": "皮卡皮卡必殺擊"
+  },
+  {
+    "kanji": "すなあつめ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "集沙"
+  },
+  {
+    "kanji": "であいがしら",
+    "kana": "",
+    "romaji": "",
+    "meaning": "迎頭一擊"
+  },
+  {
+    "kanji": "トーチカ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "碉堡"
+  },
+  {
+    "kanji": "かげぬい",
+    "kana": "",
+    "romaji": "",
+    "meaning": "縫影"
+  },
+  {
+    "kanji": "ＤＤラリアット",
+    "kana": "",
+    "romaji": "",
+    "meaning": "ＤＤ金勾臂"
+  },
+  {
+    "kanji": "うたかたのアリア",
+    "kana": "",
+    "romaji": "",
+    "meaning": "泡影的詠歎調"
+  },
+  {
+    "kanji": "アイスハンマー",
+    "kana": "",
+    "romaji": "",
+    "meaning": "冰錘"
+  },
+  {
+    "kanji": "フラワーヒール",
+    "kana": "",
+    "romaji": "",
+    "meaning": "花療"
+  },
+  {
+    "kanji": "１０まんばりき",
+    "kana": "",
+    "romaji": "",
+    "meaning": "十萬馬力"
+  },
+  {
+    "kanji": "ちからをすいとる",
+    "kana": "",
+    "romaji": "",
+    "meaning": "吸取力量"
+  },
+  {
+    "kanji": "ソーラーブレード",
+    "kana": "",
+    "romaji": "",
+    "meaning": "日光刃"
+  },
+  {
+    "kanji": "このは",
+    "kana": "",
+    "romaji": "",
+    "meaning": "樹葉"
+  },
+  {
+    "kanji": "スポットライト",
+    "kana": "",
+    "romaji": "",
+    "meaning": "聚光燈"
+  },
+  {
+    "kanji": "どくのいと",
+    "kana": "",
+    "romaji": "",
+    "meaning": "毒絲"
+  },
+  {
+    "kanji": "とぎすます",
+    "kana": "",
+    "romaji": "",
+    "meaning": "磨礪"
+  },
+  {
+    "kanji": "アシストギア",
+    "kana": "",
+    "romaji": "",
+    "meaning": "輔助齒輪"
+  },
+  {
+    "kanji": "じごくづき",
+    "kana": "",
+    "romaji": "",
+    "meaning": "地獄突刺"
+  },
+  {
+    "kanji": "かふんだんご",
+    "kana": "",
+    "romaji": "",
+    "meaning": "花粉團"
+  },
+  {
+    "kanji": "アンカーショット",
+    "kana": "",
+    "romaji": "",
+    "meaning": "擲錨"
+  },
+  {
+    "kanji": "サイコフィールド",
+    "kana": "",
+    "romaji": "",
+    "meaning": "精神場地"
+  },
+  {
+    "kanji": "とびかかる",
+    "kana": "",
+    "romaji": "",
+    "meaning": "猛撲"
+  },
+  {
+    "kanji": "ほのおのムチ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "火焰鞭"
+  },
+  {
+    "kanji": "つけあがる",
+    "kana": "",
+    "romaji": "",
+    "meaning": "囂張"
+  },
+  {
+    "kanji": "もえつきる",
+    "kana": "",
+    "romaji": "",
+    "meaning": "燃盡"
+  },
+  {
+    "kanji": "スピードスワップ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "速度互換"
+  },
+  {
+    "kanji": "スマートホーン",
+    "kana": "",
+    "romaji": "",
+    "meaning": "修長之角"
+  },
+  {
+    "kanji": "じょうか",
+    "kana": "",
+    "romaji": "",
+    "meaning": "淨化"
+  },
+  {
+    "kanji": "めざめるダンス",
+    "kana": "",
+    "romaji": "",
+    "meaning": "覺醒之舞"
+  },
+  {
+    "kanji": "コアパニッシャー",
+    "kana": "",
+    "romaji": "",
+    "meaning": "核心懲罰者"
+  },
+  {
+    "kanji": "トロピカルキック",
+    "kana": "",
+    "romaji": "",
+    "meaning": "熱帶踢"
+  },
+  {
+    "kanji": "さいはい",
+    "kana": "",
+    "romaji": "",
+    "meaning": "號令"
+  },
+  {
+    "kanji": "くちばしキャノン",
+    "kana": "",
+    "romaji": "",
+    "meaning": "鳥嘴加農炮"
+  },
+  {
+    "kanji": "スケイルノイズ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "鱗片噪音"
+  },
+  {
+    "kanji": "ドラゴンハンマー",
+    "kana": "",
+    "romaji": "",
+    "meaning": "龍錘"
+  },
+  {
+    "kanji": "ぶんまわす",
+    "kana": "",
+    "romaji": "",
+    "meaning": "狂舞揮打"
+  },
+  {
+    "kanji": "オーロラベール",
+    "kana": "",
+    "romaji": "",
+    "meaning": "極光幕"
+  },
+  {
+    "kanji": "シャドーアローズストライク",
+    "kana": "",
+    "romaji": "",
+    "meaning": "遮天蔽日暗影箭"
+  },
+  {
+    "kanji": "ハイパーダーククラッシャー",
+    "kana": "",
+    "romaji": "",
+    "meaning": "極惡飛躍粉碎擊"
+  },
+  {
+    "kanji": "わだつみのシンフォニア",
+    "kana": "",
+    "romaji": "",
+    "meaning": "海神莊嚴交響樂"
+  },
+  {
+    "kanji": "ガーディアン・デ・アローラ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "巨人衛士・阿羅拉"
+  },
+  {
+    "kanji": "しちせいだっこんたい",
+    "kana": "",
+    "romaji": "",
+    "meaning": "七星奪魂腿"
+  },
+  {
+    "kanji": "ライトニングサーフライド",
+    "kana": "",
+    "romaji": "",
+    "meaning": "駕雷馭電戲衝浪"
+  },
+  {
+    "kanji": "ほんきをだす　こうげき",
+    "kana": "",
+    "romaji": "",
+    "meaning": "認真起來大爆擊"
+  },
+  {
+    "kanji": "ナインエボルブースト",
+    "kana": "",
+    "romaji": "",
+    "meaning": "九彩昇華齊聚頂"
+  },
+  {
+    "kanji": "オリジンズスーパーノヴァ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "起源超新星大爆炸"
+  },
+  {
+    "kanji": "トラップシェル",
+    "kana": "",
+    "romaji": "",
+    "meaning": "陷阱甲殼"
+  },
+  {
+    "kanji": "フルールカノン",
+    "kana": "",
+    "romaji": "",
+    "meaning": "花朵加農炮"
+  },
+  {
+    "kanji": "サイコファング",
+    "kana": "",
+    "romaji": "",
+    "meaning": "精神之牙"
+  },
+  {
+    "kanji": "じだんだ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "跺腳"
+  },
+  {
+    "kanji": "シャドーボーン",
+    "kana": "",
+    "romaji": "",
+    "meaning": "暗影之骨"
+  },
+  {
+    "kanji": "アクセルロック",
+    "kana": "",
+    "romaji": "",
+    "meaning": "衝岩"
+  },
+  {
+    "kanji": "アクアブレイク",
+    "kana": "",
+    "romaji": "",
+    "meaning": "水流裂破"
+  },
+  {
+    "kanji": "プリズムレーザー",
+    "kana": "",
+    "romaji": "",
+    "meaning": "稜鏡鐳射"
+  },
+  {
+    "kanji": "シャドースチール",
+    "kana": "",
+    "romaji": "",
+    "meaning": "暗影偷盜"
+  },
+  {
+    "kanji": "メテオドライブ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "流星閃衝"
+  },
+  {
+    "kanji": "シャドーレイ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "暗影之光"
+  },
+  {
+    "kanji": "なみだめ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "淚眼汪汪"
+  },
+  {
+    "kanji": "びりびりちくちく",
+    "kana": "",
+    "romaji": "",
+    "meaning": "麻麻刺刺"
+  },
+  {
+    "kanji": "しぜんのいかり",
+    "kana": "",
+    "romaji": "",
+    "meaning": "自然之怒"
+  },
+  {
+    "kanji": "マルチアタック",
+    "kana": "",
+    "romaji": "",
+    "meaning": "多屬性攻擊"
+  },
+  {
+    "kanji": "１０００まんボルト",
+    "kana": "",
+    "romaji": "",
+    "meaning": "千萬伏特"
+  },
+  {
+    "kanji": "ビックリヘッド",
+    "kana": "",
+    "romaji": "",
+    "meaning": "驚爆大頭"
+  },
+  {
+    "kanji": "プラズマフィスト",
+    "kana": "",
+    "romaji": "",
+    "meaning": "等離子閃電拳"
+  },
+  {
+    "kanji": "フォトンゲイザー",
+    "kana": "",
+    "romaji": "",
+    "meaning": "光子噴湧"
+  },
+  {
+    "kanji": "ブレイジングソウルビート",
+    "kana": "",
+    "romaji": "",
+    "meaning": "熾魂熱舞烈音爆"
+  },
+  {
+    "kanji": "ラジアルエッジストーム",
+    "kana": "",
+    "romaji": "",
+    "meaning": "狼嘯石牙颶風暴"
+  },
+  {
+    "kanji": "ぽかぼかフレンドタイム",
+    "kana": "",
+    "romaji": "",
+    "meaning": "親密無間大亂揍"
+  },
+  {
+    "kanji": "サンシャインスマッシャー",
+    "kana": "",
+    "romaji": "",
+    "meaning": "日光迴旋下蒼穹"
+  },
+  {
+    "kanji": "ムーンライトブラスター",
+    "kana": "",
+    "romaji": "",
+    "meaning": "月華飛濺落靈霄"
+  },
+  {
+    "kanji": "てんこがすめつぼうのひかり",
+    "kana": "",
+    "romaji": "",
+    "meaning": "焚天滅世熾光爆"
+  },
+  {
+    "kanji": "ばちばちアクセル",
+    "kana": "",
+    "romaji": "",
+    "meaning": "電電加速"
+  },
+  {
+    "kanji": "ざぶざぶサーフ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "滔滔衝浪"
+  },
+  {
+    "kanji": "ふわふわフォール",
+    "kana": "",
+    "romaji": "",
+    "meaning": "飄飄墜落"
+  },
+  {
+    "kanji": "ピカピカサンダー",
+    "kana": "",
+    "romaji": "",
+    "meaning": "閃閃雷光"
+  },
+  {
+    "kanji": "いきいきバブル",
+    "kana": "",
+    "romaji": "",
+    "meaning": "活活氣泡"
+  },
+  {
+    "kanji": "びりびりエレキ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "麻麻電擊"
+  },
+  {
+    "kanji": "めらめらバーン",
+    "kana": "",
+    "romaji": "",
+    "meaning": "熊熊火爆"
+  },
+  {
+    "kanji": "どばどばオーラ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "嘩嘩氣場"
+  },
+  {
+    "kanji": "わるわるゾーン",
+    "kana": "",
+    "romaji": "",
+    "meaning": "壞壞領域"
+  },
+  {
+    "kanji": "すくすくボンバー",
+    "kana": "",
+    "romaji": "",
+    "meaning": "茁茁轟炸"
+  },
+  {
+    "kanji": "こちこちフロスト",
+    "kana": "",
+    "romaji": "",
+    "meaning": "冰冰霜凍"
+  },
+  {
+    "kanji": "きらきらストーム",
+    "kana": "",
+    "romaji": "",
+    "meaning": "亮亮風暴"
+  },
+  {
+    "kanji": "ブイブイブレイク",
+    "kana": "",
+    "romaji": "",
+    "meaning": "砰砰擊破"
+  },
+  {
+    "kanji": "ダブルパンツァー",
+    "kana": "",
+    "romaji": "",
+    "meaning": "鋼拳雙擊"
+  },
+  {
+    "kanji": "ダイウォール",
+    "kana": "",
+    "romaji": "",
+    "meaning": "極巨防壁"
+  },
+  {
+    "kanji": "ダイマックスほう",
+    "kana": "",
+    "romaji": "",
+    "meaning": "極巨炮"
+  },
+  {
+    "kanji": "ねらいうち",
+    "kana": "",
+    "romaji": "",
+    "meaning": "狙擊"
+  },
+  {
+    "kanji": "くらいつく",
+    "kana": "",
+    "romaji": "",
+    "meaning": "緊咬不放"
+  },
+  {
+    "kanji": "ほおばる",
+    "kana": "",
+    "romaji": "",
+    "meaning": "大快朵頤"
+  },
+  {
+    "kanji": "はいすいのじん",
+    "kana": "",
+    "romaji": "",
+    "meaning": "背水一戰"
+  },
+  {
+    "kanji": "タールショット",
+    "kana": "",
+    "romaji": "",
+    "meaning": "瀝青射擊"
+  },
+  {
+    "kanji": "まほうのこな",
+    "kana": "",
+    "romaji": "",
+    "meaning": "魔法粉"
+  },
+  {
+    "kanji": "ドラゴンアロー",
+    "kana": "",
+    "romaji": "",
+    "meaning": "龍箭"
+  },
+  {
+    "kanji": "おちゃかい",
+    "kana": "",
+    "romaji": "",
+    "meaning": "茶會"
+  },
+  {
+    "kanji": "たこがため",
+    "kana": "",
+    "romaji": "",
+    "meaning": "蛸固"
+  },
+  {
+    "kanji": "でんげきくちばし",
+    "kana": "",
+    "romaji": "",
+    "meaning": "電喙"
+  },
+  {
+    "kanji": "エラがみ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "鰓咬"
+  },
+  {
+    "kanji": "コートチェンジ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "換場"
+  },
+  {
+    "kanji": "ダイバーン",
+    "kana": "",
+    "romaji": "",
+    "meaning": "極巨火爆"
+  },
+  {
+    "kanji": "ダイワーム",
+    "kana": "",
+    "romaji": "",
+    "meaning": "極巨蟲蠱"
+  },
+  {
+    "kanji": "ダイサンダー",
+    "kana": "",
+    "romaji": "",
+    "meaning": "極巨閃電"
+  },
+  {
+    "kanji": "ダイアタック",
+    "kana": "",
+    "romaji": "",
+    "meaning": "極巨攻擊"
+  },
+  {
+    "kanji": "ダイナックル",
+    "kana": "",
+    "romaji": "",
+    "meaning": "極巨拳鬥"
+  },
+  {
+    "kanji": "ダイホロウ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "極巨幽魂"
+  },
+  {
+    "kanji": "ダイアイス",
+    "kana": "",
+    "romaji": "",
+    "meaning": "極巨寒冰"
+  },
+  {
+    "kanji": "ダイアシッド",
+    "kana": "",
+    "romaji": "",
+    "meaning": "極巨酸毒"
+  },
+  {
+    "kanji": "ダイストリーム",
+    "kana": "",
+    "romaji": "",
+    "meaning": "極巨水流"
+  },
+  {
+    "kanji": "ダイジェット",
+    "kana": "",
+    "romaji": "",
+    "meaning": "極巨飛衝"
+  },
+  {
+    "kanji": "ダイフェアリー",
+    "kana": "",
+    "romaji": "",
+    "meaning": "極巨妖精"
+  },
+  {
+    "kanji": "ダイドラグーン",
+    "kana": "",
+    "romaji": "",
+    "meaning": "極巨龍騎"
+  },
+  {
+    "kanji": "ダイサイコ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "極巨超能"
+  },
+  {
+    "kanji": "ダイロック",
+    "kana": "",
+    "romaji": "",
+    "meaning": "極巨岩石"
+  },
+  {
+    "kanji": "ダイアース",
+    "kana": "",
+    "romaji": "",
+    "meaning": "極巨大地"
+  },
+  {
+    "kanji": "ダイアーク",
+    "kana": "",
+    "romaji": "",
+    "meaning": "極巨惡霸"
+  },
+  {
+    "kanji": "ダイソウゲン",
+    "kana": "",
+    "romaji": "",
+    "meaning": "極巨草原"
+  },
+  {
+    "kanji": "ダイスチル",
+    "kana": "",
+    "romaji": "",
+    "meaning": "極巨鋼鐵"
+  },
+  {
+    "kanji": "ソウルビート",
+    "kana": "",
+    "romaji": "",
+    "meaning": "魂舞烈音爆"
+  },
+  {
+    "kanji": "ボディプレス",
+    "kana": "",
+    "romaji": "",
+    "meaning": "撲擊"
+  },
+  {
+    "kanji": "デコレーション",
+    "kana": "",
+    "romaji": "",
+    "meaning": "裝飾"
+  },
+  {
+    "kanji": "ドラムアタック",
+    "kana": "",
+    "romaji": "",
+    "meaning": "鼓擊"
+  },
+  {
+    "kanji": "トラバサミ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "捕獸夾"
+  },
+  {
+    "kanji": "かえんボール",
+    "kana": "",
+    "romaji": "",
+    "meaning": "火焰球"
+  },
+  {
+    "kanji": "きょじゅうざん",
+    "kana": "",
+    "romaji": "",
+    "meaning": "巨獸斬"
+  },
+  {
+    "kanji": "きょじゅうだん",
+    "kana": "",
+    "romaji": "",
+    "meaning": "巨獸彈"
+  },
+  {
+    "kanji": "オーラぐるま",
+    "kana": "",
+    "romaji": "",
+    "meaning": "氣場輪"
+  },
+  {
+    "kanji": "ワイドブレイカー",
+    "kana": "",
+    "romaji": "",
+    "meaning": "廣域破壞"
+  },
+  {
+    "kanji": "えだづき",
+    "kana": "",
+    "romaji": "",
+    "meaning": "木枝突刺"
+  },
+  {
+    "kanji": "オーバードライブ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "破音"
+  },
+  {
+    "kanji": "りんごさん",
+    "kana": "",
+    "romaji": "",
+    "meaning": "蘋果酸"
+  },
+  {
+    "kanji": "Ｇのちから",
+    "kana": "",
+    "romaji": "",
+    "meaning": "萬有引力"
+  },
+  {
+    "kanji": "ソウルクラッシュ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "靈魂衝擊"
+  },
+  {
+    "kanji": "ワンダースチーム",
+    "kana": "",
+    "romaji": "",
+    "meaning": "神奇蒸汽"
+  },
+  {
+    "kanji": "いのちのしずく",
+    "kana": "",
+    "romaji": "",
+    "meaning": "生命水滴"
+  },
+  {
+    "kanji": "ブロッキング",
+    "kana": "",
+    "romaji": "",
+    "meaning": "攔堵"
+  },
+  {
+    "kanji": "どげざつき",
+    "kana": "",
+    "romaji": "",
+    "meaning": "假跪真撞"
+  },
+  {
+    "kanji": "スターアサルト",
+    "kana": "",
+    "romaji": "",
+    "meaning": "流星突擊"
+  },
+  {
+    "kanji": "ムゲンダイビーム",
+    "kana": "",
+    "romaji": "",
+    "meaning": "無極光束"
+  },
+  {
+    "kanji": "てっていこうせん",
+    "kana": "",
+    "romaji": "",
+    "meaning": "鐵蹄光線"
+  },
+  {
+    "kanji": "キョダイゴクエン",
+    "kana": "",
+    "romaji": "",
+    "meaning": "超極巨地獄滅焰"
+  },
+  {
+    "kanji": "キョダイコワク",
+    "kana": "",
+    "romaji": "",
+    "meaning": "超極巨蝶影蠱惑"
+  },
+  {
+    "kanji": "キョダイバンライ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "超極巨萬雷轟頂"
+  },
+  {
+    "kanji": "キョダイコバン",
+    "kana": "",
+    "romaji": "",
+    "meaning": "超極巨特大金幣"
+  },
+  {
+    "kanji": "キョダイシンゲキ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "超極巨會心一擊"
+  },
+  {
+    "kanji": "キョダイゲンエイ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "超極巨幻影幽魂"
+  },
+  {
+    "kanji": "キョダイセンリツ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "超極巨極光旋律"
+  },
+  {
+    "kanji": "キョダイホーヨー",
+    "kana": "",
+    "romaji": "",
+    "meaning": "超極巨熱情擁抱"
+  },
+  {
+    "kanji": "キョダイサイセイ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "超極巨資源再生"
+  },
+  {
+    "kanji": "キョダイシュウキ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "超極巨臭氣沖天"
+  },
+  {
+    "kanji": "キョダイガンジン",
+    "kana": "",
+    "romaji": "",
+    "meaning": "超極巨岩陣以待"
+  },
+  {
+    "kanji": "キョダイフウゲキ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "超極巨旋風襲捲"
+  },
+  {
+    "kanji": "キョダイカンデン",
+    "kana": "",
+    "romaji": "",
+    "meaning": "超極巨異毒電場"
+  },
+  {
+    "kanji": "キョダイダンエン",
+    "kana": "",
+    "romaji": "",
+    "meaning": "超極巨幸福圓滿"
+  },
+  {
+    "kanji": "キョダイゲンスイ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "超極巨劣化衰變"
+  },
+  {
+    "kanji": "キョダイテンドウ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "超極巨天道七星"
+  },
+  {
+    "kanji": "キョダイフンセキ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "超極巨炎石噴發"
+  },
+  {
+    "kanji": "キョダイサジン",
+    "kana": "",
+    "romaji": "",
+    "meaning": "超極巨沙塵漫天"
+  },
+  {
+    "kanji": "キョダイスイマ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "超極巨睡魔降臨"
+  },
+  {
+    "kanji": "キョダイサンゲキ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "超極巨酸不溜丟"
+  },
+  {
+    "kanji": "キョダイカンロ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "超極巨瓊漿玉液"
+  },
+  {
+    "kanji": "キョダイテンバツ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "超極巨天譴雷誅"
+  },
+  {
+    "kanji": "キョダイコウジン",
+    "kana": "",
+    "romaji": "",
+    "meaning": "超極巨鋼鐵陣法"
+  },
+  {
+    "kanji": "キョダイユウゲキ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "超極巨液金熔擊"
+  },
+  {
+    "kanji": "キョダイホウマツ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "超極巨激漩泡渦"
+  },
+  {
+    "kanji": "キョダイヒャッカ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "超極巨百火焚野"
+  },
+  {
+    "kanji": "ワイドフォース",
+    "kana": "",
+    "romaji": "",
+    "meaning": "廣域戰力"
+  },
+  {
+    "kanji": "アイアンローラー",
+    "kana": "",
+    "romaji": "",
+    "meaning": "鐵滾輪"
+  },
+  {
+    "kanji": "スケイルショット",
+    "kana": "",
+    "romaji": "",
+    "meaning": "鱗射"
+  },
+  {
+    "kanji": "メテオビーム",
+    "kana": "",
+    "romaji": "",
+    "meaning": "流星光束"
+  },
+  {
+    "kanji": "シェルアームズ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "臂貝武器"
+  },
+  {
+    "kanji": "ミストバースト",
+    "kana": "",
+    "romaji": "",
+    "meaning": "薄霧炸裂"
+  },
+  {
+    "kanji": "グラススライダー",
+    "kana": "",
+    "romaji": "",
+    "meaning": "青草滑梯"
+  },
+  {
+    "kanji": "ライジングボルト",
+    "kana": "",
+    "romaji": "",
+    "meaning": "電力上升"
+  },
+  {
+    "kanji": "だいちのはどう",
+    "kana": "",
+    "romaji": "",
+    "meaning": "大地波動"
+  },
+  {
+    "kanji": "はいよるいちげき",
+    "kana": "",
+    "romaji": "",
+    "meaning": "爬擊"
+  },
+  {
+    "kanji": "しっとのほのお",
+    "kana": "",
+    "romaji": "",
+    "meaning": "妒火"
+  },
+  {
+    "kanji": "うっぷんばらし",
+    "kana": "",
+    "romaji": "",
+    "meaning": "洩憤"
+  },
+  {
+    "kanji": "ポルターガイスト",
+    "kana": "",
+    "romaji": "",
+    "meaning": "靈騷"
+  },
+  {
+    "kanji": "ふしょくガス",
+    "kana": "",
+    "romaji": "",
+    "meaning": "腐蝕氣體"
+  },
+  {
+    "kanji": "コーチング",
+    "kana": "",
+    "romaji": "",
+    "meaning": "指導"
+  },
+  {
+    "kanji": "クイックターン",
+    "kana": "",
+    "romaji": "",
+    "meaning": "快速折返"
+  },
+  {
+    "kanji": "トリプルアクセル",
+    "kana": "",
+    "romaji": "",
+    "meaning": "三旋擊"
+  },
+  {
+    "kanji": "ダブルウイング",
+    "kana": "",
+    "romaji": "",
+    "meaning": "雙翼"
+  },
+  {
+    "kanji": "ねっさのだいち",
+    "kana": "",
+    "romaji": "",
+    "meaning": "熱沙大地"
+  },
+  {
+    "kanji": "ジャングルヒール",
+    "kana": "",
+    "romaji": "",
+    "meaning": "叢林治療"
+  },
+  {
+    "kanji": "あんこくきょうだ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "暗冥強擊"
+  },
+  {
+    "kanji": "すいりゅうれんだ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "水流連打"
+  },
+  {
+    "kanji": "キョダイコランダ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "超極巨狂擂亂打"
+  },
+  {
+    "kanji": "キョダイカキュウ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "超極巨破陣火球"
+  },
+  {
+    "kanji": "キョダイソゲキ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "超極巨狙擊神射"
+  },
+  {
+    "kanji": "キョダイベンタツ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "超極巨灰飛鞭滅"
+  },
+  {
+    "kanji": "キョダイホウゲキ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "超極巨水砲轟滅"
+  },
+  {
+    "kanji": "キョダイイチゲキ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "超極巨奪命一擊"
+  },
+  {
+    "kanji": "キョダイレンゲキ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "超極巨流水連擊"
+  },
+  {
+    "kanji": "サンダープリズン",
+    "kana": "",
+    "romaji": "",
+    "meaning": "雷電囚籠"
+  },
+  {
+    "kanji": "ドラゴンエナジー",
+    "kana": "",
+    "romaji": "",
+    "meaning": "巨龍威能"
+  },
+  {
+    "kanji": "いてつくしせん",
+    "kana": "",
+    "romaji": "",
+    "meaning": "冰冷視線"
+  },
+  {
+    "kanji": "もえあがるいかり",
+    "kana": "",
+    "romaji": "",
+    "meaning": "怒火中燒"
+  },
+  {
+    "kanji": "らいめいげり",
+    "kana": "",
+    "romaji": "",
+    "meaning": "雷鳴蹴擊"
+  },
+  {
+    "kanji": "ブリザードランス",
+    "kana": "",
+    "romaji": "",
+    "meaning": "雪矛"
+  },
+  {
+    "kanji": "アストラルビット",
+    "kana": "",
+    "romaji": "",
+    "meaning": "星碎"
+  },
+  {
+    "kanji": "ぶきみなじゅもん",
+    "kana": "",
+    "romaji": "",
+    "meaning": "詭異咒語"
+  },
+  {
+    "kanji": "フェイタルクロー",
+    "kana": "",
+    "romaji": "",
+    "meaning": "剋命爪"
+  },
+  {
+    "kanji": "バリアーラッシュ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "屏障猛攻"
+  },
+  {
+    "kanji": "パワーシフト",
+    "kana": "",
+    "romaji": "",
+    "meaning": "力量轉換"
+  },
+  {
+    "kanji": "がんせきアックス",
+    "kana": "",
+    "romaji": "",
+    "meaning": "岩斧"
+  },
+  {
+    "kanji": "はるのあらし",
+    "kana": "",
+    "romaji": "",
+    "meaning": "陽春風暴"
+  },
+  {
+    "kanji": "しんぴのちから",
+    "kana": "",
+    "romaji": "",
+    "meaning": "神秘之力"
+  },
+  {
+    "kanji": "だいふんげき",
+    "kana": "",
+    "romaji": "",
+    "meaning": "大憤慨"
+  },
+  {
+    "kanji": "ウェーブタックル",
+    "kana": "",
+    "romaji": "",
+    "meaning": "波動衝"
+  },
+  {
+    "kanji": "クロロブラスト",
+    "kana": "",
+    "romaji": "",
+    "meaning": "葉綠爆震"
+  },
+  {
+    "kanji": "ひょうざんおろし",
+    "kana": "",
+    "romaji": "",
+    "meaning": "冰山風"
+  },
+  {
+    "kanji": "しょうりのまい",
+    "kana": "",
+    "romaji": "",
+    "meaning": "勝利之舞"
+  },
+  {
+    "kanji": "ぶちかまし",
+    "kana": "",
+    "romaji": "",
+    "meaning": "突飛猛撲"
+  },
+  {
+    "kanji": "どくばりセンボン",
+    "kana": "",
+    "romaji": "",
+    "meaning": "毒千針"
+  },
+  {
+    "kanji": "オーラウイング",
+    "kana": "",
+    "romaji": "",
+    "meaning": "氣場之翼"
+  },
+  {
+    "kanji": "うらみつらみ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "冤冤相報"
+  },
+  {
+    "kanji": "たてこもる",
+    "kana": "",
+    "romaji": "",
+    "meaning": "閉關"
+  },
+  {
+    "kanji": "３ぼんのや",
+    "kana": "",
+    "romaji": "",
+    "meaning": "三連箭"
+  },
+  {
+    "kanji": "ひゃっきやこう",
+    "kana": "",
+    "romaji": "",
+    "meaning": "群魔亂舞"
+  },
+  {
+    "kanji": "ひけん・ちえなみ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "秘劍・千重濤"
+  },
+  {
+    "kanji": "こがらしあらし",
+    "kana": "",
+    "romaji": "",
+    "meaning": "枯葉風暴"
+  },
+  {
+    "kanji": "かみなりあらし",
+    "kana": "",
+    "romaji": "",
+    "meaning": "鳴雷風暴"
+  },
+  {
+    "kanji": "ねっさのあらし",
+    "kana": "",
+    "romaji": "",
+    "meaning": "熱沙風暴"
+  },
+  {
+    "kanji": "みかづきのいのり",
+    "kana": "",
+    "romaji": "",
+    "meaning": "新月祈禱"
+  },
+  {
+    "kanji": "ブレイブチャージ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "勇氣填充"
+  },
+  {
+    "kanji": "テラバースト",
+    "kana": "",
+    "romaji": "",
+    "meaning": "太晶爆發"
+  },
+  {
+    "kanji": "スレッドトラップ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "線阱"
+  },
+  {
+    "kanji": "かかとおとし",
+    "kana": "",
+    "romaji": "",
+    "meaning": "下壓踢"
+  },
+  {
+    "kanji": "おはかまいり",
+    "kana": "",
+    "romaji": "",
+    "meaning": "掃墓"
+  },
+  {
+    "kanji": "ルミナコリジョン",
+    "kana": "",
+    "romaji": "",
+    "meaning": "琉光衝激"
+  },
+  {
+    "kanji": "いっちょうあがり",
+    "kana": "",
+    "romaji": "",
+    "meaning": "上菜"
+  },
+  {
+    "kanji": "ジェットパンチ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "噴射拳"
+  },
+  {
+    "kanji": "ハバネロエキス",
+    "kana": "",
+    "romaji": "",
+    "meaning": "辣椒精華"
+  },
+  {
+    "kanji": "ホイールスピン",
+    "kana": "",
+    "romaji": "",
+    "meaning": "疾速轉輪"
+  },
+  {
+    "kanji": "ネズミざん",
+    "kana": "",
+    "romaji": "",
+    "meaning": "鼠數兒"
+  },
+  {
+    "kanji": "アイススピナー",
+    "kana": "",
+    "romaji": "",
+    "meaning": "冰旋"
+  },
+  {
+    "kanji": "きょけんとつげき",
+    "kana": "",
+    "romaji": "",
+    "meaning": "巨劍突擊"
+  },
+  {
+    "kanji": "さいきのいのり",
+    "kana": "",
+    "romaji": "",
+    "meaning": "復生祈禱"
+  },
+  {
+    "kanji": "しおづけ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "鹽醃"
+  },
+  {
+    "kanji": "トリプルダイブ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "三連鑽"
+  },
+  {
+    "kanji": "キラースピン",
+    "kana": "",
+    "romaji": "",
+    "meaning": "晶光轉轉"
+  },
+  {
+    "kanji": "うつしえ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "描繪"
+  },
+  {
+    "kanji": "みをけずる",
+    "kana": "",
+    "romaji": "",
+    "meaning": "甩肉"
+  },
+  {
+    "kanji": "ドゲザン",
+    "kana": "",
+    "romaji": "",
+    "meaning": "仆斬"
+  },
+  {
+    "kanji": "トリックフラワー",
+    "kana": "",
+    "romaji": "",
+    "meaning": "千變萬花"
+  },
+  {
+    "kanji": "フレアソング",
+    "kana": "",
+    "romaji": "",
+    "meaning": "閃焰高歌"
+  },
+  {
+    "kanji": "アクアステップ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "流水旋舞"
+  },
+  {
+    "kanji": "レイジングブル",
+    "kana": "",
+    "romaji": "",
+    "meaning": "怒牛"
+  },
+  {
+    "kanji": "ゴールドラッシュ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "淘金潮"
+  },
+  {
+    "kanji": "サイコブレイド",
+    "kana": "",
+    "romaji": "",
+    "meaning": "精神劍"
+  },
+  {
+    "kanji": "ハイドロスチーム",
+    "kana": "",
+    "romaji": "",
+    "meaning": "水蒸氣"
+  },
+  {
+    "kanji": "カタストロフィ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "大災難"
+  },
+  {
+    "kanji": "アクセルブレイク",
+    "kana": "",
+    "romaji": "",
+    "meaning": "全開猛撞"
+  },
+  {
+    "kanji": "イナズマドライブ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "閃電猛衝"
+  },
+  {
+    "kanji": "しっぽきり",
+    "kana": "",
+    "romaji": "",
+    "meaning": "斷尾"
+  },
+  {
+    "kanji": "さむいギャグ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "冷笑話"
+  },
+  {
+    "kanji": "おかたづけ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "大掃除"
+  },
+  {
+    "kanji": "ゆきげしき",
+    "kana": "",
+    "romaji": "",
+    "meaning": "雪景"
+  },
+  {
+    "kanji": "とびつく",
+    "kana": "",
+    "romaji": "",
+    "meaning": "蟲撲"
+  },
+  {
+    "kanji": "くさわけ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "起草"
+  },
+  {
+    "kanji": "ひやみず",
+    "kana": "",
+    "romaji": "",
+    "meaning": "潑冷水"
+  },
+  {
+    "kanji": "ハイパードリル",
+    "kana": "",
+    "romaji": "",
+    "meaning": "強力鑽"
+  },
+  {
+    "kanji": "ツインビーム",
+    "kana": "",
+    "romaji": "",
+    "meaning": "雙光束"
+  },
+  {
+    "kanji": "ふんどのこぶし",
+    "kana": "",
+    "romaji": "",
+    "meaning": "憤怒之拳"
+  },
+  {
+    "kanji": "アーマーキャノン",
+    "kana": "",
+    "romaji": "",
+    "meaning": "鎧農炮"
+  },
+  {
+    "kanji": "むねんのつるぎ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "悔念劍"
+  },
+  {
+    "kanji": "でんこうそうげき",
+    "kana": "",
+    "romaji": "",
+    "meaning": "電光雙擊"
+  },
+  {
+    "kanji": "デカハンマー",
+    "kana": "",
+    "romaji": "",
+    "meaning": "巨力錘"
+  },
+  {
+    "kanji": "ほうふく",
+    "kana": "",
+    "romaji": "",
+    "meaning": "復仇"
+  },
+  {
+    "kanji": "アクアカッター",
+    "kana": "",
+    "romaji": "",
+    "meaning": "水波刀"
+  },
+  {
+    "kanji": "バーンアクセル",
+    "kana": "",
+    "romaji": "",
+    "meaning": "灼熱暴衝"
+  },
+  {
+    "kanji": "ダークアクセル",
+    "kana": "",
+    "romaji": "",
+    "meaning": "黑暗暴衝"
+  },
+  {
+    "kanji": "ポイズンアクセル",
+    "kana": "",
+    "romaji": "",
+    "meaning": "劇毒暴衝"
+  },
+  {
+    "kanji": "ファイトアクセル",
+    "kana": "",
+    "romaji": "",
+    "meaning": "格鬥暴衝"
+  },
+  {
+    "kanji": "マジカルアクセル",
+    "kana": "",
+    "romaji": "",
+    "meaning": "魔法暴衝"
+  },
+  {
+    "kanji": "ブラッドムーン",
+    "kana": "",
+    "romaji": "",
+    "meaning": "血月"
+  },
+  {
+    "kanji": "シャカシャカほう",
+    "kana": "",
+    "romaji": "",
+    "meaning": "刷刷茶炮"
+  },
+  {
+    "kanji": "みずあめボム‎",
+    "kana": "",
+    "romaji": "",
+    "meaning": "糖漿炸彈"
+  },
+  {
+    "kanji": "ツタこんぼう",
+    "kana": "",
+    "romaji": "",
+    "meaning": "棘藤棒"
+  },
+  {
+    "kanji": "エレクトロビーム",
+    "kana": "",
+    "romaji": "",
+    "meaning": "電光束"
+  },
+  {
+    "kanji": "テラクラスター",
+    "kana": "",
+    "romaji": "",
+    "meaning": "晶光星群"
+  },
+  {
+    "kanji": "きまぐレーザー",
+    "kana": "",
+    "romaji": "",
+    "meaning": "隨機光"
+  },
+  {
+    "kanji": "かえんのまもり",
+    "kana": "",
+    "romaji": "",
+    "meaning": "火焰守護"
+  },
+  {
+    "kanji": "じんらい",
+    "kana": "",
+    "romaji": "",
+    "meaning": "迅雷"
+  },
+  {
+    "kanji": "パワフルエッジ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "強刃攻擊"
+  },
+  {
+    "kanji": "タキオンカッター",
+    "kana": "",
+    "romaji": "",
+    "meaning": "迅子利刃"
+  },
+  {
+    "kanji": "ハードプレス",
+    "kana": "",
+    "romaji": "",
+    "meaning": "硬壓"
+  },
+  {
+    "kanji": "ドラゴンエール",
+    "kana": "",
+    "romaji": "",
+    "meaning": "龍聲鼓舞"
+  },
+  {
+    "kanji": "みわくのボイス",
+    "kana": "",
+    "romaji": "",
+    "meaning": "魅誘之聲"
+  },
+  {
+    "kanji": "やけっぱち",
+    "kana": "",
+    "romaji": "",
+    "meaning": "豁出去"
+  },
+  {
+    "kanji": "サンダーダイブ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "閃電強襲"
+  },
+  {
+    "kanji": "サイコノイズ",
+    "kana": "",
+    "romaji": "",
+    "meaning": "精神噪音"
+  },
+  {
+    "kanji": "はやてがえし",
+    "kana": "",
+    "romaji": "",
+    "meaning": "快手還擊"
+  },
+  {
+    "kanji": "じゃどくのくさり",
+    "kana": "",
+    "romaji": "",
+    "meaning": "邪毒鎖鏈"
+  },
+  {
+    "kanji": "むにきすひかり",
+    "kana": "",
+    "romaji": "",
+    "meaning": "歸無之光"
+  }
+]
