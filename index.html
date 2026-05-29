@@ -90,7 +90,17 @@
                         <span>當前字庫總數：<strong id="vocabCount" class="text-cyan-400 text-sm">0</strong> 字</span>
                         <button id="clearBtn" class="text-red-400 hover:text-red-300 transition-colors hidden" style="pointer-events: auto;">清空重置</button>
                     </div>
-                </div>
+				
+				<div class="flex items-center justify-between border-t border-gray-800 pt-3 mt-1.5">
+					<label class="text-xs text-gray-400 font-semibold flex items-center gap-1">🌐 認讀輔助</label>
+					<label class="relative inline-flex items-center cursor-pointer">
+						<input type="checkbox" id="globalRomajiToggle" class="sr-only peer" checked>
+						<div class="w-9 h-5 bg-gray-800 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-gray-400 after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-cyan-600 peer-checked:after:bg-white"></div>
+						<span class="ml-2 text-xs font-medium text-gray-300">顯示羅馬拼音</span>
+					</label>
+				</div>
+				
+				</div>
             </div>
         </div>
 
@@ -258,6 +268,7 @@
         const selectNoneBtn = document.getElementById('selectNoneBtn');
         const cancelImportBtn = document.getElementById('cancelImportBtn');
         const confirmImportBtn = document.getElementById('confirmImportBtn');
+		const globalRomajiToggle = document.getElementById('globalRomajiToggle');
         
         const exportBtn = document.getElementById('exportBtn');
         const importBtn = document.getElementById('importBtn');
@@ -423,6 +434,13 @@
                 updateVocabUI(); showAlert('已還原本地初始資料庫。', 'info');
             }
         });
+		
+		globalRomajiToggle.addEventListener('change', () => {
+            // 如果當前畫面上有正在顯示的單字卡，立刻同步更新顯示狀態
+            if (currentCard) {
+                renderCurrentCard(currentCard);
+            }
+        });
 
         // 隨機抽卡
         drawBtn.addEventListener('click', () => {
@@ -440,6 +458,25 @@
             displayRomaji.innerText = currentCard.romaji;
             displayMeaning.innerText = `意：${currentCard.meaning}`;
             cardEmpty.classList.add('hidden'); cardContent.classList.remove('hidden');
+            
+			if (globalRomajiToggle.checked) {
+				displayRomaji.innerText = currentCard.romaji || '';
+				displayRomaji.classList.remove('hidden'); // 確保元素可見
+			} else {
+				// 如果全域開關被關閉，則不顯示羅馬拼音（或者可以給它一個 "???" 或空字串）
+				displayRomaji.innerText = '（已隱藏，點擊可查看）'; 
+				// 或者如果你希望它徹底隱形，可以直接加上 hidden 類別：
+				// displayRomaji.classList.add('hidden');
+			}
+			
+			
+        });
+		
+		displayRomaji.addEventListener('click', () => {
+			if (!globalRomajiToggle.checked) {
+			// 當全域是隱藏狀態時，點擊它可以單獨揭曉答案
+			   displayRomaji.innerText = currentCard.romaji || '';
+			}
         });
 
         // 開啟審查 Modal
