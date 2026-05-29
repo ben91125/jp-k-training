@@ -145,6 +145,18 @@
                     <button id="tabYouon" class="py-1 rounded text-gray-400 hover:text-gray-200" style="pointer-events: auto;">拗音</button>
                     <button id="tabTokushu" class="py-1 rounded text-gray-400 hover:text-gray-200" style="pointer-events: auto;">特殊</button>
                 </div>
+				
+				
+				<div class="flex items-center justify-between border-t border-gray-800 pt-3 mt-1.5">
+					<label class="text-xs text-gray-400 font-semibold flex items-center gap-1">🔤 字體切換</label>
+					<label class="relative inline-flex items-center cursor-pointer">
+						<input type="checkbox" id="kanaModeToggle" class="sr-only peer">
+						<div class="w-16 h-6 bg-gray-800 rounded-full peer peer-focus:outline-none relative after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-gray-400 after:rounded-full after:h-5 after:w-7 after:transition-all peer-checked:after:translate-x-full peer-checked:after:bg-white peer-checked:bg-emerald-600 flex items-center justify-between px-2 text-[10px] font-bold text-gray-400 select-none">
+							<span class="z-10 peer-checked:text-gray-200">平</span>
+							<span class="z-10 text-gray-200 peer-checked:text-white">片</span>
+						</div>
+					</label>
+				</div>
             </div>
             
             <div id="tableHeader" class="grid grid-cols-6 gap-0.5 md:gap-1 text-center text-[9px] md:text-[10px] text-gray-500 font-bold mb-1"></div>
@@ -229,6 +241,51 @@
             { name: '撥音 (ん)', romaji: 'n', desc: '單獨算一拍的鼻音。如「あん」(an)' }
         ];
 
+
+        const seionKataData = [
+            { row: 'ア行', items: [{k:'ア', r:'a'}, {k:'イ', r:'i'}, {k:'ウ', r:'u'}, {k:'エ', r:'e'}, {k:'オ', r:'o'}] },
+            { row: 'カ行', items: [{k:'カ', r:'ka'},{k:'キ', r:'ki'},{k:'ク', r:'ku'},{k:'ケ', r:'ke'},{k:'コ', r:'ko'}] },
+            { row: 'サ行', items: [{k:'サ', r:'sa'},{k:'シ', r:'shi'},{k:'ス', r:'su'},{k:'セ', r:'se'},{k:'ソ', r:'so'}] },
+            { row: 'タ行', items: [{k:'タ', r:'ta'},{k:'チ', r:'chi'},{k:'ツ', r:'tsu'},{k:'テ', r:'te'},{k:'ト', r:'to'}] },
+            { row: 'ナ行', items: [{k:'ナ', r:'na'},{k:'ニ', r:'ni'},{k:'ヌ', r:'nu'},{k:'ネ', r:'ne'},{k:'ノ', r:'no'}] },
+            { row: 'ハ行', items: [{k:'ハ', r:'ha'},{k:'ヒ', r:'hi'},{k:'フ', r:'fu'},{k:'ヘ', r:'he'},{k:'ホ', r:'ho'}] },
+            { row: 'マ行', items: [{k:'マ', r:'ma'},{k:'ミ', r:'mi'},{k:'ム', r:'mu'},{k:'メ', r:'me'},{k:'モ', r:'mo'}] },
+            { row: 'ヤ行', items: [{k:'ヤ', r:'ya'},{k:'', r:''},     {k:'ユ', r:'yu'},{k:'', r:''},     {k:'ヨ', r:'yo'}] },
+            { row: 'ラ行', items: [{k:'ラ', r:'ra'},{k:'リ', r:'ri'},{k:'ル', r:'ru'},{k:'レ', r:'re'},{k:'ロ', r:'ro'}] },
+            { row: 'ワ行', items: [{k:'ワ', r:'wa'}, {k:'', r:''},      {k:'', r:''},      {k:'', r:''},      {k:'ヲ', r:'wo'}] },
+            { row: 'ン行', items: [{k:'ン', r:'n'}, {k:'', r:''},     {k:'', r:''},     {k:'', r:''},     {k:'', r:''}] }
+        ];
+
+        const dakuonKataData = [
+            { row: 'ガ行', items: [{k:'ガ', r:'ga'}, {k:'ギ', r:'gi'}, {k:'グ', r:'gu'}, {k:'ゲ', r:'ge'}, {k:'ゴ', r:'go'}] },
+            { row: 'ザ行', items: [{k:'ザ', r:'za'},{k:'ジ', r:'ji'},{k:'ズ', r:'zu'},{k:'ゼ', r:'ze'},{k:'ゾ', r:'zo'}] },
+            { row: 'ダ行', items: [{k:'ダ', r:'da'},{k:'ヂ', r:'ji'},{k:'ヅ', r:'zu'},{k:'デ', r:'de'},{k:'ド', r:'do'}] },
+            { row: 'バ行', items: [{k:'バ', r:'ba'},{k:'ビ', r:'bi'},{k:'ブ', r:'bu'},{k:'ベ', r:'be'},{k:'ボ', r:'bo'}] },
+            { row: 'パ行', items: [{k:'パ', r:'pa'},{k:'ピ', r:'pi'},{k:'プ', r:'pu'},{k:'ペ', r:'pe'},{k:'ポ', r:'po'}] }
+        ];
+
+        const youonKataData = [
+            { row: 'キョ', items: [{k:'キャ', r:'kya'}, {k:'キュ', r:'kyu'}, {k:'キョ', r:'kyo'}] },
+            { row: 'ショ', items: [{k:'シャ', r:'sha'}, {k:'シュ', r:'shu'}, {k:'ショ', r:'sho'}] },
+            { row: 'チョ', items: [{k:'チャ', r:'cha'}, {k:'チュ', r:'chu'}, {k:'チョ', r:'cho'}] },
+            { row: 'ニャ', items: [{k:'ニャ', r:'nya'}, {k:'ニュ', r:'nyu'}, {k:'ニョ', r:'nyo'}] },
+            { row: 'ヒャ', items: [{k:'ヒャ', r:'hya'}, {k:'ヒュ', r:'hyu'}, {k:'ヒョ', r:'hyo'}] },
+            { row: 'ミャ', items: [{k:'ミャ', r:'mya'}, {k:'ミュ', r:'myu'}, {k:'ミョ', r:'myo'}] },
+            { row: 'リャ', items: [{k:'リャ', r:'rya'}, {k:'リュ', r:'ryu'}, {k:'リョ', r:'ryo'}] },
+            { row: 'ギャ', items: [{k:'ギャ', r:'gya'}, {k:'ギュ', r:'gyu'}, {k:'ギョ', r:'gyo'}] },
+            { row: 'ジャ', items: [{k:'ジャ', r:'ja'},  {k:'ジュ', r:'ju'},  {k:'ジョ', r:'jo'}] },
+            { row: 'ビャ', items: [{k:'ビャ', r:'bya'}, {k:'ビュ', r:'byu'}, {k:'ビョ', r:'byo'}] },
+            { row: 'ピャ', items: [{k:'ピャ', r:'pya'}, {k:'ピュ', r:'pyu'}, {k:'ピョ', r:'pyo'}] }
+        ];
+
+        const tokushuKataData = [
+            { name: '促音 (ッ)', romaji: '雙寫後方子音', desc: '停頓一拍。如「マッチ」(mat-chi)' },
+            { name: '長音 (ー)', romaji: '拉長一拍', desc: '外來語片假名極其常用。如「カード」(ka-do)' },
+            { name: '撥音 (ン)', romaji: 'n', desc: '單獨算一拍的鼻音。如「コイン」(ko-in)' }
+        ];
+
+
+
         const defaultTestResource = [
             { "kanji": "残酷", "kana": "ざんこく", "romaji": "zankoku", "meaning": "殘酷的 (殘酷天使的行動綱領)" }
         ];
@@ -277,6 +334,10 @@
         let vocabList = [];
         let currentCard = null;
         let incomingVocabBuffer = []; 
+		
+		// 增設平片假名全域狀態 (預設為平假名 'hira')
+        let currentKanaMode = 'hira'; 
+        const kanaModeToggle = document.getElementById('kanaModeToggle');
 
         // 側邊欄收合
         toggleConfigBtn.addEventListener('click', () => {
@@ -289,8 +350,11 @@
             }
         });
 
-        // 五十音切換標籤頁
+       // 五十音切換標籤頁（支援平片假名動態切換版）
         function switchView(type) {
+            // 每次刷新時，記住當前切換的標籤，綁定到 container 的 dataset 方便重刷
+            gojuonContainer.dataset.currentType = type;
+
             [tabSeion, tabDakuon, tabYouon, tabTokushu].forEach(b => {
                 b.className = "py-1 rounded text-gray-400 hover:text-gray-200";
             });
@@ -301,9 +365,15 @@
                 tableHeader.innerHTML = `<div>行\\段</div><div class="text-cyan-400">あ段</div><div class="text-cyan-400">い段</div><div class="text-cyan-400">う段</div><div class="text-cyan-400">え段</div><div class="text-cyan-400">お段</div>`;
                 gojuonContainer.classList.add('grid-cols-6');
                 
-                const data = (type === 'seion') ? seionData : dakuonData;
-                if(type === 'seion') tabSeion.className = "py-1 rounded text-emerald-400 bg-gray-800";
-                else tabDakuon.className = "py-1 rounded text-emerald-400 bg-gray-800";
+                // 🌟 簡潔路徑：依據全域狀態動態對接資料來源
+                let data;
+                if (type === 'seion') {
+                    data = (currentKanaMode === 'kata') ? seionKataData : seionData;
+                    tabSeion.className = "py-1 rounded text-emerald-400 bg-gray-800";
+                } else {
+                    data = (currentKanaMode === 'kata') ? dakuonKataData : dakuonData;
+                    tabDakuon.className = "py-1 rounded text-emerald-400 bg-gray-800";
+                }
 
                 let html = '';
                 data.forEach(row => {
@@ -321,11 +391,17 @@
             } else if (type === 'youon') {
                 tabYouon.className = "py-1 rounded text-emerald-400 bg-gray-800";
                 tableHeader.className = "grid grid-cols-4 gap-0.5 md:gap-1 text-center text-[9px] md:text-[10px] text-gray-500 font-bold mb-1";
-                tableHeader.innerHTML = `<div>基礎</div><div class="text-orange-400">ゃ 結尾</div><div class="text-orange-400">ゅ 結尾</div><div class="text-orange-400">ょ 結尾</div>`;
+                
+                // 根據平片假名動態微調表頭結尾字
+                const suffix = (currentKanaMode === 'kata') ? 'ャ' : 'ゃ';
+                tableHeader.innerHTML = `<div>基礎</div><div class="text-orange-400">${suffix} 結尾</div><div class="text-orange-400">${suffix} 結尾</div><div class="text-orange-400">${suffix} 結尾</div>`;
                 gojuonContainer.classList.add('grid-cols-4');
 
+                // 🌟 依據全域狀態動態對接資料來源
+                const data = (currentKanaMode === 'kata') ? youonKataData : youonData;
+
                 let html = '';
-                youonData.forEach(row => {
+                data.forEach(row => {
                     html += `<div class="text-[9px] md:text-[10px] font-bold text-gray-400 flex items-center justify-center bg-gray-950/30 rounded py-1">${row.row}</div>`;
                     row.items.forEach(item => {
                         html += `<div class="p-0.5 md:p-1 rounded bg-gray-950/70 border border-gray-800 flex flex-col items-center justify-center min-h-[36px]"><span class="text-xs md:text-sm font-semibold text-gray-200">${item.k}</span><span class="text-[8px] md:text-[9px] font-mono text-orange-400">${item.r}</span></div>`;
@@ -338,8 +414,11 @@
                 tableHeader.className = "hidden";
                 gojuonContainer.classList.add('grid-cols-1');
 
+                // 🌟 依據全域狀態動態對接資料來源
+                const data = (currentKanaMode === 'kata') ? tokushuKataData : tokushuData;
+
                 let html = '';
-                tokushuData.forEach(item => {
+                data.forEach(item => {
                     html += `
                         <div class="p-2.5 rounded bg-gray-950/70 border border-gray-800 text-left flex flex-col gap-0.5">
                             <div class="flex justify-between items-center">
@@ -352,6 +431,18 @@
                 gojuonContainer.innerHTML = html;
             }
         }
+		
+		// 監聽平片假名切換 Switch
+        kanaModeToggle.addEventListener('change', () => {
+            // 變更全域假名模式狀態
+            currentKanaMode = kanaModeToggle.checked ? 'kata' : 'hira';
+            
+            // 取得目前停留在哪一個標籤頁（seion, dakuon, youon, tokushu），如果沒有則預設清音
+            const activeType = gojuonContainer.dataset.currentType || 'seion';
+            
+            // 重新刷新當前的五十音面板圖表，達到無縫變更
+            switchView(activeType);
+        });
 
         tabSeion.addEventListener('click', () => switchView('seion'));
         tabDakuon.addEventListener('click', () => switchView('dakuon'));
