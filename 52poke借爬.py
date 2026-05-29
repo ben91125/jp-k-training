@@ -63,7 +63,7 @@ def kana_to_romaji(text):
         "ん": "n",
         "が": "ga",
         "ぎ": "gi",
-        "ぐ": "gu",
+        "ぐ": "ぐ",
         "げ": "ge",
         "ご": "go",
         "ざ": "za",
@@ -85,9 +85,9 @@ def kana_to_romaji(text):
         "ぴ": "pi",
         "ぷ": "pu",
         "ぺ": "pe",
-        "ぽ": "po",
+        "ぼ": "bo",
         "っ": "t",
-        "ー": "",
+        "ー": "-",
         "ア": "a",
         "イ": "i",
         "ウ": "u",
@@ -110,7 +110,7 @@ def kana_to_romaji(text):
         "ト": "to",
         "ナ": "na",
         "ニ": "ni",
-        "ヌ": "nu",
+        "ぬ": "nu",
         "ネ": "ne",
         "ノ": "no",
         "ハ": "ha",
@@ -119,7 +119,7 @@ def kana_to_romaji(text):
         "ヘ": "he",
         "ホ": "ho",
         "マ": "ma",
-        "ミ": "ki",
+        "ミ": "mi",
         "ム": "mu",
         "メ": "me",
         "モ": "mo",
@@ -135,8 +135,6 @@ def kana_to_romaji(text):
         "ヲ": "wo",
         "ン": "n",
     }
-
-    # 處理坳音 (如 しょ -> sho, チュ -> chu)
     r_text = text
     yo_ons = {
         "きゃ": "kya",
@@ -194,16 +192,10 @@ def kana_to_romaji(text):
         "リュ": "ryu",
         "リョ": "ryo",
     }
-
     for k, v in yo_ons.items():
         r_text = r_text.replace(k, v)
-
-    result = ""
-    for char in r_text:
-        result += romaji_dict.get(char, char)
-
-    # 簡單清洗非英文字元與連續空格
-    result = re.sub(r"[^a-zA-Z0-9\s]", "", result).lower()
+    result = "".join([romaji_dict.get(char, char) for char in r_text])
+    result = re.sub(r"[^a-zA-Z0-9\s-]", "", result).lower()
     return "".join(result.split())
 
 
@@ -212,7 +204,7 @@ response = requests.get(url, headers=headers)
 response.encoding = "utf-8"
 
 if response.status_code == 200:
-    print("成功取得網頁內容，開始解析全網頁招式表格...")
+    print("成功取得網頁內容，開始進行高級資料清洗與分離...")
     soup = BeautifulSoup(response.text, "html.parser")
     tables = soup.find_all("table", class_="sortable")
 
@@ -226,48 +218,84 @@ if response.status_code == 200:
 
                 if len(cols) >= 4:
                     zh_name = cols[1].text.strip()
-                    ja_name = cols[2].text.strip()
-                    en_name = cols[3].text.strip()  # 英文名作為羅馬拼音備援
+                    ja_td = cols[2]
+                    en_name = cols[3].text.strip()
 
-                    if not zh_name or not ja_name:
+                    if not zh_name or not ja_td.text.strip():
                         continue
 
                     if zh_name in seen_meanings:
                         continue
                     seen_meanings.add(zh_name)
 
-                    # 1. 產生羅馬拼音
-                    computed_romaji = kana_to_romaji(ja_name)
+                    # --- 核心邏輯：從 Ruby 標籤提取 漢字(kanji) 與 純假名(kana) ---
+                    ruby_tag = ja_td.find("ruby")
 
-                    # 2. 備援防呆：如果日文名包含漢字導致轉換出來不是純英文拼音，
-                    # 則直接拿第四欄的官方英文名稱處理成小寫駝峰/連字作為 romaji
-                    if not computed_romaji.isalnum():
+                    if ruby_tag:
+                        # 1. 提取完整的漢字招式名（要把 <rt> 標籤內的小字拿掉，留下原本網頁上顯示的大字）
+                        # 複製一個節點避免破壞原本結構
+                        kanji_soup = BeautifulSoup(str(ruby_tag), "html.parser")
+                        for rt in kanji_soup.find_all("rt"):
+                            rt.decompose()  # 拔除注音小字
+                        kanji_name = kanji_soup.get_text().strip()
+
+                        # 2. 提取純假名（把漢字丟掉，只留下 <rt> 裡的平假名，以及 ruby 之外的片假名外來語）
+                        kana_soup = BeautifulSoup(str(ruby_tag), "html.parser")
+                        parts = []
+                        for child in (
+                            kana_soup.find("ruby").contents
+                            if kana_soup.find("ruby")
+                            else []
+                        ):
+                            if child.name == "rt":
+                                parts.append(child.get_text().strip())
+                            elif child.name is None:  # 這是 ruby 內部的純片假名或符號
+                                parts.append(str(child).strip())
+                        pure_kana = "".join(parts)
+
+                        # 結合 ruby 之外可能殘留的片假名（例如：連続パンチ 中的 パンチ）
+                        # 我們直接用完整文字扣除掉 ruby 漢字，補上假名即可。這裡採用最穩定的做法：
+                        # 如果純假名長度怪怪的，就用原本整欄未清洗的文字做對照
+                        if not pure_kana:
+                            pure_kana = ja_td.text.strip()
+                    else:
+                        # 如果這招本來就全是平假名/片假名（沒漢字），那 kanji 和 kana 就一樣
+                        kanji_name = ja_td.text.strip()
+                        pure_kana = ja_td.text.strip()
+
+                    # 3. 基於純假名（kana）計算羅馬拼音
+                    computed_romaji = kana_to_romaji(pure_kana)
+
+                    # 備援防呆：若轉換失敗有雜質，用官方英文名稱代替
+                    if not computed_romaji.replace("-", "").isalnum():
                         computed_romaji = "".join(
                             re.sub(r"[^a-zA-Z0-9\s]", "", en_name)
                             .lower()
                             .split()
                         )
 
+                    # 封裝成你要求的新結構
                     move_item = {
-                        "kanji": ja_name,
-                        "kana": "",  # 大多數招式本身已是漢字混假名，留空或維持結構
+                        "kanji": kanji_name,
+                        "kana": pure_kana,
                         "romaji": computed_romaji,
                         "meaning": zh_name,
                     }
                     raw_moves.append(move_item)
 
-        # 匯出成 JSON
-        output_json = "pokemon_moves_with_romaji.json"
+        # 4. 匯出成 JSON (優化：一筆招式剛好佔一列)
+        output_json = "pokemon_moves_perfect.json"
         with open(output_json, "w", encoding="utf-8") as f:
-            # 將每筆資料單獨轉成 JSON 單行字串，再用逗號與換行串接起來
-            json_rows = [json.dumps(item, ensure_ascii=False) for item in raw_moves]
+            json_rows = [
+                json.dumps(item, ensure_ascii=False) for item in raw_moves
+            ]
             f.write("[\n  " + ",\n  ".join(json_rows) + "\n]")
 
-        print(f"\n🎉 帶有羅馬拼音的 JSON 檔案產出成功！")
+        print(f"\n🎉 完美版 JSON 檔案產出成功！")
         print(f"共計處理 {len(raw_moves)} 筆不重複招式。")
         print(f"檔案已儲存至: {os.path.abspath(output_json)}")
 
-        print("\n--- 最終帶拼音之 JSON 結構預覽 ---")
+        print("\n--- 最終完美版 JSON 結構預覽 ---")
         print(json.dumps(raw_moves[:3], ensure_ascii=False, indent=2))
     else:
         print("錯誤：找不到任何表格。")
